@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 61450045}
   - component: {fileID: 61450044}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: LeftMonitor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,13 +224,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61450043}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.9481106, z: -0, w: 0.317941}
-  m_LocalPosition: {x: 10.75345, y: 41.78029, z: -112.43917}
+  m_LocalRotation: {x: -0, y: 0.9795556, z: -0, w: 0.20117384}
+  m_LocalPosition: {x: 8.041, y: 41.78029, z: -112.428}
   m_LocalScale: {x: 1.25, y: 1, z: 0.07000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1755165656}
-  m_LocalEulerAnglesHint: {x: 0, y: -142.923, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 156.789, z: 0}
 --- !u!1 &208212477
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,12 +543,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.175, y: 42.032, z: -117.68}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.015000105, y: 0.4620018, z: 0.5699997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823939632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
@@ -689,7 +689,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 128.3
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -758,6 +758,7 @@ MonoBehaviour:
   rb: {fileID: 383529933}
   moveSpeed: 3
   rotForce: 1
+  ascendForce: 1
 --- !u!54 &383529933
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -768,7 +769,7 @@ Rigidbody:
   serializedVersion: 5
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -783,7 +784,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &383529934
 BoxCollider:
@@ -1021,7 +1022,7 @@ GameObject:
   - component: {fileID: 496270377}
   - component: {fileID: 496270376}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: FrontMonitor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1113,13 +1114,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496270375}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.9488348, z: -0, w: -0.315773}
-  m_LocalPosition: {x: 7.9644504, y: 41.78029, z: -112.42917}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 9.374, y: 41.78029, z: -112.289}
   m_LocalScale: {x: 1.2499999, y: 1, z: 0.07}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1755165656}
-  m_LocalEulerAnglesHint: {x: 0, y: -216.815, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &585754421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,7 +1134,7 @@ GameObject:
   - component: {fileID: 585754423}
   - component: {fileID: 585754422}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1488,7 +1489,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 131.9
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1534,7 +1535,7 @@ GameObject:
   - component: {fileID: 1191946316}
   - component: {fileID: 1191946315}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: RightMonitor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1626,13 +1627,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191946314}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9999821, z: -0, w: -0.0059936563}
-  m_LocalPosition: {x: 9.34745, y: 41.78029, z: -112.11717}
+  m_LocalRotation: {x: -0, y: 0.9817344, z: -0, w: -0.19025666}
+  m_LocalPosition: {x: 10.757, y: 41.78029, z: -112.42}
   m_LocalScale: {x: 1.2500001, y: 1, z: 0.07000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1755165656}
-  m_LocalEulerAnglesHint: {x: 0, y: 180.687, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 201.936, z: 0}
 --- !u!1 &1219465127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,7 +1842,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 117.55
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1905,7 +1906,6 @@ Transform:
   m_Children:
   - {fileID: 1219465131}
   - {fileID: 1986306060}
-  - {fileID: 1823939632}
   - {fileID: 585754425}
   - {fileID: 496270379}
   - {fileID: 1191946318}
@@ -1928,7 +1928,7 @@ GameObject:
   - component: {fileID: 1823939630}
   - component: {fileID: 1823939629}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2023,11 +2023,12 @@ Transform:
   m_GameObject: {fileID: 1823939628}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.53645, y: 41.34829, z: -118.13317}
+  m_LocalPosition: {x: -3.33, y: 41.57, z: -114.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1755165656}
+  m_Children:
+  - {fileID: 330585546}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1986306056
 GameObject:
@@ -2146,8 +2147,8 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 383529937}
+  - {fileID: 1823939632}
   - {fileID: 1755165656}

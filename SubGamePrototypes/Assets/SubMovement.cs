@@ -4,8 +4,10 @@ public class SubMovement : MonoBehaviour
 {
 
     public Rigidbody rb;
-    public float moveSpeed = 3f;
-    public float rotForce = 1f;
+    public float moveSpeed = 1f;
+    public float rotForce = .5f;
+    public float ascendForce = 1f;
+    
 
 
 
@@ -18,10 +20,52 @@ public class SubMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        //Movement
+        float h = Input.GetAxis("HorizontalMovement");
+        float v = Input.GetAxis("VerticalMovement");
+        rb.AddForce(transform.forward * h * moveSpeed);
+        rb.AddForce(transform.right * v * moveSpeed);
+        //Ascend
+        if (Input.GetKey(KeyCode.Space))
+        {
+            rb.AddForce(0, ascendForce, 0);
+        }
+        //Descend
+        if ( Input.GetKey(KeyCode.LeftControl))
+        {
+            rb.AddForce(0, -ascendForce, 0);
+        }
+        //Boost
+        if( Input.GetKey(KeyCode.LeftShift))
+        {
+            moveSpeed = 2f;
+            ascendForce = 2f;
+        }
+        else
+        {
+            moveSpeed = 1f;
+            ascendForce = 1f;
+        }
+        //Brakes
+        if(Input.GetKey(KeyCode.LeftAlt))
+        {
+            rb.linearVelocity -= rb.linearVelocity / 50;
+            if(rb.linearVelocity.magnitude < 0.01f)
+            {
+                rb.linearVelocity = Vector3.zero;
+            }
+           
+        }
+        //Rotation
+        float rotH = Input.GetAxis("HorizontalCamera");
+        float rotV = Input.GetAxis("VerticalCamera");
+        
+        rb.AddTorque(transform.up * rotH * rotForce);
+        rb.AddTorque(transform.right * rotV * rotForce);
 
-        Vector3 move = new Vector3(h, 0f, v).normalized;
-        rb.AddForce(move * moveSpeed);
+
+
+
+
     }
 }
