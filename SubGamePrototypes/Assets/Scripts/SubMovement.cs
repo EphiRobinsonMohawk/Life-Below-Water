@@ -7,17 +7,11 @@ public class SubMovement : MonoBehaviour
     public float moveSpeed = 1f;
     public float rotForce = 0.25f;
     public float ascendForce = 1f;
-    
+    public AudioManager audioManager;
+    public float jetAudioCooldown = 1f;
+    public float jetTimerMax = 1f;
+    public bool jetTimer;
 
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         //Movement
@@ -54,10 +48,14 @@ public class SubMovement : MonoBehaviour
             {
                 rb.linearVelocity = Vector3.zero;
             }
+            rb.angularVelocity -= rb.angularVelocity / 50;
+            if(rb.angularVelocity.magnitude < 0.01f)
+            {
+                rb.angularVelocity = Vector3.zero;
+            }
            
         }
         //Rotation
-        //todo: add q and e roll
         float rotH = Input.GetAxis("HorizontalCamera");
         float rotV = Input.GetAxis("VerticalCamera");
         
@@ -69,9 +67,25 @@ public class SubMovement : MonoBehaviour
         float roll = Input.GetAxis("Roll");
         rb.AddRelativeTorque(Vector3.left * roll * rotForce);
 
+        //SFX
+        if (Input.GetAxis("HorizontalMovement") != 0 && !jetTimer || Input.GetAxis("VerticalMovement") != 0 && !jetTimer)
+        {
+            jetTimer = true;
+            audioManager.PlayOneShotSFX(audioManager.sfxs[0]);
+        }
 
+        //Timers
+        //Movement audio timer.
+        if(jetTimer)
+        {
+            jetAudioCooldown -= Time.deltaTime;
+            if(jetAudioCooldown < 0)
+            {
+                jetAudioCooldown = 1;
+                jetTimer = false;
 
-
+            }
+        }
 
     }
 }
