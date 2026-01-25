@@ -5,7 +5,7 @@ public class SubMovement : MonoBehaviour
 
     public Rigidbody rb;
     public float moveSpeed = 1f;
-    public float rotForce = .5f;
+    public float rotForce = 0.25f;
     public float ascendForce = 1f;
     
 
@@ -28,12 +28,12 @@ public class SubMovement : MonoBehaviour
         //Ascend
         if (Input.GetKey(KeyCode.Space))
         {
-            rb.AddForce(0, ascendForce, 0);
+            rb.AddRelativeForce(0, ascendForce, 0);
         }
         //Descend
         if ( Input.GetKey(KeyCode.LeftControl))
         {
-            rb.AddForce(0, -ascendForce, 0);
+            rb.AddRelativeForce(0, -ascendForce, 0);
         }
         //Boost
         if( Input.GetKey(KeyCode.LeftShift))
@@ -57,11 +57,17 @@ public class SubMovement : MonoBehaviour
            
         }
         //Rotation
+        //todo: add q and e roll
         float rotH = Input.GetAxis("HorizontalCamera");
         float rotV = Input.GetAxis("VerticalCamera");
         
-        rb.AddTorque(transform.up * rotH * rotForce);
-        rb.AddTorque(transform.right * rotV * rotForce);
+        rb.AddRelativeTorque(Vector3.up * rotH * rotForce);
+        rb.AddRelativeTorque(Vector3.forward * rotV * rotForce);
+
+        //roll
+
+        float roll = Input.GetAxis("Roll");
+        rb.AddRelativeTorque(Vector3.left * roll * rotForce);
 
 
 
