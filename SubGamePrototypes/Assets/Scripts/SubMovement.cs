@@ -17,7 +17,7 @@ public class SubMovement : MonoBehaviour
         //Movement
         float h = Input.GetAxis("HorizontalMovement");
         float v = Input.GetAxis("VerticalMovement");
-        rb.AddForce(transform.forward * h * moveSpeed);
+        rb.AddForce(transform.forward * -h * moveSpeed);
         rb.AddForce(transform.right * v * moveSpeed);
         //Ascend
         if (Input.GetKey(KeyCode.Space))
@@ -71,7 +71,7 @@ public class SubMovement : MonoBehaviour
         if (Input.GetAxis("HorizontalMovement") != 0 && !jetTimer || Input.GetAxis("VerticalMovement") != 0 && !jetTimer)
         {
             jetTimer = true;
-            audioManager.PlayOneShotSFX(audioManager.sfxs[0]);
+            audioManager.PlayOneShotSFX(audioManager.sfxsData[0]);
         }
 
         //Timers
