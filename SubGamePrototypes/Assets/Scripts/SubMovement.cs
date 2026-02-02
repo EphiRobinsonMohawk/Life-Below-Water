@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SubMovement : MonoBehaviour
 {
@@ -14,12 +15,20 @@ public class SubMovement : MonoBehaviour
     public bool jetTimer;
     public bool cameraView = false;
     public bool controllingHerc = false;
+    public InputAction Movement;
 
+    void Start()
+    {
+        Movement = InputSystem.actions.FindAction("ROV/Move");
+    }
+    
     public void ControlHercules()
     {
         //Movement
-        float h = Input.GetAxis("HorizontalMovement");
-        float v = Input.GetAxis("VerticalMovement");
+        Vector2 hv = Movement.ReadValue<Vector2>();
+
+        float h = hv.x;
+        float v = hv.y;
         rb.AddForce(transform.forward * -h * moveSpeed);
         rb.AddForce(transform.right * v * moveSpeed);
         //Ascend

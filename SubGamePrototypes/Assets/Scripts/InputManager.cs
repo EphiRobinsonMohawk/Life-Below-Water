@@ -11,7 +11,7 @@ public class InputManager : MonoBehaviour
 
     void Start()
     {
-        state = InputState.ControlRoom;
+        state = InputState.Menus;
     }
 
     public void InputHandling()
