@@ -1,0 +1,91 @@
+using UnityEngine;
+
+public class SubMovement : MonoBehaviour
+{
+
+    public Rigidbody rb;
+    public float moveSpeed = 1f;
+    public float rotForce = 0.25f;
+    public float ascendForce = 1f;
+    public AudioManager audioManager;
+    public float jetAudioCooldown = 1f;
+    public float jetTimerMax = 1f;
+    public bool jetTimer;
+
+    void FixedUpdate()
+    {
+        //Movement
+        float h = Input.GetAxis("HorizontalMovement");
+        float v = Input.GetAxis("VerticalMovement");
+        rb.AddForce(transform.forward * -h * moveSpeed);
+        rb.AddForce(transform.right * v * moveSpeed);
+        //Ascend
+        if (Input.GetKey(KeyCode.Space))
+        {
+            rb.AddRelativeForce(0, ascendForce, 0);
+        }
+        //Descend
+        if ( Input.GetKey(KeyCode.LeftControl))
+        {
+            rb.AddRelativeForce(0, -ascendForce, 0);
+        }
+        //Boost
+        if( Input.GetKey(KeyCode.LeftShift))
+        {
+            moveSpeed = 2f;
+            ascendForce = 2f;
+        }
+        else
+        {
+            moveSpeed = 1f;
+            ascendForce = 1f;
+        }
+        //Brakes
+        if(Input.GetKey(KeyCode.LeftAlt))
+        {
+            rb.linearVelocity -= rb.linearVelocity / 50;
+            if(rb.linearVelocity.magnitude < 0.01f)
+            {
+                rb.linearVelocity = Vector3.zero;
+            }
+            rb.angularVelocity -= rb.angularVelocity / 50;
+            if(rb.angularVelocity.magnitude < 0.01f)
+            {
+                rb.angularVelocity = Vector3.zero;
+            }
+           
+        }
+        //Rotation
+        float rotH = Input.GetAxis("HorizontalCamera");
+        float rotV = Input.GetAxis("VerticalCamera");
+        
+        rb.AddRelativeTorque(Vector3.up * rotH * rotForce);
+        rb.AddRelativeTorque(Vector3.forward * rotV * rotForce);
+
+        //roll
+
+        float roll = Input.GetAxis("Roll");
+        rb.AddRelativeTorque(Vector3.left * roll * rotForce);
+
+        //SFX
+        if (Input.GetAxis("HorizontalMovement") != 0 && !jetTimer || Input.GetAxis("VerticalMovement") != 0 && !jetTimer)
+        {
+            jetTimer = true;
+            audioManager.PlayOneShotSFX(audioManager.sfxsData[0]);
+        }
+
+        //Timers
+        //Movement audio timer.
+        if(jetTimer)
+        {
+            jetAudioCooldown -= Time.deltaTime;
+            if(jetAudioCooldown < 0)
+            {
+                jetAudioCooldown = 1;
+                jetTimer = false;
+
+            }
+        }
+
+    }
+}
