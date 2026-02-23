@@ -1,11 +1,27 @@
 using System.IO;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Photography : MonoBehaviour
 {
     public Camera photoCamera;
     public int photoWidth = 1920;
     public int photoHeight = 1080;
+
+    InputAction takePhoto;
+
+    private void Start()
+    {
+        takePhoto = InputSystem.actions.FindAction("Photo/TakePhoto");
+    }
+
+    private void Update()
+    {
+        if (takePhoto.triggered)
+        {
+            TakePhoto();
+        }
+    }
 
     public void TakePhoto()
     {
@@ -42,5 +58,8 @@ public class Photography : MonoBehaviour
 
         // Destroy the texture to free up GPU memory
         Destroy(texture);
+
+        // Inside PhotoCapture.cs after File.WriteAllBytes
+        FindObjectsByType<GalleryDisplay>(FindObjectsSortMode.None)[0].LoadGallery();
     }
 }

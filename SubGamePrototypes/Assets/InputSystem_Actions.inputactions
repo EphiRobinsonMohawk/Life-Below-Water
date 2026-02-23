@@ -1217,10 +1217,10 @@
             "id": "d8cf0476-64b5-4776-bf9b-e720d5521fd6",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "TakePhoto",
                     "type": "Button",
                     "id": "c6684fe8-cf45-49d9-923d-8b0583dba597",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -1230,11 +1230,11 @@
                 {
                     "name": "",
                     "id": "ab940a2d-c675-48e6-a47a-1635d67aaa65",
-                    "path": "",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "TakePhoto",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
