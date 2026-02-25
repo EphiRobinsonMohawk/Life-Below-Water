@@ -8,11 +8,13 @@ public class ArmMovement : MonoBehaviour
     public float MoveForce = 10f;
     public float Kp_WristLeveling = 100f;
     public float Kd_WristLeveling = 10f;
+    public float MaxWristTorque = 50f;
 
     // Hand control
     public float TargetOpenness = 0f;
     public float HandKp = 100f;
     public float HandKd = 10f;
+    public float MaxHandTorque = 5f;
     public float MaxOpenAngle = 45f;
 
     // The wrist is the main driver of arm movement, the player will control this directly
@@ -26,8 +28,10 @@ public class ArmMovement : MonoBehaviour
     private HandCollisionDetector _detectorL;
     private HandCollisionDetector _detectorR;
 
-    private Rigidbody _heldObject;
+    public Rigidbody _heldObject;
     private FixedJoint _gripJoint;
+
+    public SampleStorage Storage;
 
     // Define input actions
     InputAction leftStick;
@@ -71,6 +75,51 @@ public class ArmMovement : MonoBehaviour
         ApplyLevelingTorque();
         ApplyHandControl();
         UpdateGrip();
+
+        //Try to store the sample if it's pulled behind and under the camera
+        CheckForStorage();
+    }
+
+    private void CheckForStorage()
+    {
+        if (_heldObject == null || Storage == null) return;
+
+        Sample sample = _heldObject.GetComponent<Sample>();
+        if (sample == null) return;
+
+        Camera mainCam = Camera.main;
+        if (mainCam == null) return;
+
+        // Below the view
+        Vector3 viewportPos = mainCam.WorldToViewportPoint(_heldObject.position);
+        bool isBelowFrustum = viewportPos.y < 0;
+
+        // Z-axis check: Between arm position and camera
+        float sampleDepth = mainCam.transform.InverseTransformPoint(_heldObject.position).z;
+        float armBaseDepth = mainCam.transform.InverseTransformPoint(transform.position).z;
+
+        // Between means sampleDepth is greater than camera (0) but less than arm base (assuming arm is forward)
+        // Or simply between the two values.
+        bool isBetweenArmAndCam = false;
+        if (armBaseDepth > 0)
+        {
+            isBetweenArmAndCam = sampleDepth > 0 && sampleDepth < armBaseDepth;
+        }
+        else
+        {
+            // If arm is behind camera for some reason
+            isBetweenArmAndCam = sampleDepth < 0 && sampleDepth > armBaseDepth;
+        }
+
+        if (isBelowFrustum && isBetweenArmAndCam)
+        {
+            if (Storage.TryStoreSample(sample))
+            {
+                GameObject sampleObj = _heldObject.gameObject;
+                ReleaseObject();
+                sampleObj.SetActive(false);
+            }
+        }
     }
 
 
@@ -88,6 +137,7 @@ public class ArmMovement : MonoBehaviour
         Vector3 error = Vector3.Cross(currentUp, targetUp);
 
         Vector3 torque = CalculatePD(error, Wrist.angularVelocity, Kp_WristLeveling, Kd_WristLeveling);
+        torque = Vector3.ClampMagnitude(torque, MaxWristTorque);
 
         Wrist.AddTorque(torque);
     }
@@ -113,6 +163,7 @@ public class ArmMovement : MonoBehaviour
 
         Vector3 torqueAxis = Wrist.transform.up;
         Vector3 torque = CalculatePD(torqueAxis * angleError * Mathf.Deg2Rad, hand.angularVelocity - Wrist.angularVelocity, HandKp, HandKd);
+        torque = Vector3.ClampMagnitude(torque, MaxHandTorque);
 
         hand.AddTorque(torque);
         Wrist.AddTorque(-torque); // Reaction torque on wrist
@@ -128,8 +179,11 @@ public class ArmMovement : MonoBehaviour
                 if (_detectorR.CollidingBodies.Contains(rbL))
                 {
                     // Found a candidate!
-                    GrabObject(rbL);
-                    break;
+                    if (rbL.gameObject.activeInHierarchy)
+                    {
+                        GrabObject(rbL);
+                        break;
+                    }
                 }
             }
         }

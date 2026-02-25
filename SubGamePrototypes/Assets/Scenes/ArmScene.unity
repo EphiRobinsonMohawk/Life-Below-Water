@@ -559,6 +559,7 @@ GameObject:
   - component: {fileID: 606635159}
   - component: {fileID: 606635158}
   - component: {fileID: 606635162}
+  - component: {fileID: 606635163}
   m_Layer: 0
   m_Name: GrabItem
   m_TagString: Untagged
@@ -686,6 +687,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &606635163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606635157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed4f2669742bab47aed75c4aa756d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Species
+  Type: 1
+  isSampleable: 1
+  hasBeenRecorded: 0
 --- !u!1 &632663832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,12 +1566,12 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
     min: 0
-    max: 0
+    max: 181.30655
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -2250,7 +2266,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 94
+  m_Constraints: 30
   m_CollisionDetection: 0
 --- !u!135 &1736678017
 SphereCollider:
@@ -2598,13 +2614,72 @@ MonoBehaviour:
   MoveForce: 10
   Kp_WristLeveling: 100
   Kd_WristLeveling: 10
+  MaxWristTorque: 50
   TargetOpenness: 0
-  HandKp: 100
+  HandKp: 50
   HandKd: 10
+  MaxHandTorque: 5
   MaxOpenAngle: 45
   Wrist: {fileID: 1240401049}
   HandL: {fileID: 1684901365}
   HandR: {fileID: 1820083418}
+  _heldObject: {fileID: 0}
+  Storage: {fileID: 2046116459}
+--- !u!1 &2046116458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2046116460}
+  - component: {fileID: 2046116459}
+  m_Layer: 0
+  m_Name: SampleStorage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2046116459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046116458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c7c83591b50ce499d55b9e5534f743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SampleStorage
+  sampleStorage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!4 &2046116460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046116458}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.72365, y: -0.08643, z: 3.75943}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2613,6 +2688,7 @@ SceneRoots:
   - {fileID: 1066550547}
   - {fileID: 1861268676}
   - {fileID: 606635161}
+  - {fileID: 2046116460}
   - {fileID: 894933437}
   - {fileID: 667464289}
   - {fileID: 66190787}
