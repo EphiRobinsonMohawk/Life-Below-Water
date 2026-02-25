@@ -12,9 +12,9 @@ public class ArmMovement : MonoBehaviour
 
     // Hand control
     public float TargetOpenness = 0f;
-    public float HandKp = 100f;
-    public float HandKd = 10f;
-    public float MaxHandTorque = 5f;
+    public float HandKp = 200f;
+    public float HandKd = 30f;
+    public float MaxHandTorque = 30f;
     public float MaxOpenAngle = 45f;
 
     // The wrist is the main driver of arm movement, the player will control this directly
@@ -66,6 +66,7 @@ public class ArmMovement : MonoBehaviour
         float openValue = openHand.ReadValue<float>();
         float closeValue = closeHand.ReadValue<float>();
         TargetOpenness += (openValue - closeValue) * Time.deltaTime;
+        TargetOpenness = Mathf.Clamp01(TargetOpenness);
     }
 
     // FixedUpdate is independent of frame rate - apply physics
@@ -154,16 +155,27 @@ public class ArmMovement : MonoBehaviour
 
     private void ApplyHandTorque(Rigidbody hand, float targetAngle)
     {
+        // Get local rotation relative to wrist
         Quaternion localRot = Quaternion.Inverse(Wrist.rotation) * hand.rotation;
 
+        // Extract the Y angle (hinge axis)
         float currentAngle = localRot.eulerAngles.y;
         if (currentAngle > 180) currentAngle -= 360;
 
         float angleError = targetAngle - currentAngle;
 
         Vector3 torqueAxis = Wrist.transform.up;
-        Vector3 torque = CalculatePD(torqueAxis * angleError * Mathf.Deg2Rad, hand.angularVelocity - Wrist.angularVelocity, HandKp, HandKd);
-        torque = Vector3.ClampMagnitude(torque, MaxHandTorque);
+
+        // Project relative angular velocity onto the hinge axis only
+        // This prevents the PD controller from fighting rotational noise on other axes
+        Vector3 relativeAngVel = hand.angularVelocity - Wrist.angularVelocity;
+        float angVelOnAxis = Vector3.Dot(relativeAngVel, torqueAxis);
+
+        // PD with scalar values, then apply along the axis
+        float torqueMag = (HandKp * angleError * Mathf.Deg2Rad) - (HandKd * angVelOnAxis);
+        torqueMag = Mathf.Clamp(torqueMag, -MaxHandTorque, MaxHandTorque);
+
+        Vector3 torque = torqueAxis * torqueMag;
 
         hand.AddTorque(torque);
         Wrist.AddTorque(-torque); // Reaction torque on wrist
