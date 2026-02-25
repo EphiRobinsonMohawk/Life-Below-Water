@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public Camera cam;
@@ -10,11 +11,20 @@ public class PlayerMovement : MonoBehaviour
     public TMP_Text interactionText;
     public InputManager inputManager;
     public UIManager uiManager;
+    public InputAction look;
+    public InputAction interact;
+
+    public void Start()
+    {
+        look = InputSystem.actions.FindAction("Player/Look");
+        interact = InputSystem.actions.FindAction("Player/Interact");
+    }
 
     public void PlayerRotation()
     {
-        float x = Input.GetAxis("Mouse X");
-        float y = Input.GetAxis("Mouse Y");
+        Vector2 mouse = look.ReadValue<Vector2>();
+        float x = mouse.x * mouseSens;
+        float y = mouse.y * mouseSens;
         cameraVertRot -= y;
         cameraVertRot = Mathf.Clamp(cameraVertRot, -90f, 90f);
         transform.localEulerAngles = Vector3.right * cameraVertRot;
@@ -43,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
                 interactionText.text = "Press E to open Journal";
                 interactionUI.SetActive(true);
                 //Debug.Log("Hit herc controls");
-                if (Input.GetKey(KeyCode.E))
+                if (interact.IsPressed())
                 {
                     inputManager.state = InputManager.InputState.Menus;
                     uiManager.journalCanvas.enabled = true;

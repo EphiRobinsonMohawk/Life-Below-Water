@@ -33,7 +33,6 @@ public class CameraManager : MonoBehaviour
                 rightCam.depth = 0;
                 leftCam.depth = 0;
                 thirdPersonCam.depth = 0;
-
                 break;
             case ActiveCamera.Right:
                 controlCam.depth = 0;
