@@ -823,10 +823,10 @@ MonoBehaviour:
     and their
     efforts!
 
-    
 
-    In this beta, you will explore the Bowie Seamount, collect
-    samples and take photos!
+
+    In this beta, you will explore the Bowie Seamount, collect samples
+    and take photos!
 
     In the full release there will be multiple expeditions
     with unique environments to explore!'
@@ -1605,12 +1605,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   cam: {fileID: 330585545}
-  mouseSens: 5
+  mouseSens: 0.16
   player: {fileID: 1823939632}
   interactionUI: {fileID: 255119368}
   interactionText: {fileID: 216249701}
   inputManager: {fileID: 60022795}
   uiManager: {fileID: 483952600}
+  look:
+    m_Name: Look
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c209186d-e783-4aa5-a8df-ae51e524b502
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &330758487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,11 +2067,47 @@ MonoBehaviour:
   jetTimer: 0
   cameraView: 0
   controllingHerc: 0
-  Movement:
+  hMovement:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 1003ef85-ff4e-47c0-b814-2c94cd6779f4
+    m_Id: a3271077-f743-4cbd-80c5-84380e32ed71
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  vMovement:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 75bd18db-2010-4b17-be1e-7d0322aa7365
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  roll:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a396b3c3-ca34-4fa3-8327-dea8814b5d6c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  pitch:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 01f85bfd-8860-40d1-8c1a-f7cde9913f1c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  yaw:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0962c171-e06b-4b37-988b-9dc40598ed5c
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
