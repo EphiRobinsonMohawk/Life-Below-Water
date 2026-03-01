@@ -1,0 +1,265 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class ArmMovement : MonoBehaviour
+{
+    // Setup: Shoulder is fixed with hinge to Upper Arm, Upper Arm has hinge to Lower Arm, Lower Arm has hinge to Wrist, 
+    // Wrist has HandL and HandR as children
+    public float MoveForce = 10f;
+    public float Kp_WristLeveling = 100f;
+    public float Kd_WristLeveling = 10f;
+    public float MaxWristTorque = 50f;
+
+    // Hand control
+    public float TargetOpenness = 0f;
+    public float MaxOpenAngle = 45f;
+    public Vector3 PivotOffset = Vector3.zero;
+
+    // The wrist is the main driver of arm movement, the player will control this directly
+    public Rigidbody Wrist;
+
+    // The hand is connected to the wrist and will follow its movement, it can also open, close, and rotate
+    public Transform HandL;
+    public Transform HandR;
+
+    // Store original local transforms for pivot-based rotation
+    private Vector3 _handLOriginalPos;
+    private Quaternion _handLOriginalRot;
+    private Vector3 _handROriginalPos;
+    private Quaternion _handROriginalRot;
+
+    // Private _variables for collision detection and gripping
+    private HandCollisionDetector _detectorL;
+    private HandCollisionDetector _detectorR;
+
+    public Rigidbody _heldObject;
+    private FixedJoint _gripJoint;
+    private bool _isClosing;
+    private Collider _triggerL;
+    private Collider _triggerR;
+
+    public SampleStorage Storage;
+
+    // Define input actions
+    public InputAction leftStick;
+    public InputAction rightStick;
+    public InputAction openHand;
+    public InputAction closeHand;
+
+    Vector3 NextMove = Vector3.zero;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        // Store original local transforms relative to wrist
+        _handLOriginalPos = HandL.localPosition;
+        _handLOriginalRot = HandL.localRotation;
+        _handROriginalPos = HandR.localPosition;
+        _handROriginalRot = HandR.localRotation;
+
+        _detectorL = HandL.gameObject.GetComponent<HandCollisionDetector>();
+        if (_detectorL == null) _detectorL = HandL.gameObject.AddComponent<HandCollisionDetector>();
+        
+        _detectorR = HandR.gameObject.GetComponent<HandCollisionDetector>();
+        if (_detectorR == null) _detectorR = HandR.gameObject.AddComponent<HandCollisionDetector>();
+
+        _triggerL = GetTrigger(HandL);
+        _triggerR = GetTrigger(HandR);
+    }
+
+    private Collider GetTrigger(Transform hand)
+    {
+        foreach (var col in hand.GetComponents<Collider>())
+        {
+            if (col.isTrigger) return col;
+        }
+        return null;
+    }
+
+    // Update is called once per frame - get inputs
+    void Update()
+    {
+        // Movement input
+        Vector2 moveInput = leftStick.ReadValue<Vector2>();
+        Vector2 lookInput = rightStick.ReadValue<Vector2>();
+
+        NextMove = new Vector3(moveInput.x, lookInput.y, moveInput.y);
+
+        // Hand openness input
+        float openValue = openHand.ReadValue<float>();
+        float closeValue = closeHand.ReadValue<float>();
+        
+        float delta = (openValue - closeValue) * Time.deltaTime;
+        _isClosing = delta < 0;
+
+        // If we are holding an object, don't allow closing further
+        if (_heldObject != null && delta < 0)
+        {
+            delta = 0;
+        }
+
+        TargetOpenness += delta;
+        TargetOpenness = Mathf.Clamp01(TargetOpenness);
+    }
+
+    // FixedUpdate is independent of frame rate - apply physics
+    void FixedUpdate()
+    {
+        Wrist.AddForce(NextMove * MoveForce);
+        ApplyLevelingTorque();
+        ApplyHandControl();
+        UpdateGrip();
+
+        //Try to store the sample if it's pulled behind and under the camera
+        CheckForStorage();
+    }
+
+    private void CheckForStorage()
+    {
+        if (_heldObject == null || Storage == null) return;
+
+        Sample sample = _heldObject.GetComponent<Sample>();
+        if (sample == null) return;
+
+        Camera mainCam = Camera.main;
+        if (mainCam == null) return;
+
+        // Below the view
+        Vector3 viewportPos = mainCam.WorldToViewportPoint(_heldObject.position);
+        bool isBelowFrustum = viewportPos.y < 0;
+
+        // Z-axis check: Between arm position and camera
+        float sampleDepth = mainCam.transform.InverseTransformPoint(_heldObject.position).z;
+        float armBaseDepth = mainCam.transform.InverseTransformPoint(transform.position).z;
+
+        // Between means sampleDepth is greater than camera (0) but less than arm base (assuming arm is forward)
+        // Or simply between the two values.
+        bool isBetweenArmAndCam = false;
+        if (armBaseDepth > 0)
+        {
+            isBetweenArmAndCam = sampleDepth > 0 && sampleDepth < armBaseDepth;
+        }
+        else
+        {
+            // If arm is behind camera for some reason
+            isBetweenArmAndCam = sampleDepth < 0 && sampleDepth > armBaseDepth;
+        }
+
+        if (isBelowFrustum && isBetweenArmAndCam)
+        {
+            if (Storage.TryStoreSample(sample))
+            {
+                GameObject sampleObj = _heldObject.gameObject;
+                ReleaseObject();
+                sampleObj.SetActive(false);
+            }
+        }
+    }
+
+
+    public Vector3 CalculatePD(Vector3 error, Vector3 currentVelocity, float kp, float kd)
+    {
+        // PD Control: output = Kp * error - Kd * derivative (velocity in this context)
+        return (kp * error) - (kd * currentVelocity);
+    }
+
+    private void ApplyLevelingTorque()
+    {
+        Vector3 currentUp = Wrist.transform.up;
+        Vector3 targetUp = Vector3.up;
+
+        Vector3 error = Vector3.Cross(currentUp, targetUp);
+
+        Vector3 torque = CalculatePD(error, Wrist.angularVelocity, Kp_WristLeveling, Kd_WristLeveling);
+        torque = Vector3.ClampMagnitude(torque, MaxWristTorque);
+
+        Wrist.AddTorque(torque);
+    }
+
+    private void ApplyHandControl()
+    {
+        if (HandL == null || HandR == null) return;
+
+        float angle = TargetOpenness * MaxOpenAngle;
+
+        // Rotate HandL about PivotOffset relative to Wrist
+        Quaternion rotL = Quaternion.Euler(0, -angle, 0);
+        HandL.localPosition = PivotOffset + rotL * (_handLOriginalPos - PivotOffset);
+        HandL.localRotation = rotL * _handLOriginalRot;
+
+        // Rotate HandR about PivotOffset relative to Wrist
+        Quaternion rotR = Quaternion.Euler(0, angle, 0);
+        HandR.localPosition = PivotOffset + rotR * (_handROriginalPos - PivotOffset);
+        HandR.localRotation = rotR * _handROriginalRot;
+
+        // Disable triggers when fully open
+        bool triggersEnabled = TargetOpenness < 0.98f;
+        if (_triggerL != null) _triggerL.enabled = triggersEnabled;
+        if (_triggerR != null) _triggerR.enabled = triggersEnabled;
+    }
+
+    private void UpdateGrip()
+    {
+        if (_heldObject == null)
+        {
+            // Only grab while closing
+            if (!_isClosing) return;
+
+            // Check for common object in contact with both hands
+            foreach (var rbL in _detectorL.CollidingBodies)
+            {
+                if (_detectorR.CollidingBodies.Contains(rbL))
+                {
+                    // Found a candidate!
+                    if (rbL.gameObject.activeInHierarchy)
+                    {
+                        GrabObject(rbL);
+                        break;
+                    }
+                }
+            }
+        }
+        else
+        {
+            // Release if hand is fully open
+            if (TargetOpenness > 0.98f)
+            {
+                ReleaseObject();
+                return;
+            }
+
+            // Check if we should release
+            if (!_detectorL.CollidingBodies.Contains(_heldObject) || !_detectorR.CollidingBodies.Contains(_heldObject))
+            {
+                ReleaseObject();
+            }
+        }
+    }
+
+    private void GrabObject(Rigidbody target)
+    {
+        _heldObject = target;
+        _gripJoint = Wrist.gameObject.AddComponent<FixedJoint>();
+        _gripJoint.connectedBody = _heldObject;
+        _gripJoint.breakForce = Mathf.Infinity;
+        _gripJoint.breakTorque = Mathf.Infinity;
+
+        Debug.Log($"Grabbed {_heldObject.name}");
+    }
+
+    private void ReleaseObject()
+    {
+        if (_heldObject != null)
+        {
+            Debug.Log($"Released {_heldObject.name}");
+        }
+
+        if (_gripJoint != null)
+        {
+            Destroy(_gripJoint);
+        }
+
+        _heldObject = null;
+        _gripJoint = null;
+    }
+}
