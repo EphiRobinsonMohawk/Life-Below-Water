@@ -3,26 +3,30 @@ using TMPro;
 
 public class CameraModeUI : MonoBehaviour
 {
-    public TextMeshProUGUI modeText;
+    [SerializeField] private TextMeshProUGUI modeText;
 
-    private int currentMode = 1;
-    private int maxModes = 3;
-
-    void Update()
+    void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (modeText == null)
         {
-            currentMode++;
-
-            if (currentMode > maxModes)
-                currentMode = 1;
-
-            UpdateUI();
+            Debug.LogWarning("ModeText is not assigned in CameraModeUI.");
         }
     }
 
-    void UpdateUI()
+    public void SetMode(int mode)
     {
-        modeText.text = currentMode.ToString();
+        if (modeText != null)
+        {
+            modeText.text = mode.ToString();
+            StopAllCoroutines();
+            StartCoroutine(PopEffect());
+        }
+    }
+
+    private System.Collections.IEnumerator PopEffect()
+    {
+        modeText.transform.localScale = Vector3.one * 1.2f;
+        yield return new WaitForSeconds(0.1f);
+        modeText.transform.localScale = Vector3.one;
     }
 }

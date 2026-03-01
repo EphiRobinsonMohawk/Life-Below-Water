@@ -17,14 +17,17 @@ public class DepthTapeGenerator : MonoBehaviour
 
     void GenerateNumbers()
     {
+        float totalHeight = maxDepth * pixelsPerMeter;
+        float halfHeight = totalHeight / 2f;
+
         for (int depth = 0; depth <= maxDepth; depth += step)
         {
-            TextMeshProUGUI newNumber = Instantiate(numberTemplate, depthContent);
-            newNumber.text = depth.ToString();
+            TextMeshProUGUI number = Instantiate(numberTemplate, depthContent);
+            number.text = depth.ToString();
 
-            RectTransform rt = newNumber.GetComponent<RectTransform>();
+            RectTransform rt = number.GetComponent<RectTransform>();
 
-            float yPos = depth * pixelsPerMeter;
+            float yPos = (depth * pixelsPerMeter) - halfHeight;
             rt.anchoredPosition = new Vector2(0, yPos);
         }
 
