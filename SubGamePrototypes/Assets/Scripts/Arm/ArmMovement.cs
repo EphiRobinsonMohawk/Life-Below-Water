@@ -41,10 +41,10 @@ public class ArmMovement : MonoBehaviour
     public SampleStorage Storage;
 
     // Define input actions
-    public InputAction leftStick;
-    public InputAction rightStick;
-    public InputAction openHand;
-    public InputAction closeHand;
+    public InputActionReference leftStick;
+    public InputActionReference rightStick;
+    public InputActionReference openHand;
+    public InputActionReference closeHand;
 
     Vector3 NextMove = Vector3.zero;
 
@@ -80,15 +80,15 @@ public class ArmMovement : MonoBehaviour
     void Update()
     {
         // Movement input
-        Vector2 moveInput = leftStick.ReadValue<Vector2>();
-        Vector2 lookInput = rightStick.ReadValue<Vector2>();
+        Vector2 moveInput = leftStick.action.ReadValue<Vector2>();
+        Vector2 lookInput = rightStick.action.ReadValue<Vector2>();
 
         NextMove = new Vector3(moveInput.x, lookInput.y, moveInput.y);
 
         // Hand openness input
-        float openValue = openHand.ReadValue<float>();
-        float closeValue = closeHand.ReadValue<float>();
-        
+        float openValue = openHand.action.ReadValue<float>();
+        float closeValue = closeHand.action.ReadValue<float>();
+
         float delta = (openValue - closeValue) * Time.deltaTime;
         _isClosing = delta < 0;
 

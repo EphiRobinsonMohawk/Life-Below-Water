@@ -1620,6 +1620,15 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  interact:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e202711e-ce33-483a-a521-f8ccd9e2440e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &330758487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,7 +2077,7 @@ MonoBehaviour:
   cameraView: 0
   controllingHerc: 0
   hMovement:
-    m_Name: 
+    m_Name: H Movement
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: a3271077-f743-4cbd-80c5-84380e32ed71
@@ -2077,7 +2086,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   vMovement:
-    m_Name: 
+    m_Name: V Movement
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 75bd18db-2010-4b17-be1e-7d0322aa7365
@@ -2086,7 +2095,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   roll:
-    m_Name: 
+    m_Name: Roll
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: a396b3c3-ca34-4fa3-8327-dea8814b5d6c
@@ -2095,7 +2104,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   pitch:
-    m_Name: 
+    m_Name: Pitch
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 01f85bfd-8860-40d1-8c1a-f7cde9913f1c
@@ -2104,10 +2113,82 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   yaw:
-    m_Name: 
+    m_Name: Yaw
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 0962c171-e06b-4b37-988b-9dc40598ed5c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  brake:
+    m_Name: Brake
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 42476a41-6322-4ef9-8a38-44a279d87a26
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  frontCam:
+    m_Name: Front Cam
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f644fcc3-5da6-45c5-80eb-640b02e69148
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  leftCam:
+    m_Name: Left Cam
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4a31d493-8dfd-4e12-8386-296386161bf8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  rightCam:
+    m_Name: Right Cam
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9a3579b3-4b7e-4f4d-890d-7919922f4d8d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  thirdpersonCam:
+    m_Name: Thirdperson Cam
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a3fb1e7f-7a40-4e8a-abaf-dc2265716ad4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  camView:
+    m_Name: Cam View
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5216ead8-0cd8-4561-b34e-c04ec6e29294
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  exit:
+    m_Name: Exit
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3f3040ce-7d95-4b44-818a-b16b577a064b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  stabilize:
+    m_Name: Stabilize
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f35c1976-bbaf-4d2e-b692-13a463b95fe9
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []

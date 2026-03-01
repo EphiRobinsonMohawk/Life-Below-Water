@@ -12,11 +12,11 @@ public class Photography : MonoBehaviour
     public int photoWidth = 1920;
     public int photoHeight = 1080;
 
-    public InputAction takePhoto;
+    public InputActionReference takePhoto;
 
     private void Update()
     {
-        if (takePhoto.triggered)
+        if (takePhoto.action.triggered)
         {
             TakePhoto();
         }
