@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class ArmMovement : MonoBehaviour
 {
     // Setup: Shoulder is fixed with hinge to Upper Arm, Upper Arm has hinge to Lower Arm, Lower Arm has hinge to Wrist, 
-    // Wrist has one hinge to HandL, one hinge to HandR
+    // Wrist has HandL and HandR as children
     public float MoveForce = 10f;
     public float Kp_WristLeveling = 100f;
     public float Kd_WristLeveling = 10f;
@@ -12,17 +12,21 @@ public class ArmMovement : MonoBehaviour
 
     // Hand control
     public float TargetOpenness = 0f;
-    public float HandKp = 200f;
-    public float HandKd = 30f;
-    public float MaxHandTorque = 30f;
     public float MaxOpenAngle = 45f;
+    public Vector3 PivotOffset = Vector3.zero;
 
     // The wrist is the main driver of arm movement, the player will control this directly
     public Rigidbody Wrist;
 
     // The hand is connected to the wrist and will follow its movement, it can also open, close, and rotate
-    public Rigidbody HandL;
-    public Rigidbody HandR;
+    public Transform HandL;
+    public Transform HandR;
+
+    // Store original local transforms for pivot-based rotation
+    private Vector3 _handLOriginalPos;
+    private Quaternion _handLOriginalRot;
+    private Vector3 _handROriginalPos;
+    private Quaternion _handROriginalRot;
 
     // Private _variables for collision detection and gripping
     private HandCollisionDetector _detectorL;
@@ -30,6 +34,9 @@ public class ArmMovement : MonoBehaviour
 
     public Rigidbody _heldObject;
     private FixedJoint _gripJoint;
+    private bool _isClosing;
+    private Collider _triggerL;
+    private Collider _triggerR;
 
     public SampleStorage Storage;
 
@@ -49,8 +56,29 @@ public class ArmMovement : MonoBehaviour
         openHand = InputSystem.actions.FindAction("Arm/OpenHand");
         closeHand = InputSystem.actions.FindAction("Arm/CloseHand");
 
-        _detectorL = HandL.gameObject.AddComponent<HandCollisionDetector>();
-        _detectorR = HandR.gameObject.AddComponent<HandCollisionDetector>();
+        // Store original local transforms relative to wrist
+        _handLOriginalPos = HandL.localPosition;
+        _handLOriginalRot = HandL.localRotation;
+        _handROriginalPos = HandR.localPosition;
+        _handROriginalRot = HandR.localRotation;
+
+        _detectorL = HandL.gameObject.GetComponent<HandCollisionDetector>();
+        if (_detectorL == null) _detectorL = HandL.gameObject.AddComponent<HandCollisionDetector>();
+        
+        _detectorR = HandR.gameObject.GetComponent<HandCollisionDetector>();
+        if (_detectorR == null) _detectorR = HandR.gameObject.AddComponent<HandCollisionDetector>();
+
+        _triggerL = GetTrigger(HandL);
+        _triggerR = GetTrigger(HandR);
+    }
+
+    private Collider GetTrigger(Transform hand)
+    {
+        foreach (var col in hand.GetComponents<Collider>())
+        {
+            if (col.isTrigger) return col;
+        }
+        return null;
     }
 
     // Update is called once per frame - get inputs
@@ -65,7 +93,17 @@ public class ArmMovement : MonoBehaviour
         // Hand openness input
         float openValue = openHand.ReadValue<float>();
         float closeValue = closeHand.ReadValue<float>();
-        TargetOpenness += (openValue - closeValue) * Time.deltaTime;
+        
+        float delta = (openValue - closeValue) * Time.deltaTime;
+        _isClosing = delta < 0;
+
+        // If we are holding an object, don't allow closing further
+        if (_heldObject != null && delta < 0)
+        {
+            delta = 0;
+        }
+
+        TargetOpenness += delta;
         TargetOpenness = Mathf.Clamp01(TargetOpenness);
     }
 
@@ -149,42 +187,29 @@ public class ArmMovement : MonoBehaviour
 
         float angle = TargetOpenness * MaxOpenAngle;
 
-        ApplyHandTorque(HandL, -angle);
-        ApplyHandTorque(HandR, angle);
-    }
+        // Rotate HandL about PivotOffset relative to Wrist
+        Quaternion rotL = Quaternion.Euler(0, -angle, 0);
+        HandL.localPosition = PivotOffset + rotL * (_handLOriginalPos - PivotOffset);
+        HandL.localRotation = rotL * _handLOriginalRot;
 
-    private void ApplyHandTorque(Rigidbody hand, float targetAngle)
-    {
-        // Get local rotation relative to wrist
-        Quaternion localRot = Quaternion.Inverse(Wrist.rotation) * hand.rotation;
+        // Rotate HandR about PivotOffset relative to Wrist
+        Quaternion rotR = Quaternion.Euler(0, angle, 0);
+        HandR.localPosition = PivotOffset + rotR * (_handROriginalPos - PivotOffset);
+        HandR.localRotation = rotR * _handROriginalRot;
 
-        // Extract the Y angle (hinge axis)
-        float currentAngle = localRot.eulerAngles.y;
-        if (currentAngle > 180) currentAngle -= 360;
-
-        float angleError = targetAngle - currentAngle;
-
-        Vector3 torqueAxis = Wrist.transform.up;
-
-        // Project relative angular velocity onto the hinge axis only
-        // This prevents the PD controller from fighting rotational noise on other axes
-        Vector3 relativeAngVel = hand.angularVelocity - Wrist.angularVelocity;
-        float angVelOnAxis = Vector3.Dot(relativeAngVel, torqueAxis);
-
-        // PD with scalar values, then apply along the axis
-        float torqueMag = (HandKp * angleError * Mathf.Deg2Rad) - (HandKd * angVelOnAxis);
-        torqueMag = Mathf.Clamp(torqueMag, -MaxHandTorque, MaxHandTorque);
-
-        Vector3 torque = torqueAxis * torqueMag;
-
-        hand.AddTorque(torque);
-        Wrist.AddTorque(-torque); // Reaction torque on wrist
+        // Disable triggers when fully open
+        bool triggersEnabled = TargetOpenness < 0.98f;
+        if (_triggerL != null) _triggerL.enabled = triggersEnabled;
+        if (_triggerR != null) _triggerR.enabled = triggersEnabled;
     }
 
     private void UpdateGrip()
     {
         if (_heldObject == null)
         {
+            // Only grab while closing
+            if (!_isClosing) return;
+
             // Check for common object in contact with both hands
             foreach (var rbL in _detectorL.CollidingBodies)
             {
@@ -201,6 +226,13 @@ public class ArmMovement : MonoBehaviour
         }
         else
         {
+            // Release if hand is fully open
+            if (TargetOpenness > 0.98f)
+            {
+                ReleaseObject();
+                return;
+            }
+
             // Check if we should release
             if (!_detectorL.CollidingBodies.Contains(_heldObject) || !_detectorR.CollidingBodies.Contains(_heldObject))
             {

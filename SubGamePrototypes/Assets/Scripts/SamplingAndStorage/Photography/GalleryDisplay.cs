@@ -12,7 +12,7 @@ public class GalleryDisplay : MonoBehaviour
         LoadGallery();
     }
 
-    public void LoadGallery()
+    private void LoadGallery()
     {
         // Clear existing items in the gallery first
         foreach (Transform child in contentParent)
@@ -26,11 +26,11 @@ public class GalleryDisplay : MonoBehaviour
 
         foreach (string filePath in filePaths)
         {
-            CreatePhotoUI(filePath);
+            AddPhoto(filePath);
         }
     }
 
-    void CreatePhotoUI(string path)
+    public void AddPhoto(string path)
     {
         // 2. Load the file into a texture
         byte[] fileData = File.ReadAllBytes(path);
@@ -43,5 +43,8 @@ public class GalleryDisplay : MonoBehaviour
         // 4. Instantiate UI element
         GameObject newPhoto = Instantiate(photoPrefab, contentParent);
         newPhoto.GetComponent<Image>().sprite = photoSprite;
+
+        // Ensure scale is correct case parent affects it
+        newPhoto.transform.localScale = Vector3.one;
     }
 }

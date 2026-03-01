@@ -16,18 +16,18 @@ public class HandCollisionDetector : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Rigidbody rb = collision.rigidbody;
+        Rigidbody rb = other.attachedRigidbody;
         if (rb != null && rb.CompareTag("Grabbable") && !_collidingBodies.Contains(rb))
         {
             _collidingBodies.Add(rb);
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        Rigidbody rb = collision.rigidbody;
+        Rigidbody rb = other.attachedRigidbody;
         if (rb != null && _collidingBodies.Contains(rb))
         {
             _collidingBodies.Remove(rb);

@@ -1,6 +1,10 @@
 using System.IO;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Threading.Tasks;
+using UnityEngine.Rendering;
+using Unity.Collections;
+using UnityEngine.Experimental.Rendering;
 
 public class Photography : MonoBehaviour
 {
@@ -30,36 +34,74 @@ public class Photography : MonoBehaviour
         photoCamera.targetTexture = rt;
 
         // 2. Manually tell the camera to render its view to that texture
-        Texture2D screenshot = new Texture2D(photoWidth, photoHeight, TextureFormat.RGB24, false);
         photoCamera.Render();
 
-        // 3. Set the active Render Texture to our texture and read the pixels
-        RenderTexture.active = rt;
-        screenshot.ReadPixels(new Rect(0, 0, photoWidth, photoHeight), 0, 0);
-        screenshot.Apply();
-
-        // 4. Clean up (Very important to avoid memory leaks!)
+        // IMMEDIATELY restore the camera's target to the screen (null)
+        // This prevents the "No Cameras Rendering" message while waiting for the GPU readback
         photoCamera.targetTexture = null;
-        RenderTexture.active = null;
-        Destroy(rt);
 
-        // 5. Save to disk
-        SaveImage(screenshot);
+        // 3. Request an asynchronous readback from the GPU
+        AsyncGPUReadback.Request(rt, 0, request => {
+            if (request.hasError) {
+                Debug.LogError("GPU readback error occurred.");
+                return;
+            }
+
+            // Start the background saving process
+            SaveImageAsync(request.GetData<byte>(), photoWidth, photoHeight);
+
+            // Clean up the RenderTexture once we have the data
+            rt.Release();
+            Destroy(rt);
+        });
     }
 
-    private void SaveImage(Texture2D texture)
+    private async void SaveImageAsync(NativeArray<byte> rawData, int width, int height)
     {
-        byte[] bytes = texture.EncodeToPNG();
         string filename = $"Photo_{System.DateTime.Now:yyyyMMdd_HHmmss}.png";
         string path = Path.Combine(Application.persistentDataPath, filename);
 
-        File.WriteAllBytes(path, bytes);
+        // We need to copy the native array because the original will be disposed after the callback
+        NativeArray<byte> dataCopy = new NativeArray<byte>(rawData, Allocator.Persistent);
+
+        // Offload PNG encoding and disk IO to a background thread
+        await Task.Run(() =>
+        {
+            try
+            {
+                // Encode the raw bytes from the GPU to PNG
+                // Note: ImageConversion.EncodeNativeArrayToPNG often returns NativeArray<byte> in newer Unity versions
+                var pngBytes = ImageConversion.EncodeNativeArrayToPNG(dataCopy, GraphicsFormat.R8G8B8A8_SRGB, (uint)width, (uint)height);
+                
+                try
+                {
+                    // File.WriteAllBytes expects byte[]. NativeArray can be converted with ToArray().
+                    File.WriteAllBytes(path, pngBytes.ToArray());
+                }
+                finally
+                {
+                    // For modern Unity, pngBytes is a NativeArray and must be disposed.
+                    // If it were a byte[], ToArray() would still work (Linq) but disposal would need a check.
+                    if (pngBytes is System.IDisposable disposable)
+                    {
+                        disposable.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+                // Always dispose of persistent native arrays
+                dataCopy.Dispose();
+            }
+        });
+
         Debug.Log($"Photo saved to: {path}");
 
-        // Destroy the texture to free up GPU memory
-        Destroy(texture);
-
-        // Inside PhotoCapture.cs after File.WriteAllBytes
-        FindObjectsByType<GalleryDisplay>(FindObjectsSortMode.None)[0].LoadGallery();
+        // Update the gallery incrementally on the main thread
+        var gallery = FindFirstObjectByType<GalleryDisplay>();
+        if (gallery != null)
+        {
+            gallery.AddPhoto(path);
+        }
     }
 }
