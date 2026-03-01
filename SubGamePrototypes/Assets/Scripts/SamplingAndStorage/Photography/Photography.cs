@@ -12,12 +12,7 @@ public class Photography : MonoBehaviour
     public int photoWidth = 1920;
     public int photoHeight = 1080;
 
-    InputAction takePhoto;
-
-    private void Start()
-    {
-        takePhoto = InputSystem.actions.FindAction("Photo/TakePhoto");
-    }
+    public InputAction takePhoto;
 
     private void Update()
     {

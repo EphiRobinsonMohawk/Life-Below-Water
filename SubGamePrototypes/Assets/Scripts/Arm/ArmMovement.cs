@@ -41,21 +41,16 @@ public class ArmMovement : MonoBehaviour
     public SampleStorage Storage;
 
     // Define input actions
-    InputAction leftStick;
-    InputAction rightStick;
-    InputAction openHand;
-    InputAction closeHand;
+    public InputAction leftStick;
+    public InputAction rightStick;
+    public InputAction openHand;
+    public InputAction closeHand;
 
     Vector3 NextMove = Vector3.zero;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        leftStick = InputSystem.actions.FindAction("Arm/LeftStick");
-        rightStick = InputSystem.actions.FindAction("Arm/RightStick");
-        openHand = InputSystem.actions.FindAction("Arm/OpenHand");
-        closeHand = InputSystem.actions.FindAction("Arm/CloseHand");
-
         // Store original local transforms relative to wrist
         _handLOriginalPos = HandL.localPosition;
         _handLOriginalRot = HandL.localRotation;
