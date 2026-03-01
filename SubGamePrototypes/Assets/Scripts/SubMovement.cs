@@ -28,6 +28,7 @@ public class SubMovement : MonoBehaviour
     public InputAction camView;
     public InputAction exit;
     public InputAction stabilize;
+    public InputAction toggleArm;
 
 
 
@@ -46,10 +47,16 @@ public class SubMovement : MonoBehaviour
         camView = InputSystem.actions.FindAction("ROV/CamView");
         exit = InputSystem.actions.FindAction("ROV/Exit");
         stabilize = InputSystem.actions.FindAction("ROV/Stabilize");
+        toggleArm = InputSystem.actions.FindAction("ROV/ToggleArm");
     }
     
     public void ControlHercules()
     {
+        if (toggleArm != null && toggleArm.IsPressed())
+        {
+            return;
+        }
+
         //Movement
         Vector2 hVector = hMovement.ReadValue<Vector2>();
         float h = hVector.x;
