@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3373028139498173655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9118925904007322234}
+  - component: {fileID: 8959241631919232090}
+  m_Layer: 0
+  m_Name: UnderwaterController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9118925904007322234
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373028139498173655}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.88449, y: 0, z: -4.29805}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8959241631919232090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373028139498173655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642c350847f29094db7c40ba1d6c95f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnderwaterVisuals
+  cam: {fileID: 0}
+  underwaterVolume: {fileID: 0}
+  overlay: {fileID: 0}
+  waterY: 900
+  blendRange: 2.5
+  controlFog: 1
+  fogAbove: {r: 0.7, g: 0.85, b: 0.95, a: 1}
+  fogDensityAbove: 0.002
+  fogUnder: {r: 0.05, g: 0.35, b: 0.45, a: 1}
+  fogDensityUnder: 0.03
+  controlAmbient: 1
+  ambientAbove: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+  ambientUnder: {r: 0.1, g: 0.25, b: 0.25, a: 1}
+  lerpSpeed: 6
