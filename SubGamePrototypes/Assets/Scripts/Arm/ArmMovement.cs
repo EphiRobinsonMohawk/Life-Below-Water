@@ -25,7 +25,10 @@ public class ArmMovement : MonoBehaviour
     public float MaxOpenAngle = 45f;
     public Vector3 PivotOffset = Vector3.zero;
 
-    // The shoulder is the base of the arm, attached to the sub
+    // ROV that the Arm is attached to
+    public Rigidbody ROV;
+
+    // The shoulder is the base of the arm, attached to the ROV
     public Rigidbody Shoulder;
 
     // The wrist is the main driver of arm movement, the player will control this directly
@@ -271,7 +274,7 @@ public class ArmMovement : MonoBehaviour
     private void ApplyLevelingTorque()
     {
         Vector3 currentUp = Wrist.transform.up;
-        Vector3 targetUp = transform.up;
+        Vector3 targetUp = ROV.transform.up;
 
         Vector3 error = Vector3.Cross(currentUp, targetUp);
 
