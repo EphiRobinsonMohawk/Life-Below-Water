@@ -24494,7 +24494,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 0
   hasBeenRecorded: 0
-  maximumPhotoDistance: 10
+  maximumPhotoDistance: 20
   photoBoundsCenter: {x: 0, y: 0.02, z: 0.44}
   photoBoundsSize: {x: 1.37, y: 1.44, z: 8.51}
   fishType: 0
