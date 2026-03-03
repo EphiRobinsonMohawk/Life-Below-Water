@@ -25,7 +25,10 @@ public class ArmMovement : MonoBehaviour
     public float MaxOpenAngle = 45f;
     public Vector3 PivotOffset = Vector3.zero;
 
-    // The shoulder is the base of the arm, attached to the sub
+    // ROV that the Arm is attached to
+    public Rigidbody ROV;
+
+    // The shoulder is the base of the arm, attached to the ROV
     public Rigidbody Shoulder;
 
     // The wrist is the main driver of arm movement, the player will control this directly

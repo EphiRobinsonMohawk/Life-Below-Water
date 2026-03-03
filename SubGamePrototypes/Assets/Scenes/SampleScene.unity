@@ -9640,6 +9640,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169620383}
   m_CullTransparentMesh: 1
+--- !u!54 &1174086744 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 7351312067298308447, guid: 5a7f1ea238db479418f21ec205ca72fb, type: 3}
+  m_PrefabInstance: {fileID: 4516527920152365949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1191946314
 GameObject:
   m_ObjectHideFlags: 0
@@ -10977,6 +10982,11 @@ Transform:
   - {fileID: 483952601}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1473517351 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8094807505058664660, guid: 5a7f1ea238db479418f21ec205ca72fb, type: 3}
+  m_PrefabInstance: {fileID: 4516527920152365949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1548653829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13062,6 +13072,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1795728353}
     m_Modifications:
+    - target: {fileID: 2678718925820267419, guid: 5a7f1ea238db479418f21ec205ca72fb, type: 3}
+      propertyPath: ROV
+      value: 
+      objectReference: {fileID: 1174086744}
+    - target: {fileID: 2678718925820267419, guid: 5a7f1ea238db479418f21ec205ca72fb, type: 3}
+      propertyPath: Shoulder
+      value: 
+      objectReference: {fileID: 1473517351}
     - target: {fileID: 2678718925820267419, guid: 5a7f1ea238db479418f21ec205ca72fb, type: 3}
       propertyPath: openHand
       value: 
