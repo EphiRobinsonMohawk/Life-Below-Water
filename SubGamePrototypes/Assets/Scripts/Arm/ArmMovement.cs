@@ -59,12 +59,11 @@ public class ArmMovement : MonoBehaviour
 
     public SampleStorage Storage;
 
-    // Define input actions
+    public InputManager inputManager;
     public InputActionReference leftStick;
     public InputActionReference rightStick;
     public InputActionReference openHand;
     public InputActionReference closeHand;
-    public InputAction toggleArm;
 
     Vector3 NextMove = Vector3.zero;
 
@@ -96,7 +95,10 @@ public class ArmMovement : MonoBehaviour
         _triggerL = GetTrigger(HandL);
         _triggerR = GetTrigger(HandR);
 
-        toggleArm = InputSystem.actions.FindAction("ROV/ToggleArm");
+        if (inputManager == null)
+        {
+            inputManager = FindFirstObjectByType<InputManager>();
+        }
     }
 
     private Collider GetTrigger(Transform hand)
@@ -111,7 +113,7 @@ public class ArmMovement : MonoBehaviour
     // Update is called once per frame - get inputs
     void Update()
     {
-        bool isArmControl = toggleArm != null && toggleArm.IsPressed();
+        bool isArmControl = inputManager != null && inputManager.isArmMode;
 
         if (isArmControl)
         {
@@ -162,7 +164,7 @@ public class ArmMovement : MonoBehaviour
     // FixedUpdate is independent of frame rate - apply physics
     void FixedUpdate()
     {
-        bool isArmControl = toggleArm != null && toggleArm.IsPressed();
+        bool isArmControl = inputManager != null && inputManager.isArmMode;
 
         if (isArmControl)
         {

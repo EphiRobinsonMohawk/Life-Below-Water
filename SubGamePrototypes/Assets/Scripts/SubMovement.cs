@@ -18,8 +18,7 @@ public class SubMovement : MonoBehaviour
     public InputAction hMovement;
     public InputAction vMovement;
     public InputAction roll;
-    public InputAction pitch;
-    public InputAction yaw;
+    public InputAction pitchYaw;
     public InputAction brake;
     public InputAction frontCam;
     public InputAction leftCam;
@@ -28,17 +27,13 @@ public class SubMovement : MonoBehaviour
     public InputAction camView;
     public InputAction exit;
     public InputAction stabilize;
-    public InputAction toggleArm;
-
-
 
     void Start()
     {
         hMovement = InputSystem.actions.FindAction("ROV/Move");
         vMovement = InputSystem.actions.FindAction("ROV/VMove");
         roll = InputSystem.actions.FindAction("ROV/Roll");
-        pitch = InputSystem.actions.FindAction("ROV/Pitch");
-        yaw = InputSystem.actions.FindAction("ROV/Yaw");
+        pitchYaw = InputSystem.actions.FindAction("ROV/PitchYaw");
         brake = InputSystem.actions.FindAction("ROV/Brake");
         frontCam = InputSystem.actions.FindAction("ROV/FrontCam");
         leftCam = InputSystem.actions.FindAction("ROV/LeftCam");
@@ -47,12 +42,12 @@ public class SubMovement : MonoBehaviour
         camView = InputSystem.actions.FindAction("ROV/CamView");
         exit = InputSystem.actions.FindAction("ROV/Exit");
         stabilize = InputSystem.actions.FindAction("ROV/Stabilize");
-        toggleArm = InputSystem.actions.FindAction("ROV/ToggleArm");
+        stabilize = InputSystem.actions.FindAction("ROV/Stabilize");
     }
     
     public void ControlHercules()
     {
-        if (toggleArm != null && toggleArm.IsPressed())
+        if (inputManager != null && inputManager.isArmMode)
         {
             return;
         }
@@ -91,14 +86,14 @@ public class SubMovement : MonoBehaviour
         }
 
         //Rotation
-        float rotH = Input.GetAxis("HorizontalCamera");
-        float rotV = Input.GetAxis("VerticalCamera");
+        float rotH = pitchYaw.ReadValue<Vector2>().x;
+        float rotV = pitchYaw.ReadValue<Vector2>().y;   
         rb.AddRelativeTorque(Vector3.up * rotH * rotForce);
         rb.AddRelativeTorque(Vector3.forward * rotV * rotForce);
 
         //roll
-        float roll = Input.GetAxis("Roll");
-        rb.AddRelativeTorque(Vector3.left * roll * rotForce);
+        float rollInput = roll.ReadValue<Vector2>().x;
+        rb.AddRelativeTorque(Vector3.left * rollInput * rotForce);
 
         /*
         //SFX
