@@ -18,8 +18,7 @@ public class SubMovement : MonoBehaviour
     public InputAction hMovement;
     public InputAction vMovement;
     public InputAction roll;
-    public InputAction pitch;
-    public InputAction yaw;
+    public InputAction pitchYaw;
     public InputAction brake;
     public InputAction frontCam;
     public InputAction leftCam;
@@ -28,16 +27,15 @@ public class SubMovement : MonoBehaviour
     public InputAction camView;
     public InputAction exit;
     public InputAction stabilize;
-
-
+    public bool isArmMode;
+    private InputAction _toggleArmAction;
 
     void Start()
     {
         hMovement = InputSystem.actions.FindAction("ROV/Move");
         vMovement = InputSystem.actions.FindAction("ROV/VMove");
         roll = InputSystem.actions.FindAction("ROV/Roll");
-        pitch = InputSystem.actions.FindAction("ROV/Pitch");
-        yaw = InputSystem.actions.FindAction("ROV/Yaw");
+        pitchYaw = InputSystem.actions.FindAction("ROV/PitchYaw");
         brake = InputSystem.actions.FindAction("ROV/Brake");
         frontCam = InputSystem.actions.FindAction("ROV/FrontCam");
         leftCam = InputSystem.actions.FindAction("ROV/LeftCam");
@@ -46,10 +44,26 @@ public class SubMovement : MonoBehaviour
         camView = InputSystem.actions.FindAction("ROV/CamView");
         exit = InputSystem.actions.FindAction("ROV/Exit");
         stabilize = InputSystem.actions.FindAction("ROV/Stabilize");
+        stabilize = InputSystem.actions.FindAction("ROV/Stabilize");
+        _toggleArmAction = InputSystem.actions.FindAction("ROV/ToggleArm");
     }
     
+    void Update()
+    {
+        if (controllingHerc && _toggleArmAction != null && _toggleArmAction.WasPressedThisFrame())
+        {
+            isArmMode = !isArmMode;
+            Debug.Log("Arm Mode Toggled: " + isArmMode);
+        }
+    }
+
     public void ControlHercules()
     {
+        if (isArmMode)
+        {
+            return;
+        }
+
         //Movement
         Vector2 hVector = hMovement.ReadValue<Vector2>();
         float h = hVector.x;
@@ -58,8 +72,8 @@ public class SubMovement : MonoBehaviour
         rb.AddForce(transform.right * v * moveSpeed);
         //Ascend
         float vFloat = vMovement.ReadValue<float>();
-        Debug.Log(vFloat);
-        rb.AddRelativeForce(transform.up * vFloat * ascendForce);
+        //Debug.Log(vFloat);
+        rb.AddRelativeForce(Vector3.up * vFloat * ascendForce);
           
         //Brakes
         if (brake.IsPressed())
@@ -84,14 +98,14 @@ public class SubMovement : MonoBehaviour
         }
 
         //Rotation
-        float rotH = Input.GetAxis("HorizontalCamera");
-        float rotV = Input.GetAxis("VerticalCamera");
+        float rotH = pitchYaw.ReadValue<Vector2>().x;
+        float rotV = pitchYaw.ReadValue<Vector2>().y;   
         rb.AddRelativeTorque(Vector3.up * rotH * rotForce);
         rb.AddRelativeTorque(Vector3.forward * rotV * rotForce);
 
         //roll
-        float roll = Input.GetAxis("Roll");
-        rb.AddRelativeTorque(Vector3.left * roll * rotForce);
+        float rollInput = roll.ReadValue<Vector2>().x;
+        rb.AddRelativeTorque(Vector3.left * rollInput * rotForce);
 
         /*
         //SFX
