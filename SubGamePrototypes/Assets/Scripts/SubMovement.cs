@@ -72,7 +72,7 @@ public class SubMovement : MonoBehaviour
         rb.AddForce(transform.right * v * moveSpeed);
         //Ascend
         float vFloat = vMovement.ReadValue<float>();
-        Debug.Log(vFloat);
+        //Debug.Log(vFloat);
         rb.AddRelativeForce(transform.up * vFloat * ascendForce);
           
         //Brakes

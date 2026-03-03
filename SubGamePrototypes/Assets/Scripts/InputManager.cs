@@ -36,6 +36,7 @@ public class InputManager : MonoBehaviour
         InputSystem.actions.FindActionMap("UI").Disable();
         InputSystem.actions.FindActionMap("ROV").Disable();
         InputSystem.actions.FindActionMap("Arm").Disable();
+        InputSystem.actions.FindActionMap("Photography").Disable();
 
         // Toggle UI Input Module to prevent background interactions
         var eventSystem = EventSystem.current;
@@ -54,6 +55,7 @@ public class InputManager : MonoBehaviour
             case InputState.Hercules:
                 InputSystem.actions.FindActionMap("ROV").Enable();
                 InputSystem.actions.FindActionMap("Arm").Enable();
+                InputSystem.actions.FindActionMap("Photography").Enable();
                 break;
             case InputState.ControlRoom:
                 InputSystem.actions.FindActionMap("Player").Enable();

@@ -1205,54 +1205,6 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!1 &894933435
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 894933437}
-  - component: {fileID: 894933436}
-  m_Layer: 0
-  m_Name: PhotoManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &894933436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894933435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a106ffd41127c74b9048047e2d99895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Photography
-  photoCamera: {fileID: 49650978}
-  photoWidth: 1920
-  photoHeight: 1080
-  takePhoto: {fileID: 1919394348}
---- !u!4 &894933437
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894933435}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -106.21781, y: -0.75282, z: -32.24903}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1066550545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2569,27 +2521,24 @@ MonoBehaviour:
   Kp_WristLeveling: 100
   Kd_WristLeveling: 10
   MaxWristTorque: 50
+  Kp_Shoulder: 100
+  Kd_Shoulder: 10
+  MaxShoulderTorque: 50
   TargetOpenness: 0
   MaxOpenAngle: -45
   PivotOffset: {x: 0, y: 0, z: 0.5}
+  ROV: {fileID: 0}
+  Shoulder: {fileID: 0}
   Wrist: {fileID: 1240401049}
   HandL: {fileID: 1684901360}
   HandR: {fileID: 1820083414}
   _heldObject: {fileID: 0}
   Storage: {fileID: 2046116459}
+  subMovement: {fileID: 0}
   leftStick: {fileID: 252855869}
   rightStick: {fileID: 599054669}
   openHand: {fileID: 2125815297}
   closeHand: {fileID: 1468603299}
-  toggleArm:
-    m_Name: Toggle Arm
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: a84ee93a-f5cd-4a64-9e9f-3cd171ccc03f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
 --- !u!114 &1919394348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2673,6 +2622,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_ActionId: a4c14622-93f5-4025-842c-81872e9144f0
+--- !u!1001 &4913774778531374554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 953391260161554097, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: takePhoto
+      value: 
+      objectReference: {fileID: 1919394348}
+    - target: {fileID: 953391260161554097, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: photoCamera
+      value: 
+      objectReference: {fileID: 49650978}
+    - target: {fileID: 3325931022872721550, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -106.21781
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325931022872721550, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.75282
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325931022872721550, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -32.24903
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325931022872721550, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325931022872721550, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325931022872721550, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325931022872721550, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325931022872721550, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325931022872721550, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325931022872721550, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112677585075692750, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: m_Name
+      value: Photography
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
 --- !u!1001 &7042692430051991567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2739,7 +2753,7 @@ SceneRoots:
   - {fileID: 1861268676}
   - {fileID: 7042692430051991567}
   - {fileID: 2046116460}
-  - {fileID: 894933437}
+  - {fileID: 4913774778531374554}
   - {fileID: 667464289}
   - {fileID: 66190787}
   - {fileID: 447023568}

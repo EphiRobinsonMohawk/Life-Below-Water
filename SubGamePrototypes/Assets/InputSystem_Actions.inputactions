@@ -1742,6 +1742,17 @@
                     "action": "Take Photo",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5f4342d7-a0e9-4789-87b1-dafed4dad2b0",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Take Photo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
