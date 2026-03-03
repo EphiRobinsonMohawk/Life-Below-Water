@@ -39,10 +39,10 @@ public class PlayerMovement : MonoBehaviour
         {
             if(hit.collider.CompareTag("HerculesControls"))
             {
-                interactionText.text = "Press E to control Hercules";
+                interactionText.text = "Press A to control Hercules";
                 interactionUI.SetActive(true);
                 //Debug.Log("Hit herc controls");
-                if(Input.GetKey(KeyCode.E))
+                if(interact.IsPressed())
                 {
                     inputManager.state = InputManager.InputState.Hercules;
                     interactionUI.SetActive(false);
@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (hit.collider.CompareTag("Journal"))
             {
-                interactionText.text = "Press E to open Journal";
+                interactionText.text = "Press A to open Journal";
                 interactionUI.SetActive(true);
                 //Debug.Log("Hit herc controls");
                 if (interact.IsPressed())

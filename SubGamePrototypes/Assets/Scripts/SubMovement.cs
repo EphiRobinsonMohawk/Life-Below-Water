@@ -27,6 +27,8 @@ public class SubMovement : MonoBehaviour
     public InputAction camView;
     public InputAction exit;
     public InputAction stabilize;
+    public bool isArmMode;
+    private InputAction _toggleArmAction;
 
     void Start()
     {
@@ -43,11 +45,21 @@ public class SubMovement : MonoBehaviour
         exit = InputSystem.actions.FindAction("ROV/Exit");
         stabilize = InputSystem.actions.FindAction("ROV/Stabilize");
         stabilize = InputSystem.actions.FindAction("ROV/Stabilize");
+        _toggleArmAction = InputSystem.actions.FindAction("ROV/ToggleArm");
     }
     
+    void Update()
+    {
+        if (controllingHerc && _toggleArmAction != null && _toggleArmAction.WasPressedThisFrame())
+        {
+            isArmMode = !isArmMode;
+            Debug.Log("Arm Mode Toggled: " + isArmMode);
+        }
+    }
+
     public void ControlHercules()
     {
-        if (inputManager != null && inputManager.isArmMode)
+        if (isArmMode)
         {
             return;
         }

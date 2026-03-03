@@ -59,7 +59,7 @@ public class ArmMovement : MonoBehaviour
 
     public SampleStorage Storage;
 
-    public InputManager inputManager;
+    public SubMovement subMovement;
     public InputActionReference leftStick;
     public InputActionReference rightStick;
     public InputActionReference openHand;
@@ -95,9 +95,9 @@ public class ArmMovement : MonoBehaviour
         _triggerL = GetTrigger(HandL);
         _triggerR = GetTrigger(HandR);
 
-        if (inputManager == null)
+        if (subMovement == null)
         {
-            inputManager = FindFirstObjectByType<InputManager>();
+            subMovement = FindFirstObjectByType<SubMovement>();
         }
     }
 
@@ -113,7 +113,7 @@ public class ArmMovement : MonoBehaviour
     // Update is called once per frame - get inputs
     void Update()
     {
-        bool isArmControl = inputManager != null && inputManager.isArmMode;
+        bool isArmControl = subMovement != null && subMovement.isArmMode;
 
         if (isArmControl)
         {
@@ -164,7 +164,7 @@ public class ArmMovement : MonoBehaviour
     // FixedUpdate is independent of frame rate - apply physics
     void FixedUpdate()
     {
-        bool isArmControl = inputManager != null && inputManager.isArmMode;
+        bool isArmControl = subMovement != null && subMovement.isArmMode;
 
         if (isArmControl)
         {
