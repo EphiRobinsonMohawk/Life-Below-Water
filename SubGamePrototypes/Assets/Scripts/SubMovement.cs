@@ -73,7 +73,7 @@ public class SubMovement : MonoBehaviour
         //Ascend
         float vFloat = vMovement.ReadValue<float>();
         //Debug.Log(vFloat);
-        rb.AddRelativeForce(transform.up * vFloat * ascendForce);
+        rb.AddRelativeForce(Vector3.up * vFloat * ascendForce);
           
         //Brakes
         if (brake.IsPressed())
