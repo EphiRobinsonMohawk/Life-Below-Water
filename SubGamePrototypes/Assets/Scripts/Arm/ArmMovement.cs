@@ -274,7 +274,7 @@ public class ArmMovement : MonoBehaviour
     private void ApplyLevelingTorque()
     {
         Vector3 currentUp = Wrist.transform.up;
-        Vector3 targetUp = transform.up;
+        Vector3 targetUp = Shoulder.transform.up;
 
         Vector3 error = Vector3.Cross(currentUp, targetUp);
 

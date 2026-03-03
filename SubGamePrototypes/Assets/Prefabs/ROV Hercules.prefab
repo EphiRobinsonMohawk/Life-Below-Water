@@ -5041,6 +5041,10 @@ PrefabInstance:
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 7644080253510132682, guid: 93268b493921e5d44b45608a761bc793, type: 3}
+      propertyPath: m_Constraints
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7644080253510132682, guid: 93268b493921e5d44b45608a761bc793, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -5062,7 +5066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7945641459827687277, guid: 93268b493921e5d44b45608a761bc793, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.35
+      value: 2.08
       objectReference: {fileID: 0}
     - target: {fileID: 7945641459827687277, guid: 93268b493921e5d44b45608a761bc793, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5103,8 +5107,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6424022955793360073, guid: 93268b493921e5d44b45608a761bc793, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7201394002370729260}
   m_SourcePrefab: {fileID: 100100000, guid: 93268b493921e5d44b45608a761bc793, type: 3}
+--- !u!1 &4845634057562928679 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6424022955793360073, guid: 93268b493921e5d44b45608a761bc793, type: 3}
+  m_PrefabInstance: {fileID: 1880693023505257198}
+  m_PrefabAsset: {fileID: 0}
+--- !u!59 &7201394002370729260
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4845634057562928679}
+  serializedVersion: 3
+  m_ConnectedBody: {fileID: 6872392622322408843}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0.5000305, z: 0}
+  m_Axis: {x: 0, y: 1, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_ExtendedLimits: 0
+  m_UseAcceleration: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!54 &8074015332498059556 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 7644080253510132682, guid: 93268b493921e5d44b45608a761bc793, type: 3}
