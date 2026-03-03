@@ -1,18 +1,70 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
 
 public class InputManager : MonoBehaviour
 {
-    public enum InputState {  Hercules, ControlRoom, Grabber, Suction, Menus }
-    public InputState state;
+    public enum InputState { Hercules, ControlRoom, Grabber, Suction, Menus }
+    
+    [SerializeField] private InputState _state;
+    public InputState state
+    {
+        get => _state;
+        set
+        {
+            if (_state == value) return;
+            previousState = _state;
+            _state = value;
+            UpdateActionMaps();
+        }
+    }
+
     public InputState previousState;
     public SubMovement subMovement;
     public PlayerMovement playerMovement;
 
-
     void Start()
     {
-        state = InputState.Menus;
+        UpdateActionMaps();
+    }
+
+    private void UpdateActionMaps()
+    {
+        // Disable all gameplay-related action maps
+        InputSystem.actions.FindActionMap("Player").Disable();
+        InputSystem.actions.FindActionMap("UI").Disable();
+        InputSystem.actions.FindActionMap("ROV").Disable();
+        InputSystem.actions.FindActionMap("Arm").Disable();
+
+        // Toggle UI Input Module to prevent background interactions
+        var eventSystem = EventSystem.current;
+        if (eventSystem != null)
+        {
+            var uiModule = eventSystem.GetComponent<InputSystemUIInputModule>();
+            if (uiModule != null)
+            {
+                uiModule.enabled = (_state == InputState.Menus);
+            }
+        }
+
+        // Enable the appropriate action map based on state
+        switch (_state)
+        {
+            case InputState.Hercules:
+                InputSystem.actions.FindActionMap("ROV").Enable();
+                InputSystem.actions.FindActionMap("Arm").Enable();
+                break;
+            case InputState.ControlRoom:
+                InputSystem.actions.FindActionMap("Player").Enable();
+                break;
+            case InputState.Menus:
+                InputSystem.actions.FindActionMap("UI").Enable();
+                break;
+            case InputState.Grabber:
+            case InputState.Suction:
+                break;
+        }
     }
 
     public void InputHandling()

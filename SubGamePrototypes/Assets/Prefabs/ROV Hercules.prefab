@@ -4096,20 +4096,11 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  pitch:
-    m_Name: Pitch
+  pitchYaw:
+    m_Name: Pitch Yaw
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 223e6f03-de15-428b-b723-4652c3481e61
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  yaw:
-    m_Name: Yaw
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: efb31453-2773-4cb8-a722-d8f4a18cee93
+    m_Id: f4bdcdb3-2a88-492f-9519-37d67c450047
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -4186,15 +4177,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  toggleArm:
-    m_Name: Toggle Arm
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 3096b863-9c44-40f2-8a20-771ee243b482
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
+  isArmMode: 0
 --- !u!136 &5219450176765021259
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5035,6 +5018,18 @@ PrefabInstance:
     - target: {fileID: 4570883552419166341, guid: 93268b493921e5d44b45608a761bc793, type: 3}
       propertyPath: ForceMultiplier
       value: 0.0005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913564026376387482, guid: 93268b493921e5d44b45608a761bc793, type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913564026376387482, guid: 93268b493921e5d44b45608a761bc793, type: 3}
+      propertyPath: m_Limits.max
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913564026376387482, guid: 93268b493921e5d44b45608a761bc793, type: 3}
+      propertyPath: m_Limits.min
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 6499299579908217246, guid: 93268b493921e5d44b45608a761bc793, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits

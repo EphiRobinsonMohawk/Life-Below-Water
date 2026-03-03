@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,6 +11,14 @@ public class UIManager : MonoBehaviour
     public InputManager inputManager;
     public Canvas activeCanvas;
 
+    [Header("First Selection Targets")]
+    public GameObject introFirstSelected;
+    public GameObject journalFirstSelected;
+    public GameObject fishJournalFirstSelected;
+    public GameObject plantlifeFirstSelected;
+
+    InputAction cancelAction;
+
     public void Start()
     {
         journalCanvas.enabled = false;
@@ -16,18 +26,33 @@ public class UIManager : MonoBehaviour
         plantlifeCanvas.enabled = false;
         introductionCanvas.enabled = true;
         activeCanvas = introductionCanvas;
+
+        SetSelected(introFirstSelected);
+        cancelAction = InputSystem.actions.FindAction("UI/Cancel");
+    }
+
+    void Update()
+    {
+        if (inputManager.state == InputManager.InputState.Menus)
+        {
+            if (cancelAction.WasPressedThisFrame())
+            {
+                ExitCurrentUI();
+            }
+        }
     }
     public void ExitCurrentUI()
     {
-        activeCanvas.enabled = false;
+        if (activeCanvas != null) activeCanvas.enabled = false;
         inputManager.state = InputManager.InputState.ControlRoom;
     }
 
-    public void  OpenFishJournal()
+    public void OpenFishJournal()
     {
         activeCanvas.enabled = false;
         fishJournalCanvas.enabled = true;
         activeCanvas = fishJournalCanvas;
+        SetSelected(fishJournalFirstSelected);
     }
 
     public void OpenPlantlifeJournal()
@@ -35,6 +60,21 @@ public class UIManager : MonoBehaviour
         activeCanvas.enabled = false;
         plantlifeCanvas.enabled = true;
         activeCanvas = plantlifeCanvas;
+        SetSelected(plantlifeFirstSelected);
+    }
+
+    public void OpenJournal()
+    {
+        if (activeCanvas != null) activeCanvas.enabled = false;
+        journalCanvas.enabled = true;
+        activeCanvas = journalCanvas;
+        SetSelected(journalFirstSelected);
+    }
+
+    private void SetSelected(GameObject target)
+    {
+        if (target == null) return;
+        EventSystem.current.SetSelectedGameObject(target);
     }
     
 }
