@@ -13,6 +13,7 @@ public class Photography : MonoBehaviour
     public int photoHeight = 1080;
 
     public InputActionReference takePhoto;
+    public ShutterEffect shutterEffect;
 
     private void Update()
     {
@@ -24,6 +25,11 @@ public class Photography : MonoBehaviour
 
     public void TakePhoto()
     {
+        if (shutterEffect != null)
+        {
+            shutterEffect.TriggerEffect();
+        }
+
         // 1. Create a temporary Render Texture
         RenderTexture rt = new RenderTexture(photoWidth, photoHeight, 24);
         photoCamera.targetTexture = rt;
@@ -45,10 +51,101 @@ public class Photography : MonoBehaviour
             // Start the background saving process
             SaveImageAsync(request.GetData<byte>(), photoWidth, photoHeight);
 
+            // Identify species in frame
+            IdentifySpeciesInFrame();
+
             // Clean up the RenderTexture once we have the data
             rt.Release();
             Destroy(rt);
         });
+    }
+
+    private void IdentifySpeciesInFrame()
+    {
+        Species[] allSpecies = Object.FindObjectsByType<Species>(FindObjectsSortMode.None);
+        Plane[] frustumPlanes = GeometryUtility.CalculateFrustumPlanes(photoCamera);
+
+        foreach (Species species in allSpecies)
+        {
+            // 1. Initial rough pre-filter using AABB distance
+            Bounds worldBounds = species.GetWorldBounds();
+            float maxDim = Mathf.Max(species.photoBoundsSize.x, species.photoBoundsSize.y, species.photoBoundsSize.z);
+            float effectiveMaxDistance = species.maximumPhotoDistance + (2f * maxDim);
+            float sqrEffectiveDistance = effectiveMaxDistance * effectiveMaxDistance;
+
+            float sqrDistancePre = worldBounds.SqrDistance(photoCamera.transform.position);
+            if (sqrDistancePre > sqrEffectiveDistance) continue;
+
+            // 2. Frustum check using bounds
+            if (!GeometryUtility.TestPlanesAABB(frustumPlanes, worldBounds)) continue;
+
+            // 3. Refined distance check (to closest point on bounds)
+            float sqrDistance = worldBounds.SqrDistance(photoCamera.transform.position);
+            if (sqrDistance > sqrEffectiveDistance) continue;
+
+            // 4. Multi-point visibility check (occlusion)
+            if (IsSpeciesVisible(species, worldBounds))
+            {
+                if (!species.hasBeenRecorded)
+                {
+                    species.hasBeenRecorded = true;
+                    Debug.Log($"Identified new species: {species.gameObject.name}");
+                }
+                else
+                {
+                    Debug.Log($"Photographed known species: {species.gameObject.name}");
+                }
+            }
+        }
+    }
+
+    private bool IsSpeciesVisible(Species species, Bounds worldBounds)
+    {
+        // Check center and corners of the manual bounding box defined in local space
+        Vector3 localCenter = species.photoBoundsCenter;
+        Vector3 localExtents = species.photoBoundsSize * 0.5f;
+
+        Vector3[] localCheckPoints = new Vector3[]
+        {
+            Vector3.zero, // Pivot (Origin)
+            localCenter,  // Manual bounds center
+            localCenter + new Vector3(localExtents.x, localExtents.y, localExtents.z),
+            localCenter + new Vector3(localExtents.x, localExtents.y, -localExtents.z),
+            localCenter + new Vector3(localExtents.x, -localExtents.y, localExtents.z),
+            localCenter + new Vector3(localExtents.x, -localExtents.y, -localExtents.z),
+            localCenter + new Vector3(-localExtents.x, localExtents.y, localExtents.z),
+            localCenter + new Vector3(-localExtents.x, localExtents.y, -localExtents.z),
+            localCenter + new Vector3(-localExtents.x, -localExtents.y, localExtents.z),
+            localCenter + new Vector3(-localExtents.x, -localExtents.y, -localExtents.z)
+        };
+
+        foreach (Vector3 localPoint in localCheckPoints)
+        {
+            Vector3 worldPoint = species.transform.TransformPoint(localPoint);
+
+            // First, ensure this point is actually in the viewport
+            Vector3 viewportPos = photoCamera.WorldToViewportPoint(worldPoint);
+            bool inViewport = viewportPos.x >= 0 && viewportPos.x <= 1 && viewportPos.y >= 0 && viewportPos.y <= 1 && viewportPos.z > 0;
+            
+            if (!inViewport) continue;
+
+            // Linecast to check for occlusion
+            if (Physics.Linecast(photoCamera.transform.position, worldPoint, out RaycastHit hit))
+            {
+                // If we hit the species or any of its children, it's visible
+                if (hit.collider.gameObject == species.gameObject || hit.collider.transform.IsChildOf(species.transform))
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                // If it hit nothing, it's definitely visible
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private async void SaveImageAsync(NativeArray<byte> rawData, int width, int height)
@@ -90,7 +187,7 @@ public class Photography : MonoBehaviour
             }
         });
 
-        Debug.Log($"Photo saved to: {path}");
+        //Debug.Log($"Photo saved to: {path}");
 
         // Update the gallery incrementally on the main thread
         var gallery = FindFirstObjectByType<GalleryDisplay>();

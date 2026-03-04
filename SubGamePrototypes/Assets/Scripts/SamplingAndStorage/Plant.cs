@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class Plant : MonoBehaviour
+public enum PlantType
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+}
+
+public class Plant : Species
+{
+    public PlantType fishType;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Type = SpeciesType.Plant;
     }
 }

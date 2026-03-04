@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:SubGamePrototypes/Assets/Scenes/StephanUITest.unity.meta
+guid: ce2d01ddd90ba7c47aa0a9885fc3e494
+========
 guid: 5feed911604e3b24a9168c5b2433bebf
+>>>>>>>> main:SubGamePrototypes/Assets/Scenes/ArmScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
