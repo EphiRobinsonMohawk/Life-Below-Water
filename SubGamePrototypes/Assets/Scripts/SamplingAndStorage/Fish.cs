@@ -9,4 +9,9 @@ public enum FishType
 public class Fish : Species
 {
     public FishType fishType = FishType.BaskingShark;
+
+    void Start()
+    {
+        Type = SpeciesType.Fish;
+    }
 }
