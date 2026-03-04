@@ -59,12 +59,11 @@ public class ArmMovement : MonoBehaviour
 
     public SampleStorage Storage;
 
-    // Define input actions
+    public SubMovement subMovement;
     public InputActionReference leftStick;
     public InputActionReference rightStick;
     public InputActionReference openHand;
     public InputActionReference closeHand;
-    public InputAction toggleArm;
 
     Vector3 NextMove = Vector3.zero;
 
@@ -96,7 +95,10 @@ public class ArmMovement : MonoBehaviour
         _triggerL = GetTrigger(HandL);
         _triggerR = GetTrigger(HandR);
 
-        toggleArm = InputSystem.actions.FindAction("ROV/ToggleArm");
+        if (subMovement == null)
+        {
+            subMovement = FindFirstObjectByType<SubMovement>();
+        }
     }
 
     private Collider GetTrigger(Transform hand)
@@ -111,7 +113,7 @@ public class ArmMovement : MonoBehaviour
     // Update is called once per frame - get inputs
     void Update()
     {
-        bool isArmControl = toggleArm != null && toggleArm.IsPressed();
+        bool isArmControl = subMovement != null && subMovement.isArmMode;
 
         if (isArmControl)
         {
@@ -162,7 +164,7 @@ public class ArmMovement : MonoBehaviour
     // FixedUpdate is independent of frame rate - apply physics
     void FixedUpdate()
     {
-        bool isArmControl = toggleArm != null && toggleArm.IsPressed();
+        bool isArmControl = subMovement != null && subMovement.isArmMode;
 
         if (isArmControl)
         {
@@ -274,7 +276,7 @@ public class ArmMovement : MonoBehaviour
     private void ApplyLevelingTorque()
     {
         Vector3 currentUp = Wrist.transform.up;
-        Vector3 targetUp = transform.up;
+        Vector3 targetUp = Shoulder.transform.up;
 
         Vector3 error = Vector3.Cross(currentUp, targetUp);
 

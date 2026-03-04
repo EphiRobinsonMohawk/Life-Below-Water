@@ -57,9 +57,14 @@ MonoBehaviour:
   Kp_WristLeveling: 10
   Kd_WristLeveling: 1
   MaxWristTorque: 5
+  Kp_Shoulder: 100
+  Kd_Shoulder: 10
+  MaxShoulderTorque: 50
   TargetOpenness: 0
   MaxOpenAngle: -45
   PivotOffset: {x: 0, y: 0, z: 0.5}
+  ROV: {fileID: 0}
+  Shoulder: {fileID: 0}
   Wrist: {fileID: 8069020593066832577}
   HandL: {fileID: 3434554210574404245}
   HandR: {fileID: 9209631002328223063}
@@ -547,7 +552,7 @@ GameObject:
   - component: {fileID: 8758839806929305107}
   - component: {fileID: 8145811684104013137}
   - component: {fileID: 7644080253510132682}
-  - component: {fileID: 8948916980290999166}
+  - component: {fileID: 4913564026376387482}
   m_Layer: 0
   m_Name: Shoulder
   m_TagString: Untagged
@@ -673,18 +678,41 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 94
   m_CollisionDetection: 2
---- !u!138 &8948916980290999166
-FixedJoint:
+--- !u!59 &4913564026376387482
+HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6424022955793360073}
-  serializedVersion: 1
+  serializedVersion: 3
   m_ConnectedBody: {fileID: 6499299579908217246}
   m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0.5}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_ExtendedLimits: 0
+  m_UseAcceleration: 0
+  m_Limits:
+    min: -55.970947
+    max: 53.00609
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -994,8 +1022,8 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: 0
-    max: 181.30655
+    min: 5
+    max: 180
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0

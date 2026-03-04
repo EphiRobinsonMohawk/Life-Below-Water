@@ -1,16 +1,12 @@
 using UnityEngine;
 
-public class Fish : MonoBehaviour
+public enum FishType
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    BaskingShark,
+    Tuna,
+}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public class Fish : Species
+{
+    public FishType fishType = FishType.BaskingShark;
 }
