@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public Canvas plantlifeCanvas;
     public InputManager inputManager;
     public Canvas activeCanvas;
+    public ScoreManager scoreManager;
 
     [Header("First Selection Targets")]
     public GameObject introFirstSelected;
@@ -41,6 +42,12 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+
+    //Timer UI
+
+
+
+    //UI Open and Close functions
     public void ExitCurrentUI()
     {
         if (activeCanvas != null) activeCanvas.enabled = false;
