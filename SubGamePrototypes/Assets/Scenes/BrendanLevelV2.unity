@@ -45326,7 +45326,7 @@ MonoBehaviour:
     shouldLoop: 1
   bgmData:
   - clip: {fileID: 8300000, guid: dc2678fa9c616a84ea0d34c58b2d4b2a, type: 3}
-    song: 0
+    song: 1
     duration: 188
     volume: 0.5
   sfxSource: {fileID: 695684405}
