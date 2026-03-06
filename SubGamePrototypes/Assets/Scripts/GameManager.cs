@@ -15,17 +15,20 @@ public class GameManager : MonoBehaviour
     {
         cameraManager.CameraControl();
         subMovement.HercCamControl();
-        if (inputManager.state != InputManager.InputState.Hercules)
+       /* if (inputManager.state != InputManager.InputState.Hercules)
         {
             inputManager.InputHandling();
         }
+       */
+
        
     }
     void FixedUpdate()
     {
-        if (inputManager.state == InputManager.InputState.Hercules)
-        {
-            inputManager.InputHandling();
-        }
+        inputManager.InputHandling();
+        /* if (inputManager.state == InputManager.InputState.Hercules)
+         {
+             inputManager.InputHandling();
+         }*/
     }
 }
