@@ -1,8 +1,15 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class SubMovement : MonoBehaviour
 {
+    //Events
+    public UnityEvent onEnterHerculesFirstPersonView;
+    public UnityEvent onExitHerculesFirstPersonView;
+    public UnityEvent onExitHercules;
+
+    //References
     public Rigidbody rb;
     public float moveSpeed = 1f;
     public float rotForce = 0.25f;
@@ -32,6 +39,7 @@ public class SubMovement : MonoBehaviour
 
     void Start()
     {
+        // Register Inputs
         hMovement = InputSystem.actions.FindAction("ROV/Move");
         vMovement = InputSystem.actions.FindAction("ROV/VMove");
         roll = InputSystem.actions.FindAction("ROV/Roll");
@@ -43,7 +51,6 @@ public class SubMovement : MonoBehaviour
         thirdpersonCam = InputSystem.actions.FindAction("ROV/ThirdPersonCam");
         camView = InputSystem.actions.FindAction("ROV/CamView");
         exit = InputSystem.actions.FindAction("ROV/Exit");
-        stabilize = InputSystem.actions.FindAction("ROV/Stabilize");
         stabilize = InputSystem.actions.FindAction("ROV/Stabilize");
         _toggleArmAction = InputSystem.actions.FindAction("ROV/ToggleArm");
     }
@@ -140,6 +147,7 @@ public class SubMovement : MonoBehaviour
                 controllingHerc = false;
                 inputManager.state = InputManager.InputState.ControlRoom;
                 cameraManager.activeCamera = CameraManager.ActiveCamera.Control;
+                onExitHercules.Invoke();
             }
 
             //Change Hercules Camera View
@@ -166,21 +174,20 @@ public class SubMovement : MonoBehaviour
             {
                 if (!cameraView)
                 {
+                    onEnterHerculesFirstPersonView.Invoke();
                     cameraManager.activeCamera = CameraManager.ActiveCamera.Front;
                     cameraView = true;
                 }
                 else
                 {
+                    onExitHerculesFirstPersonView.Invoke();
                     cameraManager.activeCamera = CameraManager.ActiveCamera.Control;
                     cameraView = false;
                 }
 
             }
 
-
-           
-            
         }
-        
+
     }
 }

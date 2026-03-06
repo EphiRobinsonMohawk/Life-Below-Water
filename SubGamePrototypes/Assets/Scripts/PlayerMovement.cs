@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
                 if(interact.IsPressed())
                 {
                     inputManager.state = InputManager.InputState.Hercules;
-                    interactionUI.SetActive(false);
+                    interactionText.text = "Press Select for a First Person View";
                 }
             }
             else if (hit.collider.CompareTag("Journal"))
@@ -57,18 +57,30 @@ public class PlayerMovement : MonoBehaviour
                 {
                     inputManager.state = InputManager.InputState.Menus;
                     uiManager.OpenJournal();
-                    interactionUI.SetActive(false);
+                    HideInteractionUI();
                 }
             }
             else
             {
-                interactionUI.SetActive(false);
+                HideInteractionUI();
             }
         }
         else
         {
-            interactionUI.SetActive(false);
+            HideInteractionUI();
         }
 
+    }
+
+    public void ShowExitROV()
+    {
+        interactionText.text = "Press Start to exit Hercules";
+        interactionUI.SetActive(true);
+    }
+
+    public void HideInteractionUI()
+    {
+        Debug.Log("Hiding interaction UI");
+        interactionUI.SetActive(false);
     }
 }
