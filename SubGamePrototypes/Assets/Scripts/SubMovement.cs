@@ -123,11 +123,11 @@ public class SubMovement : MonoBehaviour
             //jetTimer = true;
             if (v != 0)
             {
-                audioManager.PlayMovementEffect(audioManager.sfxsData[12]);
+                audioManager.PlayMovementEffect(audioManager.sfxsData[11]);
             }
             else if (h > 0)
             {
-                audioManager.PlayMovementEffect(audioManager.sfxsData[11]);
+                audioManager.PlayMovementEffect(audioManager.sfxsData[10]);
             }
             else if (h < 0)
             {
