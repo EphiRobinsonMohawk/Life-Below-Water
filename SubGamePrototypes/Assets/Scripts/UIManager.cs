@@ -80,7 +80,6 @@ public class UIManager : MonoBehaviour
         activeCanvas.enabled = false;
         fundCanvas.enabled = true;
         activeCanvas = fundCanvas;
-        checkbookScript.UpdateCheckbook();
         SetSelected(fundFirstSelected);
     }
 

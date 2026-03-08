@@ -18056,9 +18056,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb3830d19f8ebb439d42633bea95d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Checkbook
-  <reasons>k__BackingField: []
-  scoreManager: {fileID: 0}
-  checkbookEntryPrefab: {fileID: 1514139491323045562, guid: 581684da4cfa9fa4aa70c2973e8af691, type: 3}
+  scoreManager: {fileID: 791415636}
+  checkbookEntryPrefab: {fileID: 5780964034254146694, guid: 581684da4cfa9fa4aa70c2973e8af691, type: 3}
   container: {fileID: 1424841545}
 --- !u!1 &1488303105 stripped
 GameObject:
