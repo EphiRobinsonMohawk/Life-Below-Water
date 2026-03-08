@@ -15,5 +15,18 @@ public class Invertebrate : Species
     void Start()
     {
         Type = SpeciesType.Invertebrate;
+
+        switch (invertebrateType)
+        {
+            case InvertebrateType.Clam:
+                speciesName = "Clam";
+                break;
+            case InvertebrateType.Starfish:
+                speciesName = "Starfish";
+                break;
+            case InvertebrateType.Crab:
+                speciesName = "Crab";
+                break;
+        }
     }
 }

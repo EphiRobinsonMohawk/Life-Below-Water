@@ -14,6 +14,8 @@ public class Species : MonoBehaviour
     public bool hasBeenRecorded => JournalManager.Instance != null && JournalManager.Instance.IsSpeciesIdentified(this);
     public float maximumPhotoDistance = 10f;
 
+    public string speciesName = "";
+
     [Header("Photography Settings")]
     public Vector3 photoBoundsCenter;
     public Vector3 photoBoundsSize = Vector3.one;

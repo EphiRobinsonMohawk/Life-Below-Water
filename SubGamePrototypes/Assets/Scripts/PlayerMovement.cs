@@ -7,8 +7,11 @@ public class PlayerMovement : MonoBehaviour
     public float mouseSens = 2f;
     float cameraVertRot;
     public Transform player;
+
+    // Interaction Popup
     public GameObject interactionUI;
     public TMP_Text interactionText;
+
     public InputManager inputManager;
     public UIManager uiManager;
     public InputAction look;
@@ -80,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void HideInteractionUI()
     {
-        Debug.Log("Hiding interaction UI");
+        //Debug.Log("Hiding interaction UI");
         interactionUI.SetActive(false);
     }
 }

@@ -18,7 +18,7 @@ public class JournalManager : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject); // persist between scenes
+        //DontDestroyOnLoad(gameObject); // persist between scenes
     }
 
     public void RecordSpecies(Species species)
