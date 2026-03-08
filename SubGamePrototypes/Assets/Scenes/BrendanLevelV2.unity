@@ -776,6 +776,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -1063,6 +1064,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -1154,6 +1156,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -1441,6 +1444,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -1733,6 +1737,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -2157,6 +2162,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -3230,6 +3236,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -3677,6 +3684,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -4101,6 +4109,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -4145,6 +4154,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -4941,6 +4951,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -4985,6 +4996,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -5344,6 +5356,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -10873,6 +10886,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -11447,6 +11461,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -11846,6 +11861,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -12133,6 +12149,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -12177,6 +12194,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -12464,6 +12482,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -13135,6 +13154,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -13422,6 +13442,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -13466,6 +13487,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -13510,6 +13532,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -13939,6 +13962,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -14141,6 +14165,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -14428,6 +14453,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -14870,6 +14896,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -16116,6 +16143,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -16286,6 +16314,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -17003,6 +17032,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -17403,6 +17433,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -17532,6 +17563,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -17810,6 +17842,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -18097,6 +18130,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -18216,6 +18250,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -18960,6 +18995,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -19009,6 +19045,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -19777,6 +19814,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -20442,6 +20480,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -20729,6 +20768,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -21370,6 +21410,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -21657,6 +21698,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -22034,6 +22076,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -22321,6 +22364,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -22745,6 +22789,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -23280,6 +23325,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -23567,6 +23613,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -28426,6 +28473,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 2
@@ -28775,6 +28823,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -29448,6 +29497,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -29735,6 +29785,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -29779,6 +29830,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -29823,6 +29875,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -29920,6 +29973,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -30207,6 +30261,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -30251,6 +30306,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -30351,6 +30407,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -30738,6 +30795,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -30884,6 +30942,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -30928,6 +30987,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -30988,7 +31048,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 29e5d2d4b1095264caf0f87108c9a272, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -31103,6 +31163,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 2
@@ -31198,6 +31259,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -31401,6 +31463,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -31688,6 +31751,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -31807,6 +31871,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -31902,6 +31967,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -31946,6 +32012,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -32394,6 +32461,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -32882,6 +32950,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -33169,6 +33238,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -33325,6 +33395,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -33633,6 +33704,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -33920,6 +33992,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -34611,6 +34684,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136805295}
   m_CullTransparentMesh: 1
+--- !u!1001 &1138994214
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1755165656}
+    m_Modifications:
+    - target: {fileID: 4386339537259540962, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      propertyPath: m_Name
+      value: ExpeditionTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523362828432573558, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1521.6759
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523362828432573558, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 851.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523362828432573558, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -291.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523362828432573558, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9899404
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523362828432573558, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.14148517
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523362828432573558, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523362828432573558, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523362828432573558, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -16.268
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523362828432573558, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523362828432573558, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5421764481488925230, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7767829403766699456, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
 --- !u!1 &1144002998
 GameObject:
   m_ObjectHideFlags: 0
@@ -35350,6 +35486,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -35897,6 +36034,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -36184,6 +36322,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -36717,6 +36856,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -36761,6 +36901,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -37125,6 +37266,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -37249,6 +37391,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -37725,6 +37868,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -38341,6 +38485,7 @@ MonoBehaviour:
   Type: 1
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 0
@@ -38835,6 +38980,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -39687,6 +39833,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -39974,6 +40121,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -41116,6 +41264,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -41493,6 +41642,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -41588,6 +41738,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -42087,6 +42238,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -42472,6 +42624,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -42759,6 +42912,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -43046,6 +43200,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -43069,6 +43224,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -43967,6 +44123,7 @@ Transform:
   - {fileID: 1023148769}
   - {fileID: 483952601}
   - {fileID: 973029478}
+  - {fileID: 1546436333}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1443557323 stripped
@@ -43994,6 +44151,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -44521,6 +44679,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -44808,6 +44967,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -45015,6 +45175,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -45302,6 +45463,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -45356,6 +45518,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -45379,6 +45542,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -45494,6 +45658,96 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538581254}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1546436332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1546436333}
+  - component: {fileID: 1546436334}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1546436333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546436332}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1441890489}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1546436334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546436332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a257bf75294c22448d186b96d56fa9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
+  funds: 10000
+  startingFund: 10000
+  timeRemaining: 0
+  startingTime: 360
+  timerStarted: 0
+  gameOver: 0
+  overtime: 0
+  OnFundsChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnGameOver:
+    m_PersistentCalls:
+      m_Calls: []
+  OnOvertime:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTimeChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1595159850}
+        m_TargetAssemblyTypeName: ExpeditionTimer, Assembly-CSharp
+        m_MethodName: UpdateTimerText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnGameStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1551367530
 GameObject:
   m_ObjectHideFlags: 0
@@ -45651,6 +45905,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 0
@@ -46225,6 +46480,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 0
@@ -46344,6 +46600,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -46631,6 +46888,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -47404,6 +47662,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -47540,6 +47799,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595015657}
   m_CullTransparentMesh: 1
+--- !u!114 &1595159850 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2292597592056890190, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+  m_PrefabInstance: {fileID: 1138994214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90afb1217ee1aee429d70c0448e49346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExpeditionTimer
+--- !u!4 &1595159854 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8523362828432573558, guid: 318d292a8b7842e4f95a657b9ea77c3d, type: 3}
+  m_PrefabInstance: {fileID: 1138994214}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1598516647 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5605288466553677961, guid: b5a1cd5ea80529645a9eb067d311f181, type: 3}
@@ -47829,6 +48104,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -48142,6 +48418,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -48298,6 +48575,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -48417,6 +48695,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -49110,6 +49389,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -49483,6 +49763,7 @@ MonoBehaviour:
   Type: 1
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 0
@@ -49770,6 +50051,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -50179,6 +50461,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -55302,6 +55585,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -55325,6 +55609,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -55612,6 +55897,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -55656,6 +55942,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -55791,6 +56078,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 0
@@ -55835,6 +56123,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -56122,6 +56411,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -56729,6 +57019,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -56773,6 +57064,7 @@ Transform:
   - {fileID: 496270379}
   - {fileID: 1191946318}
   - {fileID: 61450047}
+  - {fileID: 1595159854}
   - {fileID: 44875613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -56817,6 +57109,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -57241,6 +57534,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -57336,6 +57630,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 0
@@ -57840,6 +58135,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -58119,6 +58415,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -58238,6 +58535,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -58804,6 +59102,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -59091,6 +59390,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -59717,6 +60017,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -59740,6 +60041,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -59763,6 +60065,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 2
@@ -60077,6 +60380,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -60364,6 +60668,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -60459,6 +60764,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -60746,6 +61052,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -61136,6 +61443,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -61402,6 +61710,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 0
@@ -62222,6 +62531,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 20
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0.48}
   photoBoundsSize: {x: 1, y: 1, z: 8.86}
   fishType: 0
@@ -62920,6 +63230,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -63340,6 +63651,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -63384,6 +63696,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -63835,6 +64148,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -63954,6 +64268,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -64003,6 +64318,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -64188,6 +64504,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -64211,6 +64528,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -64347,6 +64665,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 0
@@ -64812,6 +65131,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -65099,6 +65419,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -65218,6 +65539,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -65505,6 +65827,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -65845,6 +66168,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -65868,6 +66192,7 @@ MonoBehaviour:
   Type: 2
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
@@ -66398,6 +66723,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -66685,6 +67011,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -67177,6 +67504,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -67464,6 +67792,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -67751,6 +68080,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
@@ -68052,6 +68382,7 @@ MonoBehaviour:
   Type: 0
   isSampleable: 1
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1

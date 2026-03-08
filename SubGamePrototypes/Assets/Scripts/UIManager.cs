@@ -8,20 +8,26 @@ public class UIManager : MonoBehaviour
 {
     // Main UI Canvases
     [Header("Canvas References")]
-    public Canvas journalCanvas;
+    public Canvas galleryCanvas;
     public Canvas introductionCanvas;
     public Canvas fishJournalCanvas;
     public Canvas plantlifeCanvas;
     public Canvas activeCanvas;
+    public Canvas fundCanvas;
+    public Canvas expeditionCanvas;
+    public Canvas settingsCanvas;
 
     // Popups
     public TextMeshProUGUI speciesPopUp;
 
     [Header("First Selection Targets")]
     public GameObject introFirstSelected;
-    public GameObject journalFirstSelected;
+    public GameObject galleryFirstSelected;
     public GameObject fishJournalFirstSelected;
     public GameObject plantlifeFirstSelected;
+    public GameObject fundFirstSelected;
+    public GameObject settingsFirstSelected;
+    public GameObject expeditionFirstSelected;
 
     //References
     [Header("Other References")]
@@ -31,9 +37,13 @@ public class UIManager : MonoBehaviour
 
     public void Start()
     {
-        journalCanvas.enabled = false;
+        galleryCanvas.enabled = false;
         fishJournalCanvas.enabled = false;
         plantlifeCanvas.enabled = false;
+        fundCanvas.enabled = false;
+        settingsCanvas.enabled = false;
+        expeditionCanvas.enabled = false;
+
         introductionCanvas.enabled = true;
         activeCanvas = introductionCanvas;
 
@@ -60,6 +70,29 @@ public class UIManager : MonoBehaviour
         inputManager.state = InputManager.InputState.ControlRoom;
     }
 
+    public void OpenCheckbook()
+    {
+        activeCanvas.enabled = false;
+        fundCanvas.enabled = true;
+        activeCanvas = fundCanvas;
+        SetSelected(fundFirstSelected);
+    }
+
+    public void OpenSettings()
+    {
+        activeCanvas.enabled = false;
+        settingsCanvas.enabled = true;
+        activeCanvas = settingsCanvas;
+        SetSelected(settingsFirstSelected);
+    }
+
+    public void OpenExpeditions()
+    {
+        activeCanvas.enabled = false;
+        expeditionCanvas.enabled = true;
+        activeCanvas = expeditionCanvas;
+        SetSelected(expeditionFirstSelected);
+    }
     public void OpenFishJournal()
     {
         activeCanvas.enabled = false;
@@ -76,12 +109,12 @@ public class UIManager : MonoBehaviour
         SetSelected(plantlifeFirstSelected);
     }
 
-    public void OpenJournal()
+    public void OpenGallery()
     {
         if (activeCanvas != null) activeCanvas.enabled = false;
-        journalCanvas.enabled = true;
-        activeCanvas = journalCanvas;
-        SetSelected(journalFirstSelected);
+        galleryCanvas.enabled = true;
+        activeCanvas = galleryCanvas;
+        SetSelected(galleryFirstSelected);
     }
 
     private void SetSelected(GameObject target)

@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
                 if (interact.IsPressed())
                 {
                     inputManager.state = InputManager.InputState.Menus;
-                    uiManager.OpenJournal();
+                    uiManager.OpenExpeditions();
                     HideInteractionUI();
                 }
             }
