@@ -114,15 +114,33 @@ public class SubMovement : MonoBehaviour
         float rollInput = roll.ReadValue<Vector2>().x;
         rb.AddRelativeTorque(Vector3.left * rollInput * rotForce);
 
-        /*
+        
         //SFX
-        if (Input.GetAxis("HorizontalMovement") != 0 && !jetTimer || Input.GetAxis("VerticalMovement") != 0 && !jetTimer)
+        if (h != 0 && !audioManager.movementSource.isPlaying || v != 0 && !audioManager.movementSource.isPlaying)
         {
-            jetTimer = true;
-            audioManager.PlayOneShotSFX(audioManager.sfxsData[0]);
+            //Debug.Log(h);
+            //Debug.Log(v);
+            //jetTimer = true;
+            if (v != 0)
+            {
+                audioManager.PlayMovementEffect(audioManager.sfxsData[12]);
+            }
+            else if (h > 0)
+            {
+                audioManager.PlayMovementEffect(audioManager.sfxsData[11]);
+            }
+            else if (h < 0)
+            {
+                audioManager.PlayMovementEffect(audioManager.sfxsData[9]);
+            }
+        }
+        else if (h == 0 && v == 0 && audioManager.movementSource.isPlaying)
+        {
+            audioManager.PauseMovementEffect();
         }
 
         //Timers
+        /*
         //Movement audio timer.
         if (jetTimer)
         {
