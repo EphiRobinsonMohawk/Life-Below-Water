@@ -5,9 +5,14 @@ using System.Threading.Tasks;
 using UnityEngine.Rendering;
 using Unity.Collections;
 using UnityEngine.Experimental.Rendering;
+using UnityEngine.Events;
+using System.Collections.Generic;
 
 public class Photography : MonoBehaviour
 {
+    [HideInInspector]
+    public UnityEvent<List<Species>> onSpeciesIdentified = new UnityEvent<List<Species>>();
+
     public Camera photoCamera;
     public int photoWidth = 1920;
     public int photoHeight = 1080;
@@ -64,6 +69,7 @@ public class Photography : MonoBehaviour
     {
         Species[] allSpecies = Object.FindObjectsByType<Species>(FindObjectsSortMode.None);
         Plane[] frustumPlanes = GeometryUtility.CalculateFrustumPlanes(photoCamera);
+        List<Species> identifiedSpecies = new List<Species>();
 
         foreach (Species species in allSpecies)
         {
@@ -86,9 +92,10 @@ public class Photography : MonoBehaviour
             // 4. Multi-point visibility check (occlusion)
             if (IsSpeciesVisible(species, worldBounds))
             {
+                identifiedSpecies.Add(species);
                 if (!species.hasBeenRecorded)
                 {
-                    species.hasBeenRecorded = true;
+                    JournalManager.Instance.RecordSpecies(species);
                     Debug.Log($"Identified new species: {species.gameObject.name}");
                 }
                 else
@@ -97,6 +104,9 @@ public class Photography : MonoBehaviour
                 }
             }
         }
+
+        onSpeciesIdentified.Invoke(identifiedSpecies);
+
     }
 
     private bool IsSpeciesVisible(Species species, Bounds worldBounds)

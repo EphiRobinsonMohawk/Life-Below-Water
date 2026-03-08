@@ -11,7 +11,7 @@ public class Species : MonoBehaviour
 {
     public SpeciesType Type = SpeciesType.Plant;
     public bool isSampleable = true;
-    public bool hasBeenRecorded = false;
+    public bool hasBeenRecorded => JournalManager.Instance != null && JournalManager.Instance.IsSpeciesIdentified(this);
     public float maximumPhotoDistance = 10f;
 
     [Header("Photography Settings")]
