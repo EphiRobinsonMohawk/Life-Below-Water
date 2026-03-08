@@ -8,15 +8,19 @@ public class UIManager : MonoBehaviour
     public Canvas introductionCanvas;
     public Canvas fishJournalCanvas;
     public Canvas plantlifeCanvas;
+    public Canvas fundCanvas;
+    public Checkbook checkbookScript;
     public InputManager inputManager;
     public Canvas activeCanvas;
     public ScoreManager scoreManager;
+
 
     [Header("First Selection Targets")]
     public GameObject introFirstSelected;
     public GameObject journalFirstSelected;
     public GameObject fishJournalFirstSelected;
     public GameObject plantlifeFirstSelected;
+    public GameObject fundFirstSelected;
 
     InputAction cancelAction;
 
@@ -25,6 +29,7 @@ public class UIManager : MonoBehaviour
         journalCanvas.enabled = false;
         fishJournalCanvas.enabled = false;
         plantlifeCanvas.enabled = false;
+        fundCanvas.enabled = false;
         introductionCanvas.enabled = true;
         activeCanvas = introductionCanvas;
 
@@ -68,6 +73,15 @@ public class UIManager : MonoBehaviour
         plantlifeCanvas.enabled = true;
         activeCanvas = plantlifeCanvas;
         SetSelected(plantlifeFirstSelected);
+    }
+
+    public void OpenFundJournal()
+    {
+        activeCanvas.enabled = false;
+        fundCanvas.enabled = true;
+        activeCanvas = fundCanvas;
+        checkbookScript.UpdateCheckbook();
+        SetSelected(fundFirstSelected);
     }
 
     public void OpenJournal()

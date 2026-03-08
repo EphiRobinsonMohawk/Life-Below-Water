@@ -10,6 +10,7 @@ public class SubMovement : MonoBehaviour
     public AudioManager audioManager;
     public InputManager inputManager;
     public CameraManager cameraManager;
+    public ScoreManager scoreManager;
     public float jetAudioCooldown = 1f;
     public float jetTimerMax = 1f;
     public bool jetTimer;
@@ -129,7 +130,6 @@ public class SubMovement : MonoBehaviour
         } */
     }
 
-
     public void HercCamControl()
     {
         if(controllingHerc)
@@ -182,5 +182,12 @@ public class SubMovement : MonoBehaviour
             
         }
         
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+            Debug.Log("Collided changed score");
+            scoreManager.ChangeFunds(-200, "Crashed into terrain!");
+       
     }
 }
