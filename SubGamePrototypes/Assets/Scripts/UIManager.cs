@@ -34,6 +34,7 @@ public class UIManager : MonoBehaviour
     public Photography photography;
     public InputManager inputManager;
     InputAction cancelAction;
+    public AudioManager audioManager;
 
     public void Start()
     {
@@ -76,6 +77,7 @@ public class UIManager : MonoBehaviour
         fundCanvas.enabled = true;
         activeCanvas = fundCanvas;
         SetSelected(fundFirstSelected);
+        audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
     public void OpenSettings()
@@ -84,6 +86,7 @@ public class UIManager : MonoBehaviour
         settingsCanvas.enabled = true;
         activeCanvas = settingsCanvas;
         SetSelected(settingsFirstSelected);
+        audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
     public void OpenExpeditions()
@@ -92,6 +95,7 @@ public class UIManager : MonoBehaviour
         expeditionCanvas.enabled = true;
         activeCanvas = expeditionCanvas;
         SetSelected(expeditionFirstSelected);
+        audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
     public void OpenFishJournal()
     {
@@ -99,6 +103,7 @@ public class UIManager : MonoBehaviour
         fishJournalCanvas.enabled = true;
         activeCanvas = fishJournalCanvas;
         SetSelected(fishJournalFirstSelected);
+        audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
     public void OpenPlantlifeJournal()
@@ -107,6 +112,7 @@ public class UIManager : MonoBehaviour
         plantlifeCanvas.enabled = true;
         activeCanvas = plantlifeCanvas;
         SetSelected(plantlifeFirstSelected);
+        audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
     public void OpenGallery()
@@ -115,6 +121,7 @@ public class UIManager : MonoBehaviour
         galleryCanvas.enabled = true;
         activeCanvas = galleryCanvas;
         SetSelected(galleryFirstSelected);
+        audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
     private void SetSelected(GameObject target)
