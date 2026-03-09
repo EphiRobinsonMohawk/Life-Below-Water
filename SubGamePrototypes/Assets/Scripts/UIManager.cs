@@ -16,6 +16,10 @@ public class UIManager : MonoBehaviour
     public Canvas fundCanvas;
     public Canvas expeditionCanvas;
     public Canvas settingsCanvas;
+    public Canvas lockedTunaCanvas;
+    public Canvas unlockedTunaCanvas;
+    public Canvas lockedBaskingSharkCanvas;
+    public Canvas unlockedBaskingSharkCanvas;
 
     // Popups
     public TextMeshProUGUI speciesPopUp;
@@ -28,6 +32,10 @@ public class UIManager : MonoBehaviour
     public GameObject fundFirstSelected;
     public GameObject settingsFirstSelected;
     public GameObject expeditionFirstSelected;
+    public GameObject lockedTunaFirstSelected;
+    public GameObject unlockedTunaFirstSelected;
+    public GameObject lockedBaskingSharkFirstSelected;
+    public GameObject unlockedBaskingSharkFirstSelected;
 
     //References
     [Header("Other References")]
@@ -45,6 +53,10 @@ public class UIManager : MonoBehaviour
         fundCanvas.enabled = false;
         settingsCanvas.enabled = false;
         expeditionCanvas.enabled = false;
+        lockedTunaCanvas.enabled = false;
+        unlockedTunaCanvas.enabled = false;
+        lockedBaskingSharkCanvas.enabled = false;
+        unlockedBaskingSharkCanvas.enabled = false;
 
         introductionCanvas.enabled = true;
         activeCanvas = introductionCanvas;
@@ -107,9 +119,52 @@ public class UIManager : MonoBehaviour
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
-    public void OpenFishPage(FishType fish)
+    public void OpenUnlockedFishPage(FishType fish)
     {
+        switch (fish)
+        {
+            case FishType.Tuna:
+                activeCanvas.enabled = false;
+                unlockedTunaCanvas.enabled = true;
+                activeCanvas = unlockedTunaCanvas;
+                SetSelected(unlockedTunaFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            case FishType.BaskingShark:
+                activeCanvas.enabled = false;
+                unlockedBaskingSharkCanvas.enabled = true;
+                activeCanvas = unlockedBaskingSharkCanvas;
+                SetSelected(unlockedBaskingSharkFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            default:
+                Debug.Log("fish type not recognized, UI navigation failed");
+                break;
+        }
+    }
 
+    public void OpenLockedFishPage(FishType fish)
+    {
+        switch (fish)
+        {
+            case FishType.Tuna:
+                activeCanvas.enabled = false;
+                lockedTunaCanvas.enabled = true;
+                activeCanvas = lockedTunaCanvas;
+                SetSelected(lockedTunaFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            case FishType.BaskingShark:
+                activeCanvas.enabled = false;
+                lockedBaskingSharkCanvas.enabled = true;
+                activeCanvas = lockedBaskingSharkCanvas;
+                SetSelected(lockedBaskingSharkFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            default:
+                Debug.Log("fish type not recognized, UI navigation failed");
+                break;
+        }
     }
 
     public void OpenPlantlifeJournal()
