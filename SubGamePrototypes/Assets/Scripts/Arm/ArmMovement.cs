@@ -25,6 +25,9 @@ public class ArmMovement : MonoBehaviour
     public float MaxOpenAngle = 45f;
     public Vector3 PivotOffset = Vector3.zero;
 
+    // Front Camera for storage check
+    public Camera frontCamera;
+
     // ROV that the Arm is attached to
     public Rigidbody ROV;
 
@@ -185,41 +188,23 @@ public class ArmMovement : MonoBehaviour
         UpdateGrip();
 
         //Try to store the sample if it's pulled behind and under the camera
-        CheckForStorage();
+        if (_heldObject != null) CheckForStorage();
     }
 
     private void CheckForStorage()
     {
-        if (_heldObject == null || Storage == null) return;
-
         Sample sample = _heldObject.GetComponent<Sample>();
-        if (sample == null) return;
-
-        Camera mainCam = Camera.main;
-        if (mainCam == null) return;
+        if (sample == null)
+        {
+            Debug.Log("Held object is not a sample, cannot store.");
+            return;
+        }
 
         // Below the view
-        Vector3 viewportPos = mainCam.WorldToViewportPoint(_heldObject.position);
+        Vector3 viewportPos = frontCamera.WorldToViewportPoint(_heldObject.position);
         bool isBelowFrustum = viewportPos.y < 0;
 
-        // Z-axis check: Between arm position and camera
-        float sampleDepth = mainCam.transform.InverseTransformPoint(_heldObject.position).z;
-        float armBaseDepth = mainCam.transform.InverseTransformPoint(transform.position).z;
-
-        // Between means sampleDepth is greater than camera (0) but less than arm base (assuming arm is forward)
-        // Or simply between the two values.
-        bool isBetweenArmAndCam = false;
-        if (armBaseDepth > 0)
-        {
-            isBetweenArmAndCam = sampleDepth > 0 && sampleDepth < armBaseDepth;
-        }
-        else
-        {
-            // If arm is behind camera for some reason
-            isBetweenArmAndCam = sampleDepth < 0 && sampleDepth > armBaseDepth;
-        }
-
-        if (isBelowFrustum && isBetweenArmAndCam)
+        if (isBelowFrustum)
         {
             if (Storage.TryStoreSample(sample))
             {

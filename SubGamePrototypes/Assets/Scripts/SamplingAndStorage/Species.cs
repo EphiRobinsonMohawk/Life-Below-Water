@@ -50,7 +50,7 @@ public class Species : MonoBehaviour
         Gizmos.DrawWireCube(photoBoundsCenter, photoBoundsSize);
     }
 
-    private void Start()
+    private void Awake()
     {
         if (isSampleable)
         {
