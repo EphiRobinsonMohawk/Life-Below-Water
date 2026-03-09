@@ -479,11 +479,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6518559476152981740, guid: 7b99cc9e601185e4eab4e04ecfa82710, type: 3}
   m_PrefabInstance: {fileID: 2668036418928128465}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &14733918 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 928031414}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &15279352
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,11 +598,6 @@ Transform:
   - {fileID: 1965481899}
   m_Father: {fileID: 833596221}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &18563742 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8525132725946183866, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
-  m_PrefabInstance: {fileID: 1967829949}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &22936501 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3698573597369551304, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
@@ -1897,11 +1887,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &51284197 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 2015568089}
-  m_PrefabAsset: {fileID: 0}
 --- !u!223 &51743117 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 8929237353929331196, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
@@ -2248,14 +2233,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 548451115}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &57355642 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 57355641}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &60022794
@@ -3810,11 +3792,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2032584033}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
+--- !u!4 &182239456 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3379002338305276162, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
+  m_PrefabInstance: {fileID: 182239455}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &189784917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11482,11 +11466,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &380997581 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 1337621597}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &382497943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12786,14 +12765,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 597318394}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &460477051 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 460477050}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &472271279 stripped
@@ -13740,20 +13716,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1634657916}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &523231830 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 523231829}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &525415471 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1493144739147319881, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-  m_PrefabInstance: {fileID: 1781261461}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &529421159
 PrefabInstance:
@@ -14250,14 +14218,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1106625848}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &536833475 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 536833474}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &540210049
@@ -14372,30 +14337,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540210049}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &548451114 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 57355641}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &548451115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548451114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1001 &551995150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14684,20 +14625,10 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &552010376 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 1000396740}
-  m_PrefabAsset: {fileID: 0}
 --- !u!223 &563571037 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 5169321949585494501, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
   m_PrefabInstance: {fileID: 7201736898502964907}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &566473110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 2102678588}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &578781335
 PrefabInstance:
@@ -14824,30 +14755,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 25055757763579973, guid: 709d18ad4b9f15f42b134eb17874e83b, type: 3}
   m_PrefabInstance: {fileID: 7825690415066918498}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &597318393 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 460477050}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &597318394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597318393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1001 &601829294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15571,14 +15478,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 951547654}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &614041802 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 614041801}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &623771831
@@ -15869,11 +15773,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &631382374 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 1460519747}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &634095470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3698573597369551304, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
@@ -16156,11 +16055,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1786193856}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
+--- !u!4 &680611890 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3379002338305276162, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
+  m_PrefabInstance: {fileID: 680611889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &680955053
 GameObject:
   m_ObjectHideFlags: 0
@@ -17817,14 +17718,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1407804735}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &754559278 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 754559277}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &756024851
@@ -19432,11 +19330,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 956605399}
   m_SourcePrefab: {fileID: 100100000, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
---- !u!4 &807502428 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1493144739147319881, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-  m_PrefabInstance: {fileID: 680611889}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &815270552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24849,30 +24742,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1 &829368947 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9008478705292683776, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
-  m_PrefabInstance: {fileID: 1967829949}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &829368948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829368947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 2
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -25400,14 +25269,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9008478705292683776, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 965968279}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
 --- !u!4 &846983202 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8525132725946183866, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7522433865193246577, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
   m_PrefabInstance: {fileID: 846983201}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &861681393
@@ -26594,11 +26460,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &910369078 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 966926962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &928031414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26666,35 +26527,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 928031416}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &928031415 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 928031414}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &928031416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14733918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1 &929115005
 GameObject:
   m_ObjectHideFlags: 0
@@ -27104,30 +26943,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 7862980534932049258, guid: 5d42dfd698e358948928c77654de6904, type: 3}
   m_PrefabInstance: {fileID: 8932446411237577670}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &951547653 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 614041801}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &951547654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951547653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!223 &953879171 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 2952183577642243725, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
@@ -27250,40 +27065,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1717950321}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
 --- !u!4 &963846203 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1493144739147319881, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3379002338305276162, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
   m_PrefabInstance: {fileID: 963846202}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &965968278 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9008478705292683776, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
-  m_PrefabInstance: {fileID: 846983201}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &965968279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965968278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 2
 --- !u!1001 &966926962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27351,35 +27139,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 966926964}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &966926963 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 966926962}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &966926964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910369078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1 &973029477
 GameObject:
   m_ObjectHideFlags: 0
@@ -28062,35 +27828,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1000396742}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &1000396741 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 1000396740}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1000396742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552010376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1 &1002190474 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3698573597369551304, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
@@ -29459,30 +29203,6 @@ Transform:
   - {fileID: 881450011}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1106625847 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 536833474}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1106625848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1106625847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1001 &1109090145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32179,14 +31899,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1537126574}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &1177104449 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 1177104448}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1178155471
@@ -32982,11 +32699,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &1225633178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 1488122314}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1236819062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33380,11 +33092,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9008478705292683776, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1850681045}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
+--- !u!4 &1253505704 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7522433865193246577, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
+  m_PrefabInstance: {fileID: 1253505703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1255734752
 GameObject:
   m_ObjectHideFlags: 0
@@ -36029,35 +35743,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1337621599}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &1337621598 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 1337621597}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1337621599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380997581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1001 &1360345679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36346,6 +36038,63 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
+--- !u!1001 &1360887759
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6655721156970641822, guid: d479bbebaaa6609458980e587e977515, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1071.6692
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655721156970641822, guid: d479bbebaaa6609458980e587e977515, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 515.03296
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655721156970641822, guid: d479bbebaaa6609458980e587e977515, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 657.3919
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655721156970641822, guid: d479bbebaaa6609458980e587e977515, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655721156970641822, guid: d479bbebaaa6609458980e587e977515, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655721156970641822, guid: d479bbebaaa6609458980e587e977515, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655721156970641822, guid: d479bbebaaa6609458980e587e977515, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655721156970641822, guid: d479bbebaaa6609458980e587e977515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655721156970641822, guid: d479bbebaaa6609458980e587e977515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655721156970641822, guid: d479bbebaaa6609458980e587e977515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498003623650125817, guid: d479bbebaaa6609458980e587e977515, type: 3}
+      propertyPath: m_Name
+      value: Environment
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d479bbebaaa6609458980e587e977515, type: 3}
 --- !u!1001 &1364399997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37047,30 +36796,6 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 2270686136580766825, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
   m_PrefabInstance: {fileID: 7201736898502964907}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1407804734 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 754559277}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1407804735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407804734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1001 &1408795824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37974,30 +37699,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6679308486139270447, guid: 9369ffd08d23bd345bbd4903146e1898, type: 3}
   m_PrefabInstance: {fileID: 837343818}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1449037638 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-  m_PrefabInstance: {fileID: 1781261461}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1449037639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1449037638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1001 &1449068901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38420,14 +38121,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1838901426}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
 --- !u!4 &1456715551 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1493144739147319881, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3379002338305276162, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
   m_PrefabInstance: {fileID: 1456715550}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1460519747
@@ -38497,35 +38195,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1460519749}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &1460519748 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 1460519747}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1460519749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631382374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1001 &1464311179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38993,35 +38669,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1488122316}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &1488122315 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 1488122314}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1488122316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225633178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1001 &1504808136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39310,11 +38964,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &1511403210 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-  m_PrefabInstance: {fileID: 1866049911}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1515616208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6679308486139270447, guid: 9369ffd08d23bd345bbd4903146e1898, type: 3}
@@ -39365,30 +39014,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &1537126573 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 1177104448}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1537126574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537126573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1 &1538581254
 GameObject:
   m_ObjectHideFlags: 0
@@ -41688,11 +41313,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &1603475113 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 1997103431}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1609070698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7126609758227715564, guid: c73fa07f68115c247b35b571545cca54, type: 3}
@@ -41743,7 +41363,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721687308}
   serializedVersion: 5
-  m_Mass: 0.0000001
+  m_Mass: 0.0001
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -42050,30 +41670,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &1634657915 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 523231829}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1634657916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634657915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1001 &1640365575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43225,16 +42821,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &1686809644 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-  m_PrefabInstance: {fileID: 2055218803}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1689408377 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9008478705292683776, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
-  m_PrefabInstance: {fileID: 1253505703}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1704597391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48647,30 +48233,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &1717950320 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-  m_PrefabInstance: {fileID: 963846202}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1717950321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1717950320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1001 &1719150196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50824,11 +50386,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1449037639}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
+--- !u!4 &1781261462 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3379002338305276162, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
+  m_PrefabInstance: {fileID: 1781261461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1784073734 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1672130704412181584, guid: 8f4b1be6777a11d4485d47caa12baa3a, type: 3}
@@ -50882,30 +50446,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &1786193855 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-  m_PrefabInstance: {fileID: 680611889}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1786193856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786193855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1 &1795728352
 GameObject:
   m_ObjectHideFlags: 0
@@ -51306,11 +50846,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &1809991398 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-  m_PrefabInstance: {fileID: 182239455}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1812310674 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6216519638743604056, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
@@ -52409,54 +51944,6 @@ MonoBehaviour:
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   fishType: 1
---- !u!1 &1838901425 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-  m_PrefabInstance: {fileID: 1456715550}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1838901426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838901425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
---- !u!4 &1850681044 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8525132725946183866, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
-  m_PrefabInstance: {fileID: 1253505703}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1850681045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689408377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 2
 --- !u!1 &1852383886 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3698573597369551304, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
@@ -52857,35 +52344,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1866049913}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
 --- !u!4 &1866049912 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1493144739147319881, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3379002338305276162, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
   m_PrefabInstance: {fileID: 1866049911}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1866049913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511403210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1001 &1868494630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54227,14 +53692,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2113595341}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
 --- !u!4 &1947039092 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1493144739147319881, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3379002338305276162, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
   m_PrefabInstance: {fileID: 1947039091}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1962400382
@@ -54623,11 +54085,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9008478705292683776, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 829368948}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
+--- !u!4 &1967829950 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7522433865193246577, guid: 143245ded3a0a854f939ea327c47f5d1, type: 3}
+  m_PrefabInstance: {fileID: 1967829949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1968984437
 GameObject:
   m_ObjectHideFlags: 0
@@ -54802,8 +54266,8 @@ Transform:
   - {fileID: 1947039092}
   - {fileID: 1456715551}
   - {fileID: 846983202}
-  - {fileID: 1850681044}
-  - {fileID: 18563742}
+  - {fileID: 1253505704}
+  - {fileID: 1967829950}
   - {fileID: 1616756383}
   - {fileID: 1443557323}
   - {fileID: 1515616208}
@@ -54820,9 +54284,9 @@ Transform:
   - {fileID: 1177104449}
   - {fileID: 14384660}
   - {fileID: 588024540}
-  - {fileID: 807502428}
-  - {fileID: 525415471}
-  - {fileID: 2032584032}
+  - {fileID: 680611890}
+  - {fileID: 1781261462}
+  - {fileID: 182239456}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1970832904
@@ -55767,35 +55231,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1997103433}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &1997103432 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 1997103431}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1997103433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603475113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1 &2001372365 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7045854412948300586, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
@@ -56128,59 +55570,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2015568091}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &2015568090 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 2015568089}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2015568091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51284197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
---- !u!4 &2032584032 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1493144739147319881, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-  m_PrefabInstance: {fileID: 182239455}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2032584033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809991398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1 &2037502328 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6339514671433060245, guid: 9369ffd08d23bd345bbd4903146e1898, type: 3}
@@ -56690,35 +56086,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2055218805}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &2055218804 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 2055218803}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2055218805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686809644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!114 &2059639347 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6564522365403647048, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
@@ -57146,69 +56520,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1968984438}
     m_Modifications:
-    - target: {fileID: 635644917278890818, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.07402135
-      objectReference: {fileID: 0}
-    - target: {fileID: 635644917278890818, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.14813863
-      objectReference: {fileID: 0}
-    - target: {fileID: 635644917278890818, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.69215137
-      objectReference: {fileID: 0}
-    - target: {fileID: 635644917278890818, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 635644917278890818, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.72175246
-      objectReference: {fileID: 0}
-    - target: {fileID: 635644917278890818, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -92.399
-      objectReference: {fileID: 0}
-    - target: {fileID: 2380109454853633243, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.07402135
-      objectReference: {fileID: 0}
-    - target: {fileID: 2380109454853633243, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.14813863
-      objectReference: {fileID: 0}
-    - target: {fileID: 2380109454853633243, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.69215137
-      objectReference: {fileID: 0}
-    - target: {fileID: 2380109454853633243, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2380109454853633243, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.72175246
-      objectReference: {fileID: 0}
-    - target: {fileID: 2380109454853633243, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -92.399
-      objectReference: {fileID: 0}
     - target: {fileID: 3698573597369551304, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
       propertyPath: m_Name
       value: Tuna (25)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4042026552398549874, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.52778465
-      objectReference: {fileID: 0}
-    - target: {fileID: 4042026552398549874, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.52778465
-      objectReference: {fileID: 0}
-    - target: {fileID: 4042026552398549874, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.52778465
       objectReference: {fileID: 0}
     - target: {fileID: 4042026552398549874, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -57250,182 +56564,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4636564882574759889, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.07402135
-      objectReference: {fileID: 0}
-    - target: {fileID: 4636564882574759889, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.14813863
-      objectReference: {fileID: 0}
-    - target: {fileID: 4636564882574759889, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.69215137
-      objectReference: {fileID: 0}
-    - target: {fileID: 4636564882574759889, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4636564882574759889, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.72175246
-      objectReference: {fileID: 0}
-    - target: {fileID: 4636564882574759889, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -92.399
-      objectReference: {fileID: 0}
-    - target: {fileID: 5466144678838834693, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.07402135
-      objectReference: {fileID: 0}
-    - target: {fileID: 5466144678838834693, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.14813863
-      objectReference: {fileID: 0}
-    - target: {fileID: 5466144678838834693, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.69215137
-      objectReference: {fileID: 0}
-    - target: {fileID: 5466144678838834693, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5466144678838834693, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.72175246
-      objectReference: {fileID: 0}
-    - target: {fileID: 5466144678838834693, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -92.399
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931067047509193501, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.07402135
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931067047509193501, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.14813863
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931067047509193501, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.69215137
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931067047509193501, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931067047509193501, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.72175246
-      objectReference: {fileID: 0}
-    - target: {fileID: 7931067047509193501, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -92.399
-      objectReference: {fileID: 0}
-    - target: {fileID: 8367287703530396414, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.07402135
-      objectReference: {fileID: 0}
-    - target: {fileID: 8367287703530396414, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.14813863
-      objectReference: {fileID: 0}
-    - target: {fileID: 8367287703530396414, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.69215137
-      objectReference: {fileID: 0}
-    - target: {fileID: 8367287703530396414, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8367287703530396414, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.72175246
-      objectReference: {fileID: 0}
-    - target: {fileID: 8367287703530396414, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -92.399
-      objectReference: {fileID: 0}
-    - target: {fileID: 8481103554506588035, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.07402135
-      objectReference: {fileID: 0}
-    - target: {fileID: 8481103554506588035, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.14813863
-      objectReference: {fileID: 0}
-    - target: {fileID: 8481103554506588035, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.69215137
-      objectReference: {fileID: 0}
-    - target: {fileID: 8481103554506588035, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8481103554506588035, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.72175246
-      objectReference: {fileID: 0}
-    - target: {fileID: 8481103554506588035, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -92.399
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3698573597369551304, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2079840840}
-    - targetCorrespondingSourceObject: {fileID: 3698573597369551304, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2079840841}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
 --- !u!4 &2079840838 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4042026552398549874, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
   m_PrefabInstance: {fileID: 2079840837}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2079840839 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3698573597369551304, guid: 81278feda40539e4da79ddb9b4c7cae0, type: 3}
-  m_PrefabInstance: {fileID: 2079840837}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2079840840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079840839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e77325b97cb55a44ac840bfd41e2076, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SimpleFishSwim
-  swimDistance: 12.25
-  swimSpeed: 4.2
-  wiggleAmount: 10
-  wiggleSpeed: 5
---- !u!114 &2079840841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079840839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b002b827d32a2ae4892b8bd2309023b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fish
-  Type: 0
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  fishType: 1
 --- !u!1 &2085586310
 GameObject:
   m_ObjectHideFlags: 0
@@ -57616,64 +56764,18 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8052445364532085625, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2102678590}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
 --- !u!4 &2102678589 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245122786251594179, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5842068919920996566, guid: 9789eb207d9aa4c4eae561e8219e6210, type: 3}
   m_PrefabInstance: {fileID: 2102678588}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2102678590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566473110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1 &2112014956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8944984150061810468, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
   m_PrefabInstance: {fileID: 7201736898502964907}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2113595340 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2302297729359859955, guid: 54bc39497cd46974eae9cd1cd10edebc, type: 3}
-  m_PrefabInstance: {fileID: 1947039091}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2113595341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113595340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb35e2211230ab545a301a375f899d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
-  Type: 2
-  isSampleable: 1
-  maximumPhotoDistance: 10
-  speciesName: 
-  photoBoundsCenter: {x: 0, y: 0, z: 0}
-  photoBoundsSize: {x: 1, y: 1, z: 1}
-  invertebrateType: 1
 --- !u!1001 &2120998382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61043,3 +60145,4 @@ SceneRoots:
   - {fileID: 454356603}
   - {fileID: 529421159}
   - {fileID: 1077397177}
+  - {fileID: 1360887759}

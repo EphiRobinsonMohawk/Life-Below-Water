@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class SimpleFishSwim : MonoBehaviour
 {
+    [Header("References")]
+    public Transform fishVisual;
+
     [Header("Movement")]
     public float swimDistance = 5f;
     public float swimSpeed = 2f;
@@ -11,14 +14,16 @@ public class SimpleFishSwim : MonoBehaviour
     public float wiggleSpeed = 5f;
 
     private Vector3 startPos;
-    private bool movingRight = true;
+    private bool movingForward = true;
 
-    private Quaternion baseRotation;
+    private Quaternion visualBaseRotation;
 
     void Start()
     {
         startPos = transform.position;
-        baseRotation = transform.rotation; // Store original rotation
+
+        if (fishVisual != null)
+            visualBaseRotation = fishVisual.localRotation;
     }
 
     void Update()
@@ -31,23 +36,23 @@ public class SimpleFishSwim : MonoBehaviour
     {
         float step = swimSpeed * Time.deltaTime;
 
-        if (movingRight)
+        if (movingForward)
         {
-            transform.position += Vector3.right * step;
+            transform.position += transform.forward * step;
 
-            if (transform.position.x >= startPos.x + swimDistance)
+            if (Vector3.Distance(startPos, transform.position) >= swimDistance)
             {
-                movingRight = false;
+                movingForward = false;
                 Flip();
             }
         }
         else
         {
-            transform.position += Vector3.left * step;
+            transform.position -= transform.forward * step;
 
-            if (transform.position.x <= startPos.x - swimDistance)
+            if (Vector3.Distance(startPos, transform.position) <= 0.2f)
             {
-                movingRight = true;
+                movingForward = true;
                 Flip();
             }
         }
@@ -55,16 +60,14 @@ public class SimpleFishSwim : MonoBehaviour
 
     void Wiggle()
     {
-        float wiggle = Mathf.Sin(Time.time * wiggleSpeed) * wiggleAmount;
-        Quaternion wiggleRotation = Quaternion.Euler(0, 0, wiggle);
+        if (fishVisual == null) return;
 
-        transform.rotation = baseRotation * wiggleRotation;
+        float wiggle = Mathf.Sin(Time.time * wiggleSpeed) * wiggleAmount;
+        fishVisual.localRotation = visualBaseRotation * Quaternion.Euler(0f, wiggle, 0f);
     }
 
     void Flip()
     {
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
+        transform.Rotate(0f, 180f, 0f);
     }
 }
