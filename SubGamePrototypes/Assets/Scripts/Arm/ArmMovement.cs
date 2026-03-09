@@ -302,10 +302,18 @@ public class ArmMovement : MonoBehaviour
         HandR.localPosition = PivotOffset + rotR * (_handROriginalPos - PivotOffset);
         HandR.localRotation = rotR * _handROriginalRot;
 
-        // Disable triggers when fully open
+        // Disable and clear triggers when fully open
         bool triggersEnabled = TargetOpenness < 0.98f;
-        if (_triggerL != null) _triggerL.enabled = triggersEnabled;
-        if (_triggerR != null) _triggerR.enabled = triggersEnabled;
+        if (_triggerL != null)
+        {
+            if (!triggersEnabled) _detectorL.ClearCollidingBodies();
+            _triggerL.enabled = triggersEnabled;
+        }
+        if (_triggerR != null)
+        {
+            if (!triggersEnabled) _detectorR.ClearCollidingBodies();
+            _triggerR.enabled = triggersEnabled;
+        }
     }
 
     private void UpdateGrip()
@@ -348,6 +356,7 @@ public class ArmMovement : MonoBehaviour
 
     private void GrabObject(Rigidbody target)
     {
+        target.useGravity = false;
         _heldObject = target;
         _gripJoint = Wrist.gameObject.AddComponent<FixedJoint>();
         _gripJoint.connectedBody = _heldObject;
@@ -361,6 +370,7 @@ public class ArmMovement : MonoBehaviour
     {
         if (_heldObject != null)
         {
+            _heldObject.useGravity = true;
             Debug.Log($"Released {_heldObject.name}");
         }
 
