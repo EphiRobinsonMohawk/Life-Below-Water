@@ -4028,7 +4028,7 @@ Rigidbody:
   m_GameObject: {fileID: 7825882796677074864}
   serializedVersion: 5
   m_Mass: 1
-  m_LinearDamping: 0.8
+  m_LinearDamping: 0.55
   m_AngularDamping: 0.8
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -4058,10 +4058,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7f2ad22681316428f068ad1dba24d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SubMovement
+  onEnterHerculesFirstPersonView:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: HideInteractionUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onExitHerculesFirstPersonView:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: ShowExitROV
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onExitHercules:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: HideInteractionUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PauseMovementEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   rb: {fileID: 6872392622322408843}
-  moveSpeed: 10
-  rotForce: 2.5
-  ascendForce: 10
+  moveSpeed: 3
+  rotForce: 3
+  ascendForce: 3
   audioManager: {fileID: 0}
   inputManager: {fileID: 0}
   cameraManager: {fileID: 0}
@@ -5174,6 +5231,30 @@ PrefabInstance:
       propertyPath: photoCamera
       value: 
       objectReference: {fileID: 7862980534932049258}
+    - target: {fileID: 953391260161554097, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 953391260161554097, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 953391260161554097, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 953391260161554097, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 953391260161554097, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ShutterEffect, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 953391260161554097, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3325931022872721550, guid: a858f7fa937667d45ac49c6989cdb861, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.3243647
