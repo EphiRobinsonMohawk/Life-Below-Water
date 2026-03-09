@@ -111,7 +111,7 @@ public class SubMovement : MonoBehaviour
         rb.AddRelativeTorque(Vector3.forward * rotV * rotForce);
 
         //roll
-        float rollInput = roll.ReadValue<Vector2>().x;
+        float rollInput = Mathf.Clamp(roll.ReadValue<Vector2>().x, -0.5f, 0.5f);
         rb.AddRelativeTorque(Vector3.left * rollInput * rotForce);
 
         
