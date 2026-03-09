@@ -46,5 +46,33 @@ public class GalleryDisplay : MonoBehaviour
 
         // Ensure scale is correct case parent affects it
         newPhoto.transform.localScale = Vector3.one;
+
+        // Initialize the Photo script
+        Photo photoScript = newPhoto.GetComponent<Photo>();
+        if (photoScript != null)
+        {
+            photoScript.Setup(path, this, photoSprite);
+        }
+    }
+
+    [Header("Fullscreen UI")]
+    public GameObject fullscreenPanel;
+    public Image fullscreenImage;
+
+    public void ShowFullscreen(Sprite fullSprite)
+    {
+        if (fullscreenPanel != null && fullscreenImage != null)
+        {
+            fullscreenImage.sprite = fullSprite;
+            fullscreenPanel.SetActive(true);
+        }
+    }
+
+    public void CloseFullscreen()
+    {
+        if (fullscreenPanel != null)
+        {
+            fullscreenPanel.SetActive(false);
+        }        
     }
 }

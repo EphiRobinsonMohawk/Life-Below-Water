@@ -23973,19 +23973,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1936050284065192956, guid: 8a199b14e412fca4d921f08307fd4bcb, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1610.4742
+      value: 1649.2758
       objectReference: {fileID: 0}
     - target: {fileID: 1936050284065192956, guid: 8a199b14e412fca4d921f08307fd4bcb, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 680.5344
+      value: 721.6184
       objectReference: {fileID: 0}
     - target: {fileID: 1936050284065192956, guid: 8a199b14e412fca4d921f08307fd4bcb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 34.650074
+      value: 15.2494
       objectReference: {fileID: 0}
     - target: {fileID: 1936050284065192956, guid: 8a199b14e412fca4d921f08307fd4bcb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 17.1118
+      value: 37.6538
       objectReference: {fileID: 0}
     - target: {fileID: 1995847123789329511, guid: 8a199b14e412fca4d921f08307fd4bcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24065,11 +24065,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8972281253969467867, guid: 8a199b14e412fca4d921f08307fd4bcb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8972281253969467867, guid: 8a199b14e412fca4d921f08307fd4bcb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9166328543180929627, guid: 8a199b14e412fca4d921f08307fd4bcb, type: 3}
       propertyPath: m_Name
@@ -24132,9 +24132,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
   m_Padding:
-    m_Left: 0
+    m_Left: 30
     m_Right: 0
-    m_Top: 0
+    m_Top: 70
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
