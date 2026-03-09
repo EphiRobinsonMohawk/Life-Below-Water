@@ -24,6 +24,7 @@ public class Photography : MonoBehaviour
     {
         if (takePhoto.action.triggered)
         {
+            TakePhoto();
             IdentifySpeciesInFrame();
             onPhotoTaken.Invoke();
         }
