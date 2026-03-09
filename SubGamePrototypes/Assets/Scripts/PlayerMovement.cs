@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float mouseSens = 2f;
     float cameraVertRot;
     public Transform player;
+    public float rotationSmoothness = 10f; // Lower = more "weight", Higher = snappier
+    Vector2 currentRotation;
 
     // Interaction Popup
     public GameObject interactionUI;
@@ -26,12 +28,20 @@ public class PlayerMovement : MonoBehaviour
     public void PlayerRotation()
     {
         Vector2 mouse = look.ReadValue<Vector2>();
-        float x = mouse.x * mouseSens;
-        float y = mouse.y * mouseSens;
-        cameraVertRot -= y;
+        
+        // Target rotation based on input
+        float targetX = mouse.x * mouseSens;
+        float targetY = mouse.y * mouseSens;
+
+        // Smoothly interpolate towards target rotation
+        currentRotation.x = Mathf.Lerp(currentRotation.x, targetX, Time.deltaTime * rotationSmoothness);
+        currentRotation.y = Mathf.Lerp(currentRotation.y, targetY, Time.deltaTime * rotationSmoothness);
+
+        cameraVertRot -= currentRotation.y;
         cameraVertRot = Mathf.Clamp(cameraVertRot, -90f, 90f);
+        
         transform.localEulerAngles = Vector3.right * cameraVertRot;
-        player.Rotate(Vector3.up * x);
+        player.Rotate(Vector3.up * currentRotation.x);
     }
 
     public void Interaction()
