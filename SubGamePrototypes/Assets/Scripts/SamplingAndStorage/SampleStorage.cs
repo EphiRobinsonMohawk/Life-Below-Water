@@ -18,4 +18,17 @@ public class SampleStorage : MonoBehaviour
         Debug.Log($"Stored sample: {sample.name}. Total: {_storedCount}");
         return true;
     }
+
+    public int GetStoredCount(InvertebrateType invertebrateType)
+    {
+        int count = 0;
+        for (int i = 0; i < _storedCount; i++)
+        {
+            if (sampleStorage[i].GetComponent<Invertebrate>().invertebrateType == invertebrateType)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
 }
