@@ -169,20 +169,20 @@ public class SubMovement : MonoBehaviour
             }
 
             //Change Hercules Camera View
-            if (frontCam.WasPerformedThisFrame() && cameraView)
+            if (frontCam.WasPerformedThisFrame())
             {
                 cameraManager.activeCamera = CameraManager.ActiveCamera.Front;
                 Debug.Log(" 1 pressed ");
             }
-            if (rightCam.WasPerformedThisFrame() && cameraView)
+            if (rightCam.WasPerformedThisFrame())
             {
                 cameraManager.activeCamera = CameraManager.ActiveCamera.Right;
             }
-            if (leftCam.WasPerformedThisFrame() && cameraView)
+            if (leftCam.WasPerformedThisFrame())
             {
                 cameraManager.activeCamera = CameraManager.ActiveCamera.Left;
             }
-            if (thirdpersonCam.WasPerformedThisFrame() && cameraView)
+            if (thirdpersonCam.WasPerformedThisFrame())
             {
                 cameraManager.activeCamera = CameraManager.ActiveCamera.ThirdPerson;
             }
@@ -190,7 +190,7 @@ public class SubMovement : MonoBehaviour
             //Enter/Exit Camera View
             if (camView.WasPerformedThisFrame())
             {
-                if (!cameraView)
+                if (cameraManager.activeCamera == CameraManager.ActiveCamera.Control)
                 {
                     onEnterHerculesFirstPersonView.Invoke();
                     cameraManager.activeCamera = CameraManager.ActiveCamera.Front;
