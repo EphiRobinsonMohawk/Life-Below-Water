@@ -84620,15 +84620,15 @@ PrefabInstance:
       objectReference: {fileID: 1872059031}
     - target: {fileID: 5450261131878174079, guid: 5d42dfd698e358948928c77654de6904, type: 3}
       propertyPath: rotForce
-      value: 1.3
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5450261131878174079, guid: 5d42dfd698e358948928c77654de6904, type: 3}
       propertyPath: moveSpeed
-      value: 3.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5450261131878174079, guid: 5d42dfd698e358948928c77654de6904, type: 3}
       propertyPath: ascendForce
-      value: 3.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5450261131878174079, guid: 5d42dfd698e358948928c77654de6904, type: 3}
       propertyPath: audioManager
