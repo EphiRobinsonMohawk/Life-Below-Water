@@ -106,6 +106,11 @@ public class UIManager : MonoBehaviour
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
+    public void OpenFishPage(FishType fish)
+    {
+
+    }
+
     public void OpenPlantlifeJournal()
     {
         activeCanvas.enabled = false;
