@@ -2,72 +2,141 @@ using UnityEngine;
 
 public class SimpleFishSwim : MonoBehaviour
 {
-    [Header("References")]
-    public Transform fishVisual;
-
     [Header("Movement")]
     public float swimDistance = 5f;
     public float swimSpeed = 2f;
 
-    [Header("Wiggle")]
+    [Header("Turning")]
+    public float turnSpeed = 120f;
+
+    [Header("Body Wiggle")]
     public float wiggleAmount = 10f;
     public float wiggleSpeed = 5f;
 
-    private Vector3 startPos;
-    private bool movingForward = true;
+    [Header("Fins")]
+    public Transform pectoralFin;
+    public Transform dorsalFin;
+    public Transform analFin;
 
-    private Quaternion visualBaseRotation;
+    [Header("Fin Animation")]
+    public float finSpeed = 8f;
+    public float pectoralAmount = 25f;
+    public float dorsalAmount = 5f;
+    public float analAmount = 5f;
+
+    private Vector3 startPos;
+
+    private bool movingForward = true;
+    private bool turning = false;
+
+    private float turnTargetY;
+    private float finOffset;
+
+    private Quaternion baseRotation;
+
+    private Quaternion pectoralStartRotation;
+    private Quaternion dorsalStartRotation;
+    private Quaternion analStartRotation;
 
     void Start()
     {
         startPos = transform.position;
+        baseRotation = transform.rotation;
 
-        if (fishVisual != null)
-            visualBaseRotation = fishVisual.localRotation;
+        finOffset = Random.Range(0f, 10f);
+
+        if (pectoralFin != null)
+            pectoralStartRotation = pectoralFin.localRotation;
+
+        if (dorsalFin != null)
+            dorsalStartRotation = dorsalFin.localRotation;
+
+        if (analFin != null)
+            analStartRotation = analFin.localRotation;
     }
 
     void Update()
     {
-        Move();
+        if (turning)
+            Turn();
+        else
+            Move();
+
         Wiggle();
+        AnimateFins();
     }
 
     void Move()
     {
-        float step = swimSpeed * Time.deltaTime;
+        transform.position += transform.forward * swimSpeed * Time.deltaTime;
 
-        if (movingForward)
+        float distanceFromStart = Vector3.Distance(startPos, transform.position);
+
+        if (movingForward && distanceFromStart >= swimDistance)
         {
-            transform.position += transform.forward * step;
-
-            if (Vector3.Distance(startPos, transform.position) >= swimDistance)
-            {
-                movingForward = false;
-                Flip();
-            }
+            StartTurn();
         }
-        else
+        else if (!movingForward && distanceFromStart <= 0.2f)
         {
-            transform.position -= transform.forward * step;
+            StartTurn();
+        }
+    }
 
-            if (Vector3.Distance(startPos, transform.position) <= 0.2f)
-            {
-                movingForward = true;
-                Flip();
-            }
+    void StartTurn()
+    {
+        turning = true;
+        movingForward = !movingForward;
+        turnTargetY = transform.eulerAngles.y + 180f;
+    }
+
+    void Turn()
+    {
+        float newY = Mathf.MoveTowardsAngle(
+            transform.eulerAngles.y,
+            turnTargetY,
+            turnSpeed * Time.deltaTime
+        );
+
+        transform.rotation = Quaternion.Euler(0f, newY, 0f);
+
+        if (Mathf.Abs(Mathf.DeltaAngle(newY, turnTargetY)) < 1f)
+        {
+            transform.rotation = Quaternion.Euler(0f, turnTargetY, 0f);
+            baseRotation = transform.rotation;
+            turning = false;
         }
     }
 
     void Wiggle()
     {
-        if (fishVisual == null) return;
+        if (turning) return;
 
         float wiggle = Mathf.Sin(Time.time * wiggleSpeed) * wiggleAmount;
-        fishVisual.localRotation = visualBaseRotation * Quaternion.Euler(0f, wiggle, 0f);
+        Quaternion wiggleRotation = Quaternion.Euler(0f, wiggle, 0f);
+
+        transform.rotation = baseRotation * wiggleRotation;
     }
 
-    void Flip()
+    void AnimateFins()
     {
-        transform.Rotate(0f, 180f, 0f);
+        float finWave = Mathf.Sin((Time.time + finOffset) * finSpeed);
+
+        if (pectoralFin != null)
+        {
+            pectoralFin.localRotation =
+                pectoralStartRotation * Quaternion.Euler(finWave * pectoralAmount, 0f, 0f);
+        }
+
+        if (dorsalFin != null)
+        {
+            dorsalFin.localRotation =
+                dorsalStartRotation * Quaternion.Euler(0f, 0f, finWave * dorsalAmount);
+        }
+
+        if (analFin != null)
+        {
+            analFin.localRotation =
+                analStartRotation * Quaternion.Euler(0f, 0f, -finWave * analAmount);
+        }
     }
 }
