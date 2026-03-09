@@ -84602,6 +84602,34 @@ PrefabInstance:
       propertyPath: shutterEffect
       value: 
       objectReference: {fileID: 2089821976}
+    - target: {fileID: 2503077051944169242, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503077051944169242, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503077051944169242, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2089821976}
+    - target: {fileID: 2503077051944169242, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503077051944169242, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503077051944169242, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ShutterEffect, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503077051944169242, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: onPhotoTaken.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2699514388993845867, guid: 5d42dfd698e358948928c77654de6904, type: 3}
       propertyPath: openHand
       value: 

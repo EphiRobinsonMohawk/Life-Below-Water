@@ -12,29 +12,25 @@ public class Photography : MonoBehaviour
 {
     [HideInInspector]
     public UnityEvent<Dictionary<Species, bool>> onSpeciesIdentified = new UnityEvent<Dictionary<Species, bool>>();
+    public UnityEvent onPhotoTaken = new UnityEvent();
 
     public Camera photoCamera;
     public int photoWidth = 1920;
     public int photoHeight = 1080;
 
     public InputActionReference takePhoto;
-    public ShutterEffect shutterEffect;
 
     private void Update()
     {
         if (takePhoto.action.triggered)
         {
-            TakePhoto();
+            IdentifySpeciesInFrame();
+            onPhotoTaken.Invoke();
         }
     }
 
     public void TakePhoto()
     {
-        if (shutterEffect != null)
-        {
-            shutterEffect.TriggerEffect();
-        }
-
         // 1. Create a temporary Render Texture
         RenderTexture rt = new RenderTexture(photoWidth, photoHeight, 24);
         photoCamera.targetTexture = rt;
@@ -56,8 +52,6 @@ public class Photography : MonoBehaviour
             // Start the background saving process
             SaveImageAsync(request.GetData<byte>(), photoWidth, photoHeight);
 
-            // Identify species in frame
-            IdentifySpeciesInFrame();
 
             // Clean up the RenderTexture once we have the data
             rt.Release();
