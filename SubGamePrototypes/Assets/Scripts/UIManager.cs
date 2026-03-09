@@ -73,8 +73,16 @@ public class UIManager : MonoBehaviour
         unlockedTunaCanvas.enabled = false;
         lockedBaskingSharkCanvas.enabled = false;
         unlockedBaskingSharkCanvas.enabled = false;
+        lockedGiantSunflowerCanvas.enabled = false;
+        unlockedGiantSunflowerCanvas.enabled = false;
+        lockedColonialWormCanvas.enabled = false;
+        unlockedColonialWormCanvas.enabled = false;
+        lockedVesicomyidClamCanvas.enabled = false;
+        unlockedVesicomyidClamCanvas.enabled = false;
+        lockedGracefulCrabCanvas.enabled = false;
+        unlockedGracefulCrabCanvas.enabled = false;
 
-        introductionCanvas.enabled = true;
+    introductionCanvas.enabled = true;
         activeCanvas = introductionCanvas;
 
         SetSelected(introFirstSelected);
