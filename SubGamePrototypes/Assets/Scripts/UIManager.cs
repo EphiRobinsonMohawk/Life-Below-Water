@@ -31,6 +31,7 @@ public class UIManager : MonoBehaviour
 
     //References
     [Header("Other References")]
+    public GalleryDisplay galleryDisplay;
     public Photography photography;
     public InputManager inputManager;
     InputAction cancelAction;
@@ -127,6 +128,7 @@ public class UIManager : MonoBehaviour
         activeCanvas = galleryCanvas;
         SetSelected(galleryFirstSelected);
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+        galleryDisplay.CloseFullscreen();
     }
 
     private void SetSelected(GameObject target)

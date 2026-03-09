@@ -61,6 +61,10 @@ public class GalleryDisplay : MonoBehaviour
 
     public void ShowFullscreen(Sprite fullSprite)
     {
+        Debug.Log("Showing fullscreen image");
+        Debug.Log(fullSprite != null ? "Sprite found" : "Sprite not found");
+        Debug.Log(fullscreenPanel != null ? "Panel found" : "Panel not found");
+        Debug.Log(fullscreenImage != null ? "Image found" : "Image not found");
         if (fullscreenPanel != null && fullscreenImage != null)
         {
             fullscreenImage.sprite = fullSprite;

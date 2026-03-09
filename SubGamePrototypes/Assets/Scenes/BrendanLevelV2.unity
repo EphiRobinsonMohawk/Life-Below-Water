@@ -13227,6 +13227,7 @@ MonoBehaviour:
   fundFirstSelected: {fileID: 2001372365}
   settingsFirstSelected: {fileID: 2112014956}
   expeditionFirstSelected: {fileID: 958380940}
+  galleryDisplay: {fileID: 1987171412}
   photography: {fileID: 1663727515}
   inputManager: {fileID: 60022795}
   audioManager: {fileID: 1609070699}
@@ -57269,6 +57270,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1755165656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1987171412 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4425922985272812030, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+  m_PrefabInstance: {fileID: 7201736898502964907}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a307b3141ac5e4399209b54f23e5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GalleryDisplay
 --- !u!1001 &1997103431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61857,7 +61869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1984879971229015894, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 249.46703
+      value: -0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 2197189711606765247, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
