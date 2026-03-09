@@ -5,31 +5,33 @@ using System.Threading.Tasks;
 using UnityEngine.Rendering;
 using Unity.Collections;
 using UnityEngine.Experimental.Rendering;
+using UnityEngine.Events;
+using System.Collections.Generic;
 
 public class Photography : MonoBehaviour
 {
+    [HideInInspector]
+    public UnityEvent<Dictionary<Species, bool>> onSpeciesIdentified = new UnityEvent<Dictionary<Species, bool>>();
+    public UnityEvent onPhotoTaken = new UnityEvent();
+
     public Camera photoCamera;
     public int photoWidth = 1920;
     public int photoHeight = 1080;
 
     public InputActionReference takePhoto;
-    public ShutterEffect shutterEffect;
 
     private void Update()
     {
         if (takePhoto.action.triggered)
         {
             TakePhoto();
+            IdentifySpeciesInFrame();
+            onPhotoTaken.Invoke();
         }
     }
 
     public void TakePhoto()
     {
-        if (shutterEffect != null)
-        {
-            shutterEffect.TriggerEffect();
-        }
-
         // 1. Create a temporary Render Texture
         RenderTexture rt = new RenderTexture(photoWidth, photoHeight, 24);
         photoCamera.targetTexture = rt;
@@ -51,8 +53,6 @@ public class Photography : MonoBehaviour
             // Start the background saving process
             SaveImageAsync(request.GetData<byte>(), photoWidth, photoHeight);
 
-            // Identify species in frame
-            IdentifySpeciesInFrame();
 
             // Clean up the RenderTexture once we have the data
             rt.Release();
@@ -64,6 +64,7 @@ public class Photography : MonoBehaviour
     {
         Species[] allSpecies = Object.FindObjectsByType<Species>(FindObjectsSortMode.None);
         Plane[] frustumPlanes = GeometryUtility.CalculateFrustumPlanes(photoCamera);
+        Dictionary<Species, bool> identifiedSpecies = new Dictionary<Species, bool>();
 
         foreach (Species species in allSpecies)
         {
@@ -86,16 +87,22 @@ public class Photography : MonoBehaviour
             // 4. Multi-point visibility check (occlusion)
             if (IsSpeciesVisible(species, worldBounds))
             {
+                identifiedSpecies.Add(species, species.hasBeenRecorded);
                 if (!species.hasBeenRecorded)
                 {
-                    species.hasBeenRecorded = true;
-                    Debug.Log($"Identified new species: {species.gameObject.name}");
+                    JournalManager.Instance.RecordSpecies(species);
+                    //Debug.Log($"Identified new species: {species.gameObject.name}");
                 }
                 else
                 {
-                    Debug.Log($"Photographed known species: {species.gameObject.name}");
+                    //Debug.Log($"Photographed known species: {species.gameObject.name}");
                 }
             }
+        }
+
+        if (identifiedSpecies.Count > 0)
+        {
+            onSpeciesIdentified.Invoke(identifiedSpecies);
         }
     }
 

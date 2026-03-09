@@ -33,4 +33,9 @@ public class HandCollisionDetector : MonoBehaviour
             _collidingBodies.Remove(rb);
         }
     }
+
+    public void ClearCollidingBodies()
+    {
+        _collidingBodies.Clear();
+    }
 }

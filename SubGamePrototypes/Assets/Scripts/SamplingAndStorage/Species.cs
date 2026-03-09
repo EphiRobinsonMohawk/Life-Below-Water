@@ -11,8 +11,10 @@ public class Species : MonoBehaviour
 {
     public SpeciesType Type = SpeciesType.Plant;
     public bool isSampleable = true;
-    public bool hasBeenRecorded = false;
+    public bool hasBeenRecorded => JournalManager.Instance != null && JournalManager.Instance.IsSpeciesIdentified(this);
     public float maximumPhotoDistance = 10f;
+
+    public string speciesName = "";
 
     [Header("Photography Settings")]
     public Vector3 photoBoundsCenter;
@@ -48,7 +50,7 @@ public class Species : MonoBehaviour
         Gizmos.DrawWireCube(photoBoundsCenter, photoBoundsSize);
     }
 
-    private void Start()
+    private void Awake()
     {
         if (isSampleable)
         {

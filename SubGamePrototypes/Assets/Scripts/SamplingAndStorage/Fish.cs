@@ -13,5 +13,15 @@ public class Fish : Species
     void Start()
     {
         Type = SpeciesType.Fish;
+
+        switch (fishType)
+        {
+            case FishType.BaskingShark:
+                speciesName = "Basking Shark";
+                break;
+            case FishType.Tuna:
+                speciesName = "Tuna";
+                break;
+        }
     }
 }

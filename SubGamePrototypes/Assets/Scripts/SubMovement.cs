@@ -1,8 +1,15 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class SubMovement : MonoBehaviour
 {
+    //Events
+    public UnityEvent onEnterHerculesFirstPersonView;
+    public UnityEvent onExitHerculesFirstPersonView;
+    public UnityEvent onExitHercules;
+
+    //References
     public Rigidbody rb;
     public float moveSpeed = 1f;
     public float rotForce = 0.25f;
@@ -32,6 +39,7 @@ public class SubMovement : MonoBehaviour
 
     void Start()
     {
+        // Register Inputs
         hMovement = InputSystem.actions.FindAction("ROV/Move");
         vMovement = InputSystem.actions.FindAction("ROV/VMove");
         roll = InputSystem.actions.FindAction("ROV/Roll");
@@ -43,7 +51,6 @@ public class SubMovement : MonoBehaviour
         thirdpersonCam = InputSystem.actions.FindAction("ROV/ThirdPersonCam");
         camView = InputSystem.actions.FindAction("ROV/CamView");
         exit = InputSystem.actions.FindAction("ROV/Exit");
-        stabilize = InputSystem.actions.FindAction("ROV/Stabilize");
         stabilize = InputSystem.actions.FindAction("ROV/Stabilize");
         _toggleArmAction = InputSystem.actions.FindAction("ROV/ToggleArm");
     }
@@ -104,18 +111,36 @@ public class SubMovement : MonoBehaviour
         rb.AddRelativeTorque(Vector3.forward * rotV * rotForce);
 
         //roll
-        float rollInput = roll.ReadValue<Vector2>().x;
+        float rollInput = Mathf.Clamp(roll.ReadValue<Vector2>().x, -0.5f, 0.5f);
         rb.AddRelativeTorque(Vector3.left * rollInput * rotForce);
 
-        /*
+        
         //SFX
-        if (Input.GetAxis("HorizontalMovement") != 0 && !jetTimer || Input.GetAxis("VerticalMovement") != 0 && !jetTimer)
+        if (h != 0 && !audioManager.movementSource.isPlaying || v != 0 && !audioManager.movementSource.isPlaying)
         {
-            jetTimer = true;
-            audioManager.PlayOneShotSFX(audioManager.sfxsData[0]);
+            //Debug.Log(h);
+            //Debug.Log(v);
+            //jetTimer = true;
+            if (v != 0)
+            {
+                audioManager.PlayMovementEffect(audioManager.sfxsData[11]);
+            }
+            else if (h > 0)
+            {
+                audioManager.PlayMovementEffect(audioManager.sfxsData[10]);
+            }
+            else if (h < 0)
+            {
+                audioManager.PlayMovementEffect(audioManager.sfxsData[9]);
+            }
+        }
+        else if (h == 0 && v == 0 && audioManager.movementSource.isPlaying)
+        {
+            audioManager.PauseMovementEffect();
         }
 
         //Timers
+        /*
         //Movement audio timer.
         if (jetTimer)
         {
@@ -140,23 +165,24 @@ public class SubMovement : MonoBehaviour
                 controllingHerc = false;
                 inputManager.state = InputManager.InputState.ControlRoom;
                 cameraManager.activeCamera = CameraManager.ActiveCamera.Control;
+                onExitHercules.Invoke();
             }
 
             //Change Hercules Camera View
-            if (frontCam.WasPerformedThisFrame() && cameraView)
+            if (frontCam.WasPerformedThisFrame())
             {
                 cameraManager.activeCamera = CameraManager.ActiveCamera.Front;
                 Debug.Log(" 1 pressed ");
             }
-            if (rightCam.WasPerformedThisFrame() && cameraView)
+            if (rightCam.WasPerformedThisFrame())
             {
                 cameraManager.activeCamera = CameraManager.ActiveCamera.Right;
             }
-            if (leftCam.WasPerformedThisFrame() && cameraView)
+            if (leftCam.WasPerformedThisFrame())
             {
                 cameraManager.activeCamera = CameraManager.ActiveCamera.Left;
             }
-            if (thirdpersonCam.WasPerformedThisFrame() && cameraView)
+            if (thirdpersonCam.WasPerformedThisFrame())
             {
                 cameraManager.activeCamera = CameraManager.ActiveCamera.ThirdPerson;
             }
@@ -164,23 +190,22 @@ public class SubMovement : MonoBehaviour
             //Enter/Exit Camera View
             if (camView.WasPerformedThisFrame())
             {
-                if (!cameraView)
+                if (cameraManager.activeCamera == CameraManager.ActiveCamera.Control)
                 {
+                    onEnterHerculesFirstPersonView.Invoke();
                     cameraManager.activeCamera = CameraManager.ActiveCamera.Front;
                     cameraView = true;
                 }
                 else
                 {
+                    onExitHerculesFirstPersonView.Invoke();
                     cameraManager.activeCamera = CameraManager.ActiveCamera.Control;
                     cameraView = false;
                 }
 
             }
 
-
-           
-            
         }
-        
+
     }
 }
