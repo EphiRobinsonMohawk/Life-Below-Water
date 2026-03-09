@@ -6,6 +6,7 @@ public enum InvertebrateType
     Clam,
     Starfish,
     Crab,
+    TubeWorm,
 }
 
 public class Invertebrate : Species
@@ -26,6 +27,9 @@ public class Invertebrate : Species
                 break;
             case InvertebrateType.Crab:
                 speciesName = "Crab";
+                break;
+            case InvertebrateType.TubeWorm:
+                speciesName = "Tube Worm";
                 break;
         }
     }

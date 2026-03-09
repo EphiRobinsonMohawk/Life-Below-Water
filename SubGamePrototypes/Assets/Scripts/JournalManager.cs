@@ -1,8 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class JournalManager : MonoBehaviour
 {
+    public UnityEvent onJournalUpdated; // Event to notify when the journal is updated 
+
     public static JournalManager Instance { get; private set; }
 
     [Header("Identified Species")]
@@ -47,6 +50,8 @@ public class JournalManager : MonoBehaviour
                 Debug.Log($"Journal: Added new Plant: {plant.plantType}");
             }
         }
+
+        onJournalUpdated.Invoke(); // Notify listeners that the journal has been updated
     }
 
     public bool IsSpeciesIdentified(Species species)
