@@ -82,11 +82,12 @@ public class UIManager : MonoBehaviour
         lockedGracefulCrabCanvas.enabled = false;
         unlockedGracefulCrabCanvas.enabled = false;
 
-    introductionCanvas.enabled = true;
+        introductionCanvas.enabled = true;
         activeCanvas = introductionCanvas;
 
-        SetSelected(introFirstSelected);
+        //SetSelected(introFirstSelected);
         cancelAction = InputSystem.actions.FindAction("UI/Cancel");
+        Debug.Log(cancelAction);
 
         // Connect event listeners
         photography.onSpeciesIdentified.AddListener(ShowSpeciesPopUp);
@@ -113,7 +114,7 @@ public class UIManager : MonoBehaviour
         activeCanvas.enabled = false;
         fundCanvas.enabled = true;
         activeCanvas = fundCanvas;
-        SetSelected(fundFirstSelected);
+        //SetSelected(fundFirstSelected);
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
@@ -122,7 +123,7 @@ public class UIManager : MonoBehaviour
         activeCanvas.enabled = false;
         settingsCanvas.enabled = true;
         activeCanvas = settingsCanvas;
-        SetSelected(settingsFirstSelected);
+        //SetSelected(settingsFirstSelected);
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
@@ -131,7 +132,7 @@ public class UIManager : MonoBehaviour
         activeCanvas.enabled = false;
         expeditionCanvas.enabled = true;
         activeCanvas = expeditionCanvas;
-        SetSelected(expeditionFirstSelected);
+        //SetSelected(expeditionFirstSelected);
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
     public void OpenFishJournal()
@@ -139,7 +140,7 @@ public class UIManager : MonoBehaviour
         activeCanvas.enabled = false;
         fishJournalCanvas.enabled = true;
         activeCanvas = fishJournalCanvas;
-        SetSelected(fishJournalFirstSelected);
+        //SetSelected(fishJournalFirstSelected);
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
@@ -151,14 +152,14 @@ public class UIManager : MonoBehaviour
                 activeCanvas.enabled = false;
                 unlockedTunaCanvas.enabled = true;
                 activeCanvas = unlockedTunaCanvas;
-                SetSelected(unlockedTunaFirstSelected);
+                //SetSelected(unlockedTunaFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             case FishType.BaskingShark:
                 activeCanvas.enabled = false;
                 unlockedBaskingSharkCanvas.enabled = true;
                 activeCanvas = unlockedBaskingSharkCanvas;
-                SetSelected(unlockedBaskingSharkFirstSelected);
+                //SetSelected(unlockedBaskingSharkFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             default:
@@ -175,14 +176,14 @@ public class UIManager : MonoBehaviour
                 activeCanvas.enabled = false;
                 lockedTunaCanvas.enabled = true;
                 activeCanvas = lockedTunaCanvas;
-                SetSelected(lockedTunaFirstSelected);
+                //SetSelected(lockedTunaFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             case FishType.BaskingShark:
                 activeCanvas.enabled = false;
                 lockedBaskingSharkCanvas.enabled = true;
                 activeCanvas = lockedBaskingSharkCanvas;
-                SetSelected(lockedBaskingSharkFirstSelected);
+                //SetSelected(lockedBaskingSharkFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             default:
@@ -199,28 +200,28 @@ public class UIManager : MonoBehaviour
                 activeCanvas.enabled = false;
                 unlockedGracefulCrabCanvas.enabled = true;
                 activeCanvas = unlockedGracefulCrabCanvas;
-                SetSelected(unlockedGracefulCrabFirstSelected);
+                //SetSelected(unlockedGracefulCrabFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             case InvertebrateType.Clam:
                 activeCanvas.enabled = false;
                 unlockedVesicomyidClamCanvas.enabled = true;
                 activeCanvas = unlockedVesicomyidClamCanvas;
-                SetSelected(unlockedVesicomyidClamFirstSelected);
+                //SetSelected(unlockedVesicomyidClamFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             case InvertebrateType.TubeWorm:
                 activeCanvas.enabled = false;
                 unlockedColonialWormCanvas.enabled = true;
                 activeCanvas = unlockedColonialWormCanvas;
-                SetSelected(unlockedColonialWormFirstSelected);
+                //SetSelected(unlockedColonialWormFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             case InvertebrateType.Starfish:
                 activeCanvas.enabled = false;
                 unlockedGiantSunflowerCanvas.enabled = true;
                 activeCanvas = unlockedGiantSunflowerCanvas;
-                SetSelected(unlockedGiantSunflowerFirstSelected);
+                //SetSelected(unlockedGiantSunflowerFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             default:
@@ -237,28 +238,28 @@ public class UIManager : MonoBehaviour
                 activeCanvas.enabled = false;
                 lockedGracefulCrabCanvas.enabled = true;
                 activeCanvas = lockedGracefulCrabCanvas;
-                SetSelected(lockedGracefulCrabFirstSelected);
+                //SetSelected(lockedGracefulCrabFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             case InvertebrateType.Clam:
                 activeCanvas.enabled = false;
                 lockedVesicomyidClamCanvas.enabled = true;
                 activeCanvas = lockedVesicomyidClamCanvas;
-                SetSelected(lockedVesicomyidClamFirstSelected);
+                //SetSelected(lockedVesicomyidClamFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             case InvertebrateType.TubeWorm:
                 activeCanvas.enabled = false;
                 lockedColonialWormCanvas.enabled = true;
                 activeCanvas = lockedColonialWormCanvas;
-                SetSelected(lockedColonialWormFirstSelected);
+                //SetSelected(lockedColonialWormFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             case InvertebrateType.Starfish:
                 activeCanvas.enabled = false;
                 lockedGiantSunflowerCanvas.enabled = true;
                 activeCanvas = lockedGiantSunflowerCanvas;
-                SetSelected(lockedGiantSunflowerFirstSelected);
+                //SetSelected(lockedGiantSunflowerFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             default:
@@ -272,7 +273,7 @@ public class UIManager : MonoBehaviour
         activeCanvas.enabled = false;
         plantlifeCanvas.enabled = true;
         activeCanvas = plantlifeCanvas;
-        SetSelected(plantlifeFirstSelected);
+        //SetSelected(plantlifeFirstSelected);
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
@@ -281,7 +282,7 @@ public class UIManager : MonoBehaviour
         if (activeCanvas != null) activeCanvas.enabled = false;
         galleryCanvas.enabled = true;
         activeCanvas = galleryCanvas;
-        SetSelected(galleryFirstSelected);
+        //SetSelected(galleryFirstSelected);
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
         galleryDisplay.CloseFullscreen();
         galleryDisplay.LoadPendingPhotos();
