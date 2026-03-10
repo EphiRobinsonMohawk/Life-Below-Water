@@ -24916,7 +24916,7 @@ MonoBehaviour:
   cursorTransform: {fileID: 0}
   canvasRect: {fileID: 0}
   inputManager: {fileID: 0}
-  cursorSpeed: 1600
+  cursorSpeed: 800
   deadzone: 0.15
 --- !u!114 &8589526955172290834
 MonoBehaviour:
