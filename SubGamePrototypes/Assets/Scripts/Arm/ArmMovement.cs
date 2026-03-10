@@ -19,6 +19,7 @@ public class ArmMovement : MonoBehaviour
     public float Kp_Shoulder = 100f;
     public float Kd_Shoulder = 10f;
     public float MaxShoulderTorque = 50f;
+    public float MaxShoulderRotation = 90f;
 
     // Hand control
     public float TargetOpenness = 0f;
@@ -59,6 +60,7 @@ public class ArmMovement : MonoBehaviour
 
     private bool _wasArmControl = false;
     private Quaternion _targetShoulderRotation;
+    private Quaternion _initialShoulderRotation;
 
     public SampleStorage Storage;
 
@@ -67,6 +69,12 @@ public class ArmMovement : MonoBehaviour
     public InputActionReference rightStick;
     public InputActionReference openHand;
     public InputActionReference closeHand;
+    public InputActionReference returnArm;
+
+
+    // Arm Default Position
+    Vector3 wristDefaultPosition = new Vector3(1.98319972f,-1.6768707f,4.63943052f);
+    Quaternion shoulderDefaultRotation = new Quaternion(5.26835571e-08f, 0.195197642f, -4.74152024e-08f, 0.980763912f);
 
     Vector3 NextMove = Vector3.zero;
 
@@ -81,6 +89,7 @@ public class ArmMovement : MonoBehaviour
         if (Shoulder != null)
         {
             _targetShoulderRotation = Shoulder.transform.localRotation;
+            _initialShoulderRotation = Shoulder.transform.localRotation;
         }
 
         // Store original local transforms relative to wrist
@@ -102,6 +111,8 @@ public class ArmMovement : MonoBehaviour
         {
             subMovement = FindFirstObjectByType<SubMovement>();
         }
+
+        ReturnArmToDefaultPosition();
     }
 
     private Collider GetTrigger(Transform hand)
@@ -116,6 +127,11 @@ public class ArmMovement : MonoBehaviour
     // Update is called once per frame - get inputs
     void Update()
     {
+        if (returnArm.action.triggered)
+        {
+            ReturnArmToDefaultPosition();
+        }
+
         bool isArmControl = subMovement != null && subMovement.isArmMode;
 
         if (isArmControl)
@@ -186,6 +202,7 @@ public class ArmMovement : MonoBehaviour
         ApplyLevelingTorque();
         ApplyHandControl();
         UpdateGrip();
+        EnforceShoulderLimits();
 
         //Try to store the sample if it's pulled behind and under the camera
         if (_heldObject != null) CheckForStorage();
@@ -366,5 +383,43 @@ public class ArmMovement : MonoBehaviour
 
         _heldObject = null;
         _gripJoint = null;
+    }
+
+    public void ReturnArmToDefaultPosition()
+    {
+        TargetRelativePosition = wristDefaultPosition;
+        _targetShoulderRotation = shoulderDefaultRotation;
+    }
+
+    private void EnforceShoulderLimits()
+    {
+        if (Shoulder == null) return;
+
+        Quaternion currentLocalRot = Shoulder.transform.localRotation;
+        float angle = Quaternion.Angle(_initialShoulderRotation, currentLocalRot);
+
+        if (angle > MaxShoulderRotation)
+        {
+            float overshoot = angle - MaxShoulderRotation;
+            
+            // Aim for the boundary of the allowed rotation
+            Quaternion targetLimitRot = Quaternion.RotateTowards(currentLocalRot, _initialShoulderRotation, overshoot);
+            Quaternion errorQuaternion = targetLimitRot * Quaternion.Inverse(currentLocalRot);
+            errorQuaternion.ToAngleAxis(out float errorAngle, out Vector3 axis);
+
+            if (errorAngle > 180f) errorAngle -= 360f;
+
+            if (Mathf.Abs(errorAngle) > 0.001f)
+            {
+                Vector3 worldAxis = Shoulder.transform.TransformDirection(axis);
+                Vector3 torqueError = worldAxis * (errorAngle * Mathf.Deg2Rad);
+                
+                // Use shoulder PD gains for correction; potentially higher max torque for limits
+                Vector3 torque = CalculatePD(torqueError, Shoulder.angularVelocity, Kp_Shoulder, Kd_Shoulder);
+                torque = Vector3.ClampMagnitude(torque, MaxShoulderTorque * 2.0f);
+                
+                Shoulder.AddTorque(torque * ForceMultiplier);
+            }
+        }
     }
 }
