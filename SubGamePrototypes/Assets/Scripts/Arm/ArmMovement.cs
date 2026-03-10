@@ -163,6 +163,12 @@ public class ArmMovement : MonoBehaviour
             NextMove = Vector3.zero;
             _isClosing = false;
         }
+    }
+
+    // FixedUpdate is independent of frame rate - apply physics
+    void FixedUpdate()
+    {
+        bool isArmControl = subMovement != null && subMovement.isArmMode;
 
         if (!isArmControl && _wasArmControl)
         {
@@ -176,14 +182,8 @@ public class ArmMovement : MonoBehaviour
                 _targetShoulderRotation = Shoulder.transform.localRotation;
             }
         }
-
+        
         _wasArmControl = isArmControl;
-    }
-
-    // FixedUpdate is independent of frame rate - apply physics
-    void FixedUpdate()
-    {
-        bool isArmControl = subMovement != null && subMovement.isArmMode;
 
         if (isArmControl)
         {
