@@ -33399,6 +33399,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1243368693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Arm/Reset
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_ActionId: 7b80bc87-0a1e-4a6d-88ee-ee4457e9b4fe
 --- !u!114 &1243593282 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5450261131878174079, guid: 5d42dfd698e358948928c77654de6904, type: 3}
@@ -61254,9 +61268,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2143408799}
     - target: {fileID: 2699514388993845867, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: returnArm
+      value: 
+      objectReference: {fileID: 1243368693}
+    - target: {fileID: 2699514388993845867, guid: 5d42dfd698e358948928c77654de6904, type: 3}
       propertyPath: rightStick
       value: 
       objectReference: {fileID: 1872059031}
+    - target: {fileID: 2699514388993845867, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: Kp_Position
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699514388993845867, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: Kp_WristLeveling
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5450261131878174079, guid: 5d42dfd698e358948928c77654de6904, type: 3}
       propertyPath: audioManager
       value: 
