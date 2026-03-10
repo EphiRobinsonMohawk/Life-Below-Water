@@ -9,9 +9,9 @@ public class DepthUIController : MonoBehaviour
 
     [Header("Depth Tape")]
     public RectTransform depthContent;
-    public float pixelsPerMeter = 4f;
+    public float pixelsPerMeter = 10f;
     public float smoothSpeed = 5f;
-    public bool invertTapeDirection = false;
+    public bool invertDirection = true; // usually true for UI tapes
 
     [Header("Depth Text")]
     public TextMeshProUGUI depthText;
@@ -22,26 +22,20 @@ public class DepthUIController : MonoBehaviour
 
     [Header("Canvas / Camera")]
     public Canvas targetCanvas;
-
-    [Header("Assign Cameras Here")]
     public Camera controlCamera;
     public Camera frontCamera;
     public Camera rightCamera;
     public Camera leftCamera;
     public Camera thirdPersonCamera;
 
-    [Header("Debug")]
-    public bool logDepth = false;
-    public float logInterval = 0.5f;
-
-    private float smoothOffset;
     private float currentDepth;
-    private float logTimer;
+    private float smoothY;
     private CameraManager.ActiveCamera lastCamera;
 
     void Start()
     {
         UpdateDepth();
+        smoothY = GetTargetTapeY();
         UpdateDepthTape(true);
         UpdateDepthText();
         UpdateCameraText(true);
@@ -55,7 +49,6 @@ public class DepthUIController : MonoBehaviour
         UpdateDepthText();
         UpdateCameraText(false);
         UpdateCanvasCamera();
-        HandleDebugLog();
     }
 
     void UpdateDepth()
@@ -69,34 +62,40 @@ public class DepthUIController : MonoBehaviour
             currentDepth = 0f;
     }
 
+    float GetTargetTapeY()
+    {
+        float targetY = currentDepth * pixelsPerMeter;
+
+        if (invertDirection)
+            targetY *= -1f;
+
+        return targetY;
+    }
+
     void UpdateDepthTape(bool instant)
     {
         if (depthContent == null)
             return;
 
-        float targetOffset = currentDepth * pixelsPerMeter;
-
-        if (!invertTapeDirection)
-            targetOffset *= -1f;
+        float targetY = GetTargetTapeY();
 
         if (instant)
-        {
-            smoothOffset = targetOffset;
-        }
+            smoothY = targetY;
         else
-        {
-            smoothOffset = Mathf.Lerp(smoothOffset, targetOffset, Time.deltaTime * smoothSpeed);
-        }
+            smoothY = Mathf.Lerp(smoothY, targetY, Time.deltaTime * smoothSpeed);
 
-        depthContent.anchoredPosition = new Vector2(depthContent.anchoredPosition.x, smoothOffset);
+        depthContent.anchoredPosition = new Vector2(
+            depthContent.anchoredPosition.x,
+            smoothY
+        );
     }
 
     void UpdateDepthText()
     {
-        if (depthText == null)
-            return;
-
-        depthText.text = currentDepth.ToString("F1") + " m";
+        if (depthText != null)
+        {
+            depthText.text = currentDepth.ToString("F1") + " m";
+        }
     }
 
     void UpdateCameraText(bool forceUpdate)
@@ -114,25 +113,20 @@ public class DepthUIController : MonoBehaviour
             case CameraManager.ActiveCamera.Control:
                 cameraText.text = "C";
                 break;
-
             case CameraManager.ActiveCamera.Front:
                 cameraText.text = "1";
                 break;
-
             case CameraManager.ActiveCamera.Right:
                 cameraText.text = "2";
                 break;
-
             case CameraManager.ActiveCamera.Left:
                 cameraText.text = "3";
                 break;
-
             case CameraManager.ActiveCamera.ThirdPerson:
                 cameraText.text = "4";
                 break;
-
             default:
-                cameraText.text = "CAM";
+                cameraText.text = "?";
                 break;
         }
     }
@@ -154,36 +148,12 @@ public class DepthUIController : MonoBehaviour
     {
         switch (cameraManager.activeCamera)
         {
-            case CameraManager.ActiveCamera.Control:
-                return controlCamera;
-
-            case CameraManager.ActiveCamera.Front:
-                return frontCamera;
-
-            case CameraManager.ActiveCamera.Right:
-                return rightCamera;
-
-            case CameraManager.ActiveCamera.Left:
-                return leftCamera;
-
-            case CameraManager.ActiveCamera.ThirdPerson:
-                return thirdPersonCamera;
-        }
-
-        return null;
-    }
-
-    void HandleDebugLog()
-    {
-        if (!logDepth)
-            return;
-
-        logTimer += Time.deltaTime;
-
-        if (logTimer >= logInterval)
-        {
-            Debug.Log("Depth: " + currentDepth.ToString("F1") + " m");
-            logTimer = 0f;
+            case CameraManager.ActiveCamera.Control: return controlCamera;
+            case CameraManager.ActiveCamera.Front: return frontCamera;
+            case CameraManager.ActiveCamera.Right: return rightCamera;
+            case CameraManager.ActiveCamera.Left: return leftCamera;
+            case CameraManager.ActiveCamera.ThirdPerson: return thirdPersonCamera;
+            default: return null;
         }
     }
 }
