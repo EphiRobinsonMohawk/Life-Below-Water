@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour
 {
@@ -24,10 +25,13 @@ public class InputManager : MonoBehaviour
     public InputState previousState;
     public SubMovement subMovement;
     public PlayerMovement playerMovement;
+    public Image cursor;
 
     void Start()
     {
         UpdateActionMaps();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void UpdateActionMaps()
@@ -77,14 +81,16 @@ public class InputManager : MonoBehaviour
             case InputState.Hercules:
                 subMovement.ControlHercules();
                 subMovement.controllingHerc = true;
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
+               // Cursor.visible = false;
+                //Cursor.lockState = CursorLockMode.Locked;
+                cursor.enabled = false;
                 break;
             case InputState.ControlRoom:
                 playerMovement.PlayerRotation();
                 playerMovement.Interaction();
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.visible = false;
+                //Cursor.lockState = CursorLockMode.Locked;
+                cursor.enabled = false;
                 break;
             case InputState.Grabber:
                 Debug.Log("Input state: " + state + " is not setup!");
@@ -93,7 +99,8 @@ public class InputManager : MonoBehaviour
                 Debug.Log("Input state: " + state + " is not setup!");
                 break;
             case InputState.Menus:
-                Cursor.visible = true;
+                //Cursor.visible = true;
+                cursor.enabled = true;
                 Cursor.lockState = CursorLockMode.None;
                 break;
         }

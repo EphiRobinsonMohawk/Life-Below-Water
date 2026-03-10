@@ -20,7 +20,7 @@ public class Fish : Species
                 speciesName = "Basking Shark";
                 break;
             case FishType.Tuna:
-                speciesName = "Tuna";
+                speciesName = "Pacific Bluefin Tuna";
                 break;
         }
     }
