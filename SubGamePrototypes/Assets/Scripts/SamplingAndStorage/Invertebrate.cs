@@ -20,16 +20,16 @@ public class Invertebrate : Species
         switch (invertebrateType)
         {
             case InvertebrateType.Clam:
-                speciesName = "Clam";
+                speciesName = "Vesicomyid Clam";
                 break;
             case InvertebrateType.Starfish:
-                speciesName = "Starfish";
+                speciesName = "Giant Sunflower Star";
                 break;
             case InvertebrateType.Crab:
-                speciesName = "Crab";
+                speciesName = "Graceful Decorator Crab";
                 break;
             case InvertebrateType.TubeWorm:
-                speciesName = "Tube Worm";
+                speciesName = "Colonial Tube Worm";
                 break;
         }
     }
