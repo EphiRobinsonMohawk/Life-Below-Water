@@ -16,6 +16,18 @@ public class UIManager : MonoBehaviour
     public Canvas fundCanvas;
     public Canvas expeditionCanvas;
     public Canvas settingsCanvas;
+    public Canvas lockedTunaCanvas;
+    public Canvas unlockedTunaCanvas;
+    public Canvas lockedBaskingSharkCanvas;
+    public Canvas unlockedBaskingSharkCanvas;
+    public Canvas lockedGiantSunflowerCanvas;
+    public Canvas unlockedGiantSunflowerCanvas;
+    public Canvas lockedColonialWormCanvas;
+    public Canvas unlockedColonialWormCanvas;
+    public Canvas lockedVesicomyidClamCanvas;
+    public Canvas unlockedVesicomyidClamCanvas;
+    public Canvas lockedGracefulCrabCanvas;
+    public Canvas unlockedGracefulCrabCanvas;
 
     // Popups
     public TextMeshProUGUI speciesPopUp;
@@ -28,6 +40,18 @@ public class UIManager : MonoBehaviour
     public GameObject fundFirstSelected;
     public GameObject settingsFirstSelected;
     public GameObject expeditionFirstSelected;
+    public GameObject lockedTunaFirstSelected;
+    public GameObject unlockedTunaFirstSelected;
+    public GameObject lockedBaskingSharkFirstSelected;
+    public GameObject unlockedBaskingSharkFirstSelected;
+    public GameObject lockedGiantSunflowerFirstSelected;
+    public GameObject lockedColonialWormFirstSelected;
+    public GameObject lockedVesicomyidClamFirstSelected;
+    public GameObject lockedGracefulCrabFirstSelected;
+    public GameObject unlockedGiantSunflowerFirstSelected;
+    public GameObject unlockedColonialWormFirstSelected;
+    public GameObject unlockedVesicomyidClamFirstSelected;
+    public GameObject unlockedGracefulCrabFirstSelected;
 
     //References
     [Header("Other References")]
@@ -45,8 +69,20 @@ public class UIManager : MonoBehaviour
         fundCanvas.enabled = false;
         settingsCanvas.enabled = false;
         expeditionCanvas.enabled = false;
+        lockedTunaCanvas.enabled = false;
+        unlockedTunaCanvas.enabled = false;
+        lockedBaskingSharkCanvas.enabled = false;
+        unlockedBaskingSharkCanvas.enabled = false;
+        lockedGiantSunflowerCanvas.enabled = false;
+        unlockedGiantSunflowerCanvas.enabled = false;
+        lockedColonialWormCanvas.enabled = false;
+        unlockedColonialWormCanvas.enabled = false;
+        lockedVesicomyidClamCanvas.enabled = false;
+        unlockedVesicomyidClamCanvas.enabled = false;
+        lockedGracefulCrabCanvas.enabled = false;
+        unlockedGracefulCrabCanvas.enabled = false;
 
-        introductionCanvas.enabled = true;
+    introductionCanvas.enabled = true;
         activeCanvas = introductionCanvas;
 
         SetSelected(introFirstSelected);
@@ -107,9 +143,128 @@ public class UIManager : MonoBehaviour
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
-    public void OpenFishPage(FishType fish)
+    public void OpenUnlockedFishPage(FishType fish)
     {
+        switch (fish)
+        {
+            case FishType.Tuna:
+                activeCanvas.enabled = false;
+                unlockedTunaCanvas.enabled = true;
+                activeCanvas = unlockedTunaCanvas;
+                SetSelected(unlockedTunaFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            case FishType.BaskingShark:
+                activeCanvas.enabled = false;
+                unlockedBaskingSharkCanvas.enabled = true;
+                activeCanvas = unlockedBaskingSharkCanvas;
+                SetSelected(unlockedBaskingSharkFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            default:
+                Debug.Log("fish type not recognized, UI navigation failed");
+                break;
+        }
+    }
 
+    public void OpenLockedFishPage(FishType fish)
+    {
+        switch (fish)
+        {
+            case FishType.Tuna:
+                activeCanvas.enabled = false;
+                lockedTunaCanvas.enabled = true;
+                activeCanvas = lockedTunaCanvas;
+                SetSelected(lockedTunaFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            case FishType.BaskingShark:
+                activeCanvas.enabled = false;
+                lockedBaskingSharkCanvas.enabled = true;
+                activeCanvas = lockedBaskingSharkCanvas;
+                SetSelected(lockedBaskingSharkFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            default:
+                Debug.Log("fish type not recognized, UI navigation failed");
+                break;
+        }
+    }
+
+    public void OpenUnlockedInvertebratePage(InvertebrateType invertebrate)
+    {
+        switch (invertebrate)
+        {
+            case InvertebrateType.Crab:
+                activeCanvas.enabled = false;
+                unlockedGracefulCrabCanvas.enabled = true;
+                activeCanvas = unlockedGracefulCrabCanvas;
+                SetSelected(unlockedGracefulCrabFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            case InvertebrateType.Clam:
+                activeCanvas.enabled = false;
+                unlockedVesicomyidClamCanvas.enabled = true;
+                activeCanvas = unlockedVesicomyidClamCanvas;
+                SetSelected(unlockedVesicomyidClamFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            case InvertebrateType.TubeWorm:
+                activeCanvas.enabled = false;
+                unlockedColonialWormCanvas.enabled = true;
+                activeCanvas = unlockedColonialWormCanvas;
+                SetSelected(unlockedColonialWormFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            case InvertebrateType.Starfish:
+                activeCanvas.enabled = false;
+                unlockedGiantSunflowerCanvas.enabled = true;
+                activeCanvas = unlockedGiantSunflowerCanvas;
+                SetSelected(unlockedGiantSunflowerFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            default:
+                Debug.Log("Invertebrate type not recognized, UI navigation failed");
+                break;
+        }
+    }
+
+    public void OpenLockedInvertebratePage(InvertebrateType invertebrate)
+    {
+        switch (invertebrate)
+        {
+            case InvertebrateType.Crab:
+                activeCanvas.enabled = false;
+                lockedGracefulCrabCanvas.enabled = true;
+                activeCanvas = lockedGracefulCrabCanvas;
+                SetSelected(lockedGracefulCrabFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            case InvertebrateType.Clam:
+                activeCanvas.enabled = false;
+                lockedVesicomyidClamCanvas.enabled = true;
+                activeCanvas = lockedVesicomyidClamCanvas;
+                SetSelected(lockedVesicomyidClamFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            case InvertebrateType.TubeWorm:
+                activeCanvas.enabled = false;
+                lockedColonialWormCanvas.enabled = true;
+                activeCanvas = lockedColonialWormCanvas;
+                SetSelected(lockedColonialWormFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            case InvertebrateType.Starfish:
+                activeCanvas.enabled = false;
+                lockedGiantSunflowerCanvas.enabled = true;
+                activeCanvas = lockedGiantSunflowerCanvas;
+                SetSelected(lockedGiantSunflowerFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            default:
+                Debug.Log("Invertebrate type not recognized, UI navigation failed");
+                break;
+        }
     }
 
     public void OpenPlantlifeJournal()
