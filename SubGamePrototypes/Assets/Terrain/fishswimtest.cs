@@ -24,13 +24,11 @@ public class SimpleFishSwim : MonoBehaviour
     public float dorsalAmount = 5f;
     public float analAmount = 5f;
 
-    private Vector3 startPos;
-
-    private bool movingForward = true;
     private bool turning = false;
 
     private float turnTargetY;
     private float finOffset;
+    private float traveledDistance;
 
     private Quaternion baseRotation;
 
@@ -40,10 +38,9 @@ public class SimpleFishSwim : MonoBehaviour
 
     void Start()
     {
-        startPos = transform.position;
         baseRotation = transform.rotation;
-
         finOffset = Random.Range(0f, 10f);
+        traveledDistance = 0f;
 
         if (pectoralFin != null)
             pectoralStartRotation = pectoralFin.localRotation;
@@ -68,16 +65,13 @@ public class SimpleFishSwim : MonoBehaviour
 
     void Move()
     {
-        transform.position += transform.forward * swimSpeed * Time.deltaTime;
+        float step = swimSpeed * Time.deltaTime;
+        transform.position += transform.forward * step;
+        traveledDistance += step;
 
-        float distanceFromStart = Vector3.Distance(startPos, transform.position);
-
-        if (movingForward && distanceFromStart >= swimDistance)
+        if (traveledDistance >= swimDistance)
         {
-            StartTurn();
-        }
-        else if (!movingForward && distanceFromStart <= 0.2f)
-        {
+            traveledDistance = 0f;
             StartTurn();
         }
     }
@@ -85,7 +79,6 @@ public class SimpleFishSwim : MonoBehaviour
     void StartTurn()
     {
         turning = true;
-        movingForward = !movingForward;
         turnTargetY = transform.eulerAngles.y + 180f;
     }
 

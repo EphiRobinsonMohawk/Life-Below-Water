@@ -10,55 +10,55 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.51211
+      value: 0.15452406
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.51211
+      value: 0.15452406
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.51210994
+      value: 0.15452404
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 173.72174
+      value: 174.495
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.7778625
+      value: 6.258
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 199.92148
+      value: 193.744
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9894157
+      value: 0.7870256
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0904302
+      value: -0.14800827
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.010329234
+      value: 0.5976514
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.11301434
+      value: -0.038693808
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -10.444
+      value: -10.762
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 75.751
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -13.033
+      value: -14.009
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -89,6 +89,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6638820953221123484}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5150269861102327289}
   m_SourcePrefab: {fileID: 100100000, guid: 9cb0d6cb88ea614468d0d9f5fa75a41d, type: 3}
 --- !u!1 &5853909729095090774 stripped
 GameObject:
@@ -156,9 +159,30 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9399798, y: 1, z: 1.5262911}
+  m_Center: {x: -0.15009376, y: -0.000000004682003, z: -0.2631438}
+--- !u!65 &5150269861102327289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5853909729095090774}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.2505975, y: 1.5988818, z: 1.8746029}
+  m_Center: {x: 0.026885064, y: 0.29944077, z: -0.43730125}
