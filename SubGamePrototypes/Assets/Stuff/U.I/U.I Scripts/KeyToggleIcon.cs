@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class KeyToggleIcon : MonoBehaviour
 {
@@ -8,13 +9,16 @@ public class KeyToggleIcon : MonoBehaviour
     public Sprite onSprite;
     public Sprite offSprite;
 
-    public KeyCode toggleKey = KeyCode.F;
+    public KeyCode keyboardKey = KeyCode.F;
 
-    private bool isOn = false;
+    bool isOn = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(toggleKey))
+        bool keyboardPressed = Input.GetKeyDown(keyboardKey);
+        bool controllerPressed = Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
+
+        if (keyboardPressed || controllerPressed)
         {
             isOn = !isOn;
             UpdateIcon();
@@ -33,5 +37,4 @@ public class KeyToggleIcon : MonoBehaviour
             ? Vector3.one * 1.05f
             : Vector3.one;
     }
-
 }
