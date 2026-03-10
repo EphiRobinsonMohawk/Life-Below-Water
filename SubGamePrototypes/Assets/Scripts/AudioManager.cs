@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
@@ -11,10 +12,17 @@ public class AudioManager : MonoBehaviour
     public Song song;
     public int randomSong;
 
+    [Header("Movement Fade")]
+    public float movementFadeDuration = 0.25f;
+
+    private Coroutine movementFadeCoroutine;
+    private float movementTargetVolume = 1f;
+
     public void Start()
     {
         RandomSong();
     }
+
     public float PlayOneShotSFX(SFXData sfx)
     {
         sfxSource.clip = sfx.clip;
@@ -27,20 +35,63 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMovementEffect(SFXData sfx)
     {
+        if (movementFadeCoroutine != null)
+        {
+            StopCoroutine(movementFadeCoroutine);
+            movementFadeCoroutine = null;
+        }
+
         movementSource.clip = sfx.clip;
-        movementSource.volume = sfx.volume;
+        movementTargetVolume = sfx.volume;
+        movementSource.volume = movementTargetVolume;
         movementSource.pitch = sfx.pitch;
-        movementSource.PlayOneShot(sfx.clip);
+        movementSource.loop = sfx.shouldLoop;
+
+        // avoids stacking the same sound 900 times a second
+        if (movementSource.clip != sfx.clip)
+        {
+            movementSource.clip = sfx.clip;
+        }
+
+        if (!movementSource.isPlaying)
+        {
+            movementSource.Play();
+        }
     }
 
     public void PauseMovementEffect()
     {
-        movementSource.Pause();
+        if (movementFadeCoroutine != null)
+        {
+            StopCoroutine(movementFadeCoroutine);
+        }
+
+        movementFadeCoroutine = StartCoroutine(FadeOutMovement());
+    }
+
+    private IEnumerator FadeOutMovement()
+    {
+        float startVolume = movementSource.volume;
+        float time = 0f;
+
+        while (time < movementFadeDuration)
+        {
+            time += Time.deltaTime;
+            movementSource.volume = Mathf.Lerp(startVolume, 0f, time / movementFadeDuration);
+            yield return null;
+        }
+
+        movementSource.volume = 0f;
+        movementSource.Stop();
+
+        // reset so next play starts at normal volume
+        movementSource.volume = movementTargetVolume;
+        movementFadeCoroutine = null;
     }
 
     public float PlaySFX(SFXData sfx)
     {
-        //dont use this
+        // dont use this
         sfxSource.clip = sfx.clip;
         sfxSource.volume = sfx.volume;
         sfxSource.pitch = sfx.pitch;
