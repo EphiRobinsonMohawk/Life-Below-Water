@@ -65,8 +65,8 @@ public class GamepadCursor : MonoBehaviour
         Vector2 currentPos = virtualMouse.position.ReadValue();
         Vector2 newPos = currentPos + input * cursorSpeed * dt;
 
-        newPos.x = Mathf.Clamp(newPos.x, 0, Screen.width);
-        newPos.y = Mathf.Clamp(newPos.y, 0, Screen.height);
+        newPos.x = Mathf.Clamp(newPos.x, 35, Screen.width - 35);
+        newPos.y = Mathf.Clamp(newPos.y, 35, Screen.height - 35);
 
         InputState.Change(virtualMouse.position, newPos);
         InputState.Change(virtualMouse.delta, newPos - currentPos);
