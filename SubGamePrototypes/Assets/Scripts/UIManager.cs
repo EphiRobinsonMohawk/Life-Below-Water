@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -31,6 +32,7 @@ public class UIManager : MonoBehaviour
 
     // Popups
     public TextMeshProUGUI popUpNotification;
+    public TextMeshProUGUI sampleStoragePrompt;
 
     [Header("First Selection Targets")]
     public GameObject introFirstSelected;
@@ -61,6 +63,7 @@ public class UIManager : MonoBehaviour
     InputAction cancelAction;
     public AudioManager audioManager;
     public SampleStorage sampleStorage;
+    public ArmMovement arm;
 
     public void Start()
     {
@@ -83,15 +86,19 @@ public class UIManager : MonoBehaviour
         lockedGracefulCrabCanvas.enabled = false;
         unlockedGracefulCrabCanvas.enabled = false;
 
-    introductionCanvas.enabled = true;
+        introductionCanvas.enabled = true;
         activeCanvas = introductionCanvas;
 
         SetSelected(introFirstSelected);
         cancelAction = InputSystem.actions.FindAction("UI/Cancel");
 
+        sampleStoragePrompt.gameObject.SetActive(false);
+
         // Connect event listeners
         photography.onSpeciesIdentified.AddListener(ShowSpeciesPopUp);
         sampleStorage.OnSampleStored.AddListener(ShowSamplePopUp);
+        arm.onPickupSample.AddListener(ShowSamplePrompt);
+        sampleStorage.OnSampleStored.AddListener(HideSamplePrompt);
         
     }
 
@@ -348,5 +355,15 @@ public class UIManager : MonoBehaviour
     private void HideSamplePopUp()
     {
         popUpNotification.gameObject.SetActive(false);
+    }
+
+    private void ShowSamplePrompt()
+    {
+        sampleStoragePrompt.gameObject.SetActive(true);
+    }
+
+    private void HideSamplePrompt(Invertebrate invertebrate)
+    {
+        sampleStoragePrompt.gameObject.SetActive(false);
     }
 }

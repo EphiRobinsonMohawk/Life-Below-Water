@@ -1,8 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class ArmMovement : MonoBehaviour
 {
+    // Events
+    [HideInInspector]
+    public UnityEvent onPickupSample = new UnityEvent();
+
     // Setup: Shoulder is fixed with hinge to Upper Arm, Upper Arm has hinge to Lower Arm, Lower Arm has hinge to Wrist, 
     // Wrist has HandL and HandR as children
     public float ForceMultiplier = 1f;
@@ -366,6 +371,11 @@ public class ArmMovement : MonoBehaviour
         _gripJoint.breakTorque = Mathf.Infinity;
 
         Debug.Log($"Grabbed {_heldObject.name}");
+        Debug.Log(target.gameObject.GetComponent<Sample>() != null);
+        if (target.gameObject.GetComponent<Sample>() != null)
+        {
+            onPickupSample.Invoke();
+        }
     }
 
     private void ReleaseObject()
