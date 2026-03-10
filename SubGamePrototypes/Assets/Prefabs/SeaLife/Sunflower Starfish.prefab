@@ -10,55 +10,55 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.14430493
+      value: 0.056303456
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.14430495
+      value: 0.05630346
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.14430493
+      value: 0.056303456
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 199.65375
+      value: 182.5088
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.104828
+      value: 7.965
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 187.83847
+      value: 186.2103
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.71122134
+      value: 0.9880148
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.6981251
+      value: -0.12020424
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.008772889
+      value: -0.05886028
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.081905946
+      value: 0.0768974
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 83.977
+      value: -13.207
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 76.166
+      value: -7.959
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 83.529
+      value: 9.824
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       propertyPath: m_Name
@@ -75,6 +75,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5568442301874631488}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2024154805799130584}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2941686868760749524}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4350620501745083298}
   m_SourcePrefab: {fileID: 100100000, guid: 7968c604af1d75e4bb0bbe5639f825e2, type: 3}
 --- !u!1 &3364164061084293918 stripped
 GameObject:
@@ -95,8 +104,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Invertebrate
   Type: 2
   isSampleable: 1
-  hasBeenRecorded: 0
   maximumPhotoDistance: 10
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0}
   photoBoundsSize: {x: 1, y: 1, z: 1}
   invertebrateType: 1
+--- !u!65 &2024154805799130584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3364164061084293918}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.349576, y: 0.49101573, z: 4.180691}
+  m_Center: {x: 0.06889366, y: -0.25449666, z: 0.018741824}
+--- !u!65 &2941686868760749524
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3364164061084293918}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 2.322404, y: 1.3213454, z: 2.8405845}
+  m_Center: {x: 0.03328881, y: 0.16067277, z: -0.090829946}
+--- !u!54 &4350620501745083298
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3364164061084293918}
+  serializedVersion: 5
+  m_Mass: 0.0001
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
