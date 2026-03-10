@@ -19071,6 +19071,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -157.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1440326202084323847, guid: bfd73f36e6f63b74facd80c07a333edc, type: 3}
+      propertyPath: photoBoundsSize.x
+      value: 1.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440326202084323847, guid: bfd73f36e6f63b74facd80c07a333edc, type: 3}
+      propertyPath: photoBoundsSize.y
+      value: 3.54
+      objectReference: {fileID: 0}
     - target: {fileID: 1838920746186431426, guid: bfd73f36e6f63b74facd80c07a333edc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 393.8
