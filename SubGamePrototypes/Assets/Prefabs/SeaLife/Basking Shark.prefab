@@ -493,7 +493,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5605288466553677961}
-  - component: {fileID: 477990832107433299}
   - component: {fileID: 1982343579904611298}
   - component: {fileID: 3537953810481887227}
   m_Layer: 0
@@ -511,7 +510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4550378904069649076}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.31293318, z: -0, w: 0.9497752}
+  m_LocalRotation: {x: 0, y: 0.31293175, z: 0, w: 0.9497757}
   m_LocalPosition: {x: 443.28754, y: -133.69516, z: -68.57181}
   m_LocalScale: {x: 7.013566, y: 7.013566, z: 7.013566}
   m_ConstrainProportionsScale: 0
@@ -531,21 +530,6 @@ Transform:
   - {fileID: 6229184202178452347}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 36.472, z: 0}
---- !u!114 &477990832107433299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4550378904069649076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0d3b16d923dc6439ff9826642b5142, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::rotate
-  clam: {fileID: 0}
-  rotationSpeed: 0.1
-  rotatesForwards: 0
 --- !u!114 &1982343579904611298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,10 +544,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Fish
   Type: 0
   isSampleable: 1
-  hasBeenRecorded: 0
   maximumPhotoDistance: 20
+  speciesName: 
   photoBoundsCenter: {x: 0, y: 0, z: 0.48}
-  photoBoundsSize: {x: 1, y: 1, z: 8.86}
+  photoBoundsSize: {x: 2.11, y: 1.55, z: 8.86}
   fishType: 0
 --- !u!114 &3537953810481887227
 MonoBehaviour:
@@ -579,8 +563,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SimpleFishSwim
   swimDistance: 18.5
   swimSpeed: 8
+  turnSpeed: 120
   wiggleAmount: 0
   wiggleSpeed: 0
+  pectoralFin: {fileID: 6092869770654821880}
+  dorsalFin: {fileID: 6468564223227753584}
+  analFin: {fileID: 6225016911029041726}
+  finSpeed: 8
+  pectoralAmount: 25
+  dorsalAmount: 5
+  analAmount: 5
 --- !u!1 &6120510372974458070
 GameObject:
   m_ObjectHideFlags: 0
