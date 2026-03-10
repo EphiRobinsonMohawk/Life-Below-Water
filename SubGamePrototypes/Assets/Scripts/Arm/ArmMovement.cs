@@ -25,6 +25,9 @@ public class ArmMovement : MonoBehaviour
     public float MaxOpenAngle = 45f;
     public Vector3 PivotOffset = Vector3.zero;
 
+    // Front Camera for storage check
+    public Camera frontCamera;
+
     // ROV that the Arm is attached to
     public Rigidbody ROV;
 
@@ -185,41 +188,23 @@ public class ArmMovement : MonoBehaviour
         UpdateGrip();
 
         //Try to store the sample if it's pulled behind and under the camera
-        CheckForStorage();
+        if (_heldObject != null) CheckForStorage();
     }
 
     private void CheckForStorage()
     {
-        if (_heldObject == null || Storage == null) return;
-
         Sample sample = _heldObject.GetComponent<Sample>();
-        if (sample == null) return;
-
-        Camera mainCam = Camera.main;
-        if (mainCam == null) return;
+        if (sample == null)
+        {
+            Debug.Log("Held object is not a sample, cannot store.");
+            return;
+        }
 
         // Below the view
-        Vector3 viewportPos = mainCam.WorldToViewportPoint(_heldObject.position);
+        Vector3 viewportPos = frontCamera.WorldToViewportPoint(_heldObject.position);
         bool isBelowFrustum = viewportPos.y < 0;
 
-        // Z-axis check: Between arm position and camera
-        float sampleDepth = mainCam.transform.InverseTransformPoint(_heldObject.position).z;
-        float armBaseDepth = mainCam.transform.InverseTransformPoint(transform.position).z;
-
-        // Between means sampleDepth is greater than camera (0) but less than arm base (assuming arm is forward)
-        // Or simply between the two values.
-        bool isBetweenArmAndCam = false;
-        if (armBaseDepth > 0)
-        {
-            isBetweenArmAndCam = sampleDepth > 0 && sampleDepth < armBaseDepth;
-        }
-        else
-        {
-            // If arm is behind camera for some reason
-            isBetweenArmAndCam = sampleDepth < 0 && sampleDepth > armBaseDepth;
-        }
-
-        if (isBelowFrustum && isBetweenArmAndCam)
+        if (isBelowFrustum)
         {
             if (Storage.TryStoreSample(sample))
             {
@@ -302,10 +287,18 @@ public class ArmMovement : MonoBehaviour
         HandR.localPosition = PivotOffset + rotR * (_handROriginalPos - PivotOffset);
         HandR.localRotation = rotR * _handROriginalRot;
 
-        // Disable triggers when fully open
+        // Disable and clear triggers when fully open
         bool triggersEnabled = TargetOpenness < 0.98f;
-        if (_triggerL != null) _triggerL.enabled = triggersEnabled;
-        if (_triggerR != null) _triggerR.enabled = triggersEnabled;
+        if (_triggerL != null)
+        {
+            if (!triggersEnabled) _detectorL.ClearCollidingBodies();
+            _triggerL.enabled = triggersEnabled;
+        }
+        if (_triggerR != null)
+        {
+            if (!triggersEnabled) _detectorR.ClearCollidingBodies();
+            _triggerR.enabled = triggersEnabled;
+        }
     }
 
     private void UpdateGrip()
@@ -348,6 +341,7 @@ public class ArmMovement : MonoBehaviour
 
     private void GrabObject(Rigidbody target)
     {
+        target.useGravity = false;
         _heldObject = target;
         _gripJoint = Wrist.gameObject.AddComponent<FixedJoint>();
         _gripJoint.connectedBody = _heldObject;
@@ -361,6 +355,7 @@ public class ArmMovement : MonoBehaviour
     {
         if (_heldObject != null)
         {
+            _heldObject.useGravity = true;
             Debug.Log($"Released {_heldObject.name}");
         }
 

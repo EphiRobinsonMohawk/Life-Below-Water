@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using System.Collections.Generic;
 
 public class GalleryDisplay : MonoBehaviour
 {
     public GameObject photoPrefab; // A UI Image prefab
     public Transform contentParent; // The Content object of a Scroll View
+
+    private Queue<string> pendingPhotos = new Queue<string>();
 
     void Start()
     {
@@ -20,6 +23,8 @@ public class GalleryDisplay : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        pendingPhotos.Clear();
+
         // 1. Get all PNG files from the persistent path
         string path = Application.persistentDataPath;
         string[] filePaths = Directory.GetFiles(path, "*.png");
@@ -31,6 +36,20 @@ public class GalleryDisplay : MonoBehaviour
     }
 
     public void AddPhoto(string path)
+    {
+        pendingPhotos.Enqueue(path);
+    }
+
+    public void LoadPendingPhotos()
+    {
+        while (pendingPhotos.Count > 0)
+        {
+            string path = pendingPhotos.Dequeue();
+            ProcessPhoto(path);
+        }
+    }
+
+    private void ProcessPhoto(string path)
     {
         // 2. Load the file into a texture
         byte[] fileData = File.ReadAllBytes(path);

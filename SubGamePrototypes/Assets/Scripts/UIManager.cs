@@ -284,6 +284,7 @@ public class UIManager : MonoBehaviour
         SetSelected(galleryFirstSelected);
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
         galleryDisplay.CloseFullscreen();
+        galleryDisplay.LoadPendingPhotos();
     }
 
     private void SetSelected(GameObject target)
