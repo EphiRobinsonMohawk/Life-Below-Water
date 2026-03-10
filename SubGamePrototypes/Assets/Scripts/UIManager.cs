@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
     public Canvas unlockedGracefulCrabCanvas;
 
     // Popups
-    public TextMeshProUGUI speciesPopUp;
+    public TextMeshProUGUI popUpNotification;
 
     [Header("First Selection Targets")]
     public GameObject introFirstSelected;
@@ -60,6 +60,7 @@ public class UIManager : MonoBehaviour
     public InputManager inputManager;
     InputAction cancelAction;
     public AudioManager audioManager;
+    public SampleStorage sampleStorage;
 
     public void Start()
     {
@@ -90,6 +91,8 @@ public class UIManager : MonoBehaviour
 
         // Connect event listeners
         photography.onSpeciesIdentified.AddListener(ShowSpeciesPopUp);
+        sampleStorage.OnSampleStored.AddListener(ShowSamplePopUp);
+        
     }
 
     void Update()
@@ -312,16 +315,16 @@ public class UIManager : MonoBehaviour
 
         if (newSpeciesNames.Count > 0)
         {
-            speciesPopUp.gameObject.SetActive(true);
-            speciesPopUp.text = $"New Species Identified: {string.Join(", ", newSpeciesNames)}";
+            popUpNotification.gameObject.SetActive(true);
+            popUpNotification.text = $"New Species Identified: {string.Join(", ", newSpeciesNames)}";
 
             CancelInvoke(nameof(HideSpeciesPopUp));
             Invoke(nameof(HideSpeciesPopUp), 5f);
         }
         else if (knownSpeciesNames.Count > 0)
         {
-            speciesPopUp.gameObject.SetActive(true);
-            speciesPopUp.text = $"Species Already Recorded: {string.Join(", ", knownSpeciesNames)}";
+            popUpNotification.gameObject.SetActive(true);
+            popUpNotification.text = $"Species Already Recorded: {string.Join(", ", knownSpeciesNames)}";
 
             CancelInvoke(nameof(HideSpeciesPopUp));
             Invoke(nameof(HideSpeciesPopUp), 5f);
@@ -330,6 +333,20 @@ public class UIManager : MonoBehaviour
 
     private void HideSpeciesPopUp()
     {
-        speciesPopUp.gameObject.SetActive(false);
+        popUpNotification.gameObject.SetActive(false);
+    }
+
+    private void ShowSamplePopUp(Invertebrate invertebrate)
+    {
+        popUpNotification.gameObject.SetActive(true);
+        popUpNotification.text = $"Sample Stored: {invertebrate.speciesName}";
+
+        CancelInvoke(nameof(HideSamplePopUp));
+        Invoke(nameof(HideSamplePopUp), 5f);
+    }
+
+    private void HideSamplePopUp()
+    {
+        popUpNotification.gameObject.SetActive(false);
     }
 }
