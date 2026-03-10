@@ -440,7 +440,7 @@ MonoBehaviour:
   previousState: 0
   subMovement: {fileID: 1243593282}
   playerMovement: {fileID: 330585548}
-  cursor: {fileID: 0}
+  cursor: {fileID: 1376128529}
 --- !u!4 &60022796
 Transform:
   m_ObjectHideFlags: 0
@@ -14741,8 +14741,8 @@ MonoBehaviour:
   m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: 0}
+  m_SubmitAction: {fileID: 0}
   m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
@@ -16165,6 +16165,22 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 8255562126729390530, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
   m_PrefabInstance: {fileID: 7201736898502964907}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &1376128528 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3495579974043451235, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+  m_PrefabInstance: {fileID: 7201736898502964907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1376128529 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8844016244068599545, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+  m_PrefabInstance: {fileID: 7201736898502964907}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!223 &1376690641 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 2270686136580766825, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
@@ -17324,6 +17340,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 833596221}
   m_LocalEulerAnglesHint: {x: 0, y: 56.647, z: 0}
+--- !u!224 &1581895133 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4653381725266301219, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+  m_PrefabInstance: {fileID: 7201736898502964907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!223 &1592489288 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 6874368381705782003, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
@@ -24531,14 +24552,66 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 299315219964947541, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: canvasRect
+      value: 
+      objectReference: {fileID: 1581895133}
+    - target: {fileID: 299315219964947541, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: inputManager
+      value: 
+      objectReference: {fileID: 60022795}
+    - target: {fileID: 299315219964947541, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: cursorTransform
+      value: 
+      objectReference: {fileID: 1376128528}
+    - target: {fileID: 346200560722529910, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 346200560722529910, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 395884094652107458, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 395884094652107458, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 409571177408115391, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 409571177408115391, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
+    - target: {fileID: 485401491590635181, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 485401491590635181, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
     - target: {fileID: 524544079864465538, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 524544079864465538, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
     - target: {fileID: 571261456049130310, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 571261456049130310, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
     - target: {fileID: 700088979629189771, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -24571,14 +24644,90 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 736741022872681875, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
+    - target: {fileID: 822555787216937143, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 822555787216937143, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 935170153333461587, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 935170153333461587, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
+    - target: {fileID: 957306462016047175, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 957306462016047175, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 989091525529758135, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 989091525529758135, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
     - target: {fileID: 1027876066667785365, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 1027876066667785365, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046914577228567997, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1046914577228567997, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
     - target: {fileID: 1071900659983294622, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 1071900659983294622, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134379654114526126, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1134379654114526126, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195481840845146396, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1195481840845146396, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220404199514830052, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1220404199514830052, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 1236073346900094924, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -24603,14 +24752,94 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1288957541808833595, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1288957541808833595, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402150365974776565, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1402150365974776565, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 1487644649450468944, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 1487644649450468944, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553839253847704402, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1553839253847704402, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1621375812117515675, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1621375812117515675, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644726693715571716, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1644726693715571716, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 1815264442808131641, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 1815264442808131641, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1877098009475579158, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1877098009475579158, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883233856808267511, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1883233856808267511, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891501024775411478, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1891501024775411478, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961063444796133968, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1961063444796133968, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 1983301251318010213, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -24655,22 +24884,86 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.000061035156
       objectReference: {fileID: 0}
+    - target: {fileID: 2002258722320749953, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 2002258722320749953, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
     - target: {fileID: 2197189711606765247, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 2197189711606765247, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 2265997563924192649, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 2265997563924192649, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 2295663011512509386, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 2295663011512509386, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297681401702754014, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 2297681401702754014, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414234136272228598, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 2414234136272228598, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
     - target: {fileID: 2469579988938763892, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 2469579988938763892, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485636032158837317, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 2485636032158837317, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2516746265147439388, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 2516746265147439388, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2643211059336171675, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 2643211059336171675, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
     - target: {fileID: 2687015792850791121, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -24695,14 +24988,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2704300584136421329, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 2704300584136421329, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
     - target: {fileID: 2835507159377474925, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 2835507159377474925, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
     - target: {fileID: 3000977193510736171, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 3000977193510736171, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
     - target: {fileID: 3048196652920519452, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -24739,18 +25048,62 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -681
       objectReference: {fileID: 0}
+    - target: {fileID: 3237741520777501153, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3237741520777501153, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3269779016186993994, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3269779016186993994, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318789153198025926, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3318789153198025926, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359670370295545146, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3359670370295545146, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 3364142054291683028, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 3364142054291683028, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
     - target: {fileID: 3458829786254891228, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 3458829786254891228, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 3586733803517651725, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 3586733803517651725, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
     - target: {fileID: 3598479315300499875, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -24783,30 +25136,174 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 3640794927990364521, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
     - target: {fileID: 3665248118155200270, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 3665248118155200270, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
     - target: {fileID: 3679665910338588265, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 3679665910338588265, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 3807472646360600644, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: image
       value: 
       objectReference: {fileID: 2059639347}
+    - target: {fileID: 3818484774777925307, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3818484774777925307, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824359142015272811, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3824359142015272811, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826045749988184415, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3826045749988184415, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869407260612331368, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3869407260612331368, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873102156199769599, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3873102156199769599, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876106041936139867, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3876106041936139867, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
+    - target: {fileID: 3881629453498864633, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3881629453498864633, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
+    - target: {fileID: 3982255939365025301, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3982255939365025301, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989044951716869932, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3989044951716869932, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997312583050481260, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3997312583050481260, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 4220257843720739524, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 4220257843720739524, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323747012659543593, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 4323747012659543593, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 4333584975217831343, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 4333584975217831343, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363832233208354366, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 4363832233208354366, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388392739982944174, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 4388392739982944174, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411257738905195204, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 4411257738905195204, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
     - target: {fileID: 4411316553865270638, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 4411316553865270638, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463473258711473488, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 4463473258711473488, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
     - target: {fileID: 4605404060120160782, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -24835,30 +25332,102 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4605466383352435832, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 4605466383352435832, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 4674526432371749904, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_VolumeTrigger
       value: 
       objectReference: {fileID: 832575519}
+    - target: {fileID: 4769783910707742469, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 4769783910707742469, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826911203766138977, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 4826911203766138977, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860838898828291779, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 4860838898828291779, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
     - target: {fileID: 4888629287545198889, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 4888629287545198889, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946172223888012007, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 4946172223888012007, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 4974357596141784530, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977680309879714985, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 4977680309879714985, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
       objectReference: {fileID: 0}
     - target: {fileID: 5072959523276409475, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 5072959523276409475, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
     - target: {fileID: 5173055070891878123, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 5173055070891878123, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226865627592987334, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 5226865627592987334, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
     - target: {fileID: 5230224411768122986, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 5230224411768122986, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
     - target: {fileID: 5360180347738614441, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1532.9396
@@ -24899,30 +25468,118 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5407785691627325983, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 5407785691627325983, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 5414189059887830426, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 5414189059887830426, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
+    - target: {fileID: 5429495560738755097, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 5429495560738755097, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 5545054212926844242, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 5545054212926844242, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
     - target: {fileID: 5578669025601647979, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 5578669025601647979, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643719121982633162, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 5643719121982633162, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 5689087888823611054, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 5689087888823611054, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 5724491112549747156, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 5724491112549747156, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753151190163236060, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 5753151190163236060, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781251695383023134, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 5781251695383023134, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 5827526007069811060, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 5827526007069811060, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
     - target: {fileID: 6095637481418595258, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 6095637481418595258, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105492306414530597, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 6105492306414530597, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126829597206049643, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 6126829597206049643, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 6378592247633788770, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -24951,6 +25608,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 6380277584132841124, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 6394228472900271530, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -24958,6 +25619,14 @@ PrefabInstance:
     - target: {fileID: 6394228472900271530, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424060069503441201, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 6424060069503441201, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
       objectReference: {fileID: 0}
     - target: {fileID: 6688504549741040726, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -24991,10 +25660,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 6777690533402629933, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6795123887488812608, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 6795123887488812608, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 6847857780975269404, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 6847857780975269404, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
     - target: {fileID: 6939593480470892163, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: Journal
       value: 
@@ -25015,14 +25700,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 7017553362483086994, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 7054156035478603316, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 7054156035478603316, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
     - target: {fileID: 7185004181595917769, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 7185004181595917769, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 7188988357962882889, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -25039,6 +25736,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 7269524445017183048, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
     - target: {fileID: 7273972609362259709, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -25063,14 +25764,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7466834466247627287, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 7466834466247627287, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 7578677111481320267, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 7578677111481320267, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
     - target: {fileID: 7624883911864033819, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 7624883911864033819, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628067446400124882, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 7628067446400124882, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
     - target: {fileID: 7675551787756071802, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_Name
       value: Player
@@ -25079,10 +25804,50 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 7739963121978311396, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857147955297540347, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 7857147955297540347, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862063428013263493, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 7862063428013263493, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865580936974094642, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 7865580936974094642, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926352939087809851, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 7926352939087809851, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 7970072174908859940, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 7970072174908859940, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 8148071921594627733, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -25095,14 +25860,118 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8277128790379306915, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8277128790379306915, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347839028314563231, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8347839028314563231, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
     - target: {fileID: 8383869619929873079, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 8383869619929873079, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438725230680059814, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8438725230680059814, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454606035714230115, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8454606035714230115, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475000619782717063, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8475000619782717063, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
+    - target: {fileID: 8535599423267292676, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8535599423267292676, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579008545258091987, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8579008545258091987, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414943118416243, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8635414943118416243, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655246625234620128, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8655246625234620128, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675933601945463922, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8675933601945463922, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 8736724223241414693, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 8736724223241414693, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837448975979215118, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8837448975979215118, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974249186563564946, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8974249186563564946, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
     - target: {fileID: 9002379169498624660, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnFishButtonPress
@@ -25111,10 +25980,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 9021610159997537662, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060121594928342844, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 9060121594928342844, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
     - target: {fileID: 9084882528280251871, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 9084882528280251871, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161378872133051869, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 9161378872133051869, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 9166746177982008266, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -25147,10 +26040,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 9208759946543306128, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 9215818225934249205, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483952600}
+    - target: {fileID: 9215818225934249205, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2346006574125324703, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
     m_RemovedGameObjects: []
