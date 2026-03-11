@@ -23155,6 +23155,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3389854108481369549, guid: c73fa07f68115c247b35b571545cca54, type: 3}
+      propertyPath: bgmData.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c0745163c9a24c54a9e4c79d4ea1374c, type: 3}
+    - target: {fileID: 3389854108481369549, guid: c73fa07f68115c247b35b571545cca54, type: 3}
       propertyPath: sfxsData.Array.data[9].clip
       value: 
       objectReference: {fileID: 8300000, guid: 5edf8675627a6b545bb64ec56f125c4b, type: 3}
