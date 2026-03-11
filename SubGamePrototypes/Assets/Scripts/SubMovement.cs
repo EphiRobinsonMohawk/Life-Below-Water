@@ -165,6 +165,7 @@ public class SubMovement : MonoBehaviour
                 controllingHerc = false;
                 inputManager.state = InputManager.InputState.ControlRoom;
                 cameraManager.activeCamera = CameraManager.ActiveCamera.Control;
+                onExitHerculesFirstPersonView.Invoke();
                 onExitHercules.Invoke();
             }
 

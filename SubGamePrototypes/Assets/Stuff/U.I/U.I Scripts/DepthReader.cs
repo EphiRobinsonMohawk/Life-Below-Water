@@ -10,6 +10,7 @@ public class DepthUIController : MonoBehaviour
     [Header("Depth Tape")]
     public RectTransform depthContent;
     public float pixelsPerMeter = 10f;
+    public float offset = 0f;
     public float smoothSpeed = 5f;
     public bool invertDirection = true; // usually true for UI tapes
 
@@ -58,6 +59,8 @@ public class DepthUIController : MonoBehaviour
 
         currentDepth = surface.position.y - rov.position.y;
 
+        Debug.Log(currentDepth);
+
         if (currentDepth < 0f)
             currentDepth = 0f;
     }
@@ -69,7 +72,7 @@ public class DepthUIController : MonoBehaviour
         if (invertDirection)
             targetY *= -1f;
 
-        return targetY;
+        return targetY + offset;
     }
 
     void UpdateDepthTape(bool instant)
