@@ -442,6 +442,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
+--- !u!1 &85410246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2986749632172966481, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+  m_PrefabInstance: {fileID: 384435327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &87536634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1286,7 +1291,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6993523605754821722, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1381622273}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2986749632172966481, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1193266772}
   m_SourcePrefab: {fileID: 100100000, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
 --- !u!1 &410087039
 GameObject:
@@ -1649,7 +1657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4529862461259927503, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
       propertyPath: m_Name
-      value: Canvas (1)
+      value: ROV HUD
       objectReference: {fileID: 0}
     - target: {fileID: 4782348022131268680, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
       propertyPath: rov
@@ -8156,6 +8164,20 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6993523605754821722, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
   m_PrefabInstance: {fileID: 384435327}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1193266772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85410246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155013a781b8d1f469e6327c88e54354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HUD
+  subMovement: {fileID: 1243593282}
+  subHUD: {fileID: 1354312986}
 --- !u!114 &1203044804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8466,6 +8488,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7199578410375903206, guid: 2d079267edc2eda469e1c65e4ca00189, type: 3}
   m_PrefabInstance: {fileID: 1329712938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1354312986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4529862461259927503, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
+  m_PrefabInstance: {fileID: 518976225}
   m_PrefabAsset: {fileID: 0}
 --- !u!223 &1376690641 stripped
 Canvas:

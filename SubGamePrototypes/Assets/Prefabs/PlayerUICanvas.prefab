@@ -341,5 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73863d42ff15554b9ce55c61d777ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShutterEffect
+  mainMonitor: {fileID: 0}
+  cameraManager: {fileID: 0}
   fadeInTime: 0.05
   fadeOutTime: 0.2
