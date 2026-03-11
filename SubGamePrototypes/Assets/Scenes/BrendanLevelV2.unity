@@ -1643,10 +1643,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1193266768}
     m_Modifications:
+    - target: {fileID: 1114026506308950009, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1525599530666567315, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
       propertyPath: playerRb
       value: 
       objectReference: {fileID: 2056578301}
+    - target: {fileID: 3208188303420025924, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
+      propertyPath: subMovement
+      value: 
+      objectReference: {fileID: 1243593282}
     - target: {fileID: 3467670549517384197, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
       propertyPath: m_SortingOrder
       value: -1

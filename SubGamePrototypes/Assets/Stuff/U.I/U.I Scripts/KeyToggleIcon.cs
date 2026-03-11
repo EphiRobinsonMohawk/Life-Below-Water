@@ -15,24 +15,33 @@ public class KeyToggleIcon : MonoBehaviour
 
     
 
-    [Header("Input Actions")]
-    public InputActionReference toggleAction;
+    [Header("Sync")]
+    public SubMovement subMovement;
 
     private bool isOn = false;
 
     void Start()
     {
+        if (subMovement == null)
+        {
+            subMovement = FindAnyObjectByType<SubMovement>();
+        }
+
+        if (subMovement != null)
+        {
+            isOn = subMovement.isArmMode;
+        }
+
         UpdateIcon();
     }
 
     void Update()
     {
-        bool keyboardPressed = Input.GetKeyDown(keyboardKey);
-        bool controllerPressed = toggleAction != null && toggleAction.action.WasPressedThisFrame();
+        if (subMovement == null) return;
 
-        if (keyboardPressed || controllerPressed)
+        if (isOn != subMovement.isArmMode)
         {
-            isOn = !isOn;
+            isOn = subMovement.isArmMode;
             UpdateIcon();
         }
     }
