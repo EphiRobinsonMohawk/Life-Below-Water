@@ -15030,6 +15030,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7199578410375903206, guid: 2d079267edc2eda469e1c65e4ca00189, type: 3}
   m_PrefabInstance: {fileID: 1603860689}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1606191974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1606191975}
+  - component: {fileID: 1606191976}
+  - component: {fileID: 1606191977}
+  m_Layer: 0
+  m_Name: SalpSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1606191975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606191974}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.2140461, y: -0.21404615, z: 0.67393196, w: 0.67393196}
+  m_LocalPosition: {x: 1164.6, y: 528.19, z: 728.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -35.241, z: 90}
+--- !u!114 &1606191976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606191974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 367fc330b3ccd06448ee2e69ac31fdb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChainSpawner
+  salpPrefab: {fileID: 3592723826781809985, guid: 07a900369613c714fbb6714d8ccf406c, type: 3}
+  salpMove: {fileID: 1606191977}
+  chainLength: 14
+  minXRotation: 6
+  maxXRotation: 22
+--- !u!114 &1606191977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606191974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101112b05c417d544b52a9f8e72dbc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  salps: []
+  floatHeight: 10
+  speed: 0.5
 --- !u!4 &1609070698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7126609758227715564, guid: c73fa07f68115c247b35b571545cca54, type: 3}
@@ -15191,6 +15256,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a106ffd41127c74b9048047e2d99895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Photography
+--- !u!1 &1669985062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1669985065}
+  - component: {fileID: 1669985064}
+  - component: {fileID: 1669985063}
+  m_Layer: 0
+  m_Name: SalpSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1669985063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669985062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101112b05c417d544b52a9f8e72dbc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  salps: []
+  floatHeight: 10
+  speed: 0.5
+--- !u!114 &1669985064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669985062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 367fc330b3ccd06448ee2e69ac31fdb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChainSpawner
+  salpPrefab: {fileID: 3592723826781809985, guid: 07a900369613c714fbb6714d8ccf406c, type: 3}
+  salpMove: {fileID: 1669985063}
+  chainLength: 14
+  minXRotation: 6
+  maxXRotation: 22
+--- !u!4 &1669985065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669985062}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 1052.4, y: 528.8, z: 424.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!223 &1676893244 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 7464285294102538847, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
@@ -20639,6 +20769,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &2063831921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2063831924}
+  - component: {fileID: 2063831923}
+  - component: {fileID: 2063831922}
+  m_Layer: 0
+  m_Name: SalpSpawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2063831922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063831921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101112b05c417d544b52a9f8e72dbc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  salps: []
+  floatHeight: 10
+  speed: 0.5
+--- !u!114 &2063831923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063831921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 367fc330b3ccd06448ee2e69ac31fdb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChainSpawner
+  salpPrefab: {fileID: 3592723826781809985, guid: 07a900369613c714fbb6714d8ccf406c, type: 3}
+  salpMove: {fileID: 2063831922}
+  chainLength: 14
+  minXRotation: 6
+  maxXRotation: 22
+--- !u!4 &2063831924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063831921}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 769.5, y: 585, z: 619.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &2076739180 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4460995155386506654, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
@@ -23765,3 +23960,6 @@ SceneRoots:
   - {fileID: 929115006}
   - {fileID: 1086158040}
   - {fileID: 8932446411237577670}
+  - {fileID: 1606191975}
+  - {fileID: 1669985065}
+  - {fileID: 2063831924}
