@@ -13880,7 +13880,7 @@ MonoBehaviour:
   funds: 10000
   startingFund: 10000
   timeRemaining: 0
-  startingTime: 360
+  startingTime: 600
   timerStarted: 0
   gameOver: 0
   overtime: 0
