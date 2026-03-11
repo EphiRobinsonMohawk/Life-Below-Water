@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
    public SubMovement subMovement;
     void Start()
     {
+        Application.targetFrameRate = 30; // Set the target frame rate
         inputManager.state = InputManager.InputState.Menus;       
     }
 
