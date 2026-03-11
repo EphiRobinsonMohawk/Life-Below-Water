@@ -1165,6 +1165,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2056578302}
     - target: {fileID: 965796971650031261, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: offset
+      value: 930
+      objectReference: {fileID: 0}
+    - target: {fileID: 965796971650031261, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
       propertyPath: surface
       value: 
       objectReference: {fileID: 1616530658}
@@ -1188,6 +1192,10 @@ PrefabInstance:
       propertyPath: controlCamera
       value: 
       objectReference: {fileID: 330585545}
+    - target: {fileID: 965796971650031261, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: pixelsPerMeter
+      value: 3.7
+      objectReference: {fileID: 0}
     - target: {fileID: 965796971650031261, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
       propertyPath: thirdPersonCamera
       value: 

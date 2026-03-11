@@ -110,7 +110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2577275392976269252
 RectTransform:
   m_ObjectHideFlags: 0
@@ -487,6 +487,7 @@ MonoBehaviour:
   rov: {fileID: 0}
   depthContent: {fileID: 8075980562756644707}
   pixelsPerMeter: 20.62
+  offset: 0
   smoothSpeed: 5
   invertDirection: 0
   depthText: {fileID: 8371018664336584030}
@@ -1213,7 +1214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7086384965572710238
 RectTransform:
   m_ObjectHideFlags: 0
