@@ -4,19 +4,31 @@ using UnityEngine.InputSystem;
 
 public class KeyToggleIcon : MonoBehaviour
 {
+    [Header("UI")]
     public Image iconImage;
-
     public Sprite onSprite;
     public Sprite offSprite;
 
-    public KeyCode keyboardKey = KeyCode.F;
+    [Header("Keyboard Fallback")]
+    public KeyCode keyboardKey = KeyCode.LeftShift; 
 
-    bool isOn = false;
+
+    
+
+    [Header("Input Actions")]
+    public InputActionReference toggleAction;
+
+    private bool isOn = false;
+
+    void Start()
+    {
+        UpdateIcon();
+    }
 
     void Update()
     {
         bool keyboardPressed = Input.GetKeyDown(keyboardKey);
-        bool controllerPressed = Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
+        bool controllerPressed = toggleAction != null && toggleAction.action.WasPressedThisFrame();
 
         if (keyboardPressed || controllerPressed)
         {
@@ -27,6 +39,8 @@ public class KeyToggleIcon : MonoBehaviour
 
     void UpdateIcon()
     {
+        if (iconImage == null) return;
+
         iconImage.sprite = isOn ? onSprite : offSprite;
 
         iconImage.color = isOn
