@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour
 {
+    UnityEvent onEnterControlRoom = new UnityEvent();
+    UnityEvent onEnterHercules = new UnityEvent();
+
     public enum InputState { Hercules, ControlRoom, Grabber, Suction, Menus }
     
     [SerializeField] private InputState _state;
@@ -81,9 +84,10 @@ public class InputManager : MonoBehaviour
             case InputState.Hercules:
                 subMovement.ControlHercules();
                 subMovement.controllingHerc = true;
-               // Cursor.visible = false;
+                // Cursor.visible = false;
                 //Cursor.lockState = CursorLockMode.Locked;
                 cursor.enabled = false;
+                onEnterHercules.Invoke();
                 break;
             case InputState.ControlRoom:
                 playerMovement.PlayerRotation();
@@ -91,6 +95,7 @@ public class InputManager : MonoBehaviour
                 //Cursor.visible = false;
                 //Cursor.lockState = CursorLockMode.Locked;
                 cursor.enabled = false;
+                onEnterHercules.Invoke();
                 break;
             case InputState.Grabber:
                 Debug.Log("Input state: " + state + " is not setup!");

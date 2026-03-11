@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
 
     public void Start()
     {
-        RandomSong();
+        FirstSong();
     }
 
     public float PlayOneShotSFX(SFXData sfx)
@@ -106,6 +106,14 @@ public class AudioManager : MonoBehaviour
         bgmSource.clip = bgmData[randomSong].clip;
         bgmSource.volume = bgmData[randomSong].volume;
         lastSong = bgmData[randomSong].song;
+        bgmSource.Play();
+    }
+
+    public void FirstSong()
+    {
+        bgmSource.clip = bgmData[0].clip;
+        bgmSource.volume = bgmData[0].volume;
+        lastSong = bgmData[0].song;
         bgmSource.Play();
     }
 }
