@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour
 
     private Coroutine movementFadeCoroutine;
     private float movementTargetVolume = 1f;
+    private Coroutine bgmCoroutine;
 
     public void Start()
     {
@@ -102,18 +103,46 @@ public class AudioManager : MonoBehaviour
 
     public void RandomSong()
     {
-        randomSong = Random.Range(0, bgmData.Length);
+        if (bgmCoroutine != null) StopCoroutine(bgmCoroutine);
+
+        int nextSong;
+        if (bgmData.Length > 1)
+        {
+            do
+            {
+                nextSong = Random.Range(0, bgmData.Length);
+            } while (nextSong == randomSong);
+        }
+        else
+        {
+            nextSong = 0;
+        }
+
+        randomSong = nextSong;
         bgmSource.clip = bgmData[randomSong].clip;
         bgmSource.volume = bgmData[randomSong].volume;
         lastSong = bgmData[randomSong].song;
         bgmSource.Play();
+
+        bgmCoroutine = StartCoroutine(PlayNextSongAfter(bgmSource.clip.length));
     }
 
     public void FirstSong()
     {
+        if (bgmCoroutine != null) StopCoroutine(bgmCoroutine);
+
+        randomSong = 0;
         bgmSource.clip = bgmData[0].clip;
         bgmSource.volume = bgmData[0].volume;
         lastSong = bgmData[0].song;
         bgmSource.Play();
+
+        bgmCoroutine = StartCoroutine(PlayNextSongAfter(bgmSource.clip.length));
+    }
+
+    private IEnumerator PlayNextSongAfter(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        RandomSong();
     }
 }
