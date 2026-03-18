@@ -636,6 +636,95 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &1603077500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1603077501}
+  - component: {fileID: 1603077504}
+  - component: {fileID: 1603077503}
+  - component: {fileID: 1603077502}
+  m_Layer: 5
+  m_Name: Blip(redo)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1603077501
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603077500}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6538186632034471229}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1603077502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603077500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.30482078, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1603077503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603077500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77955acd49d37d4faabff8cbbf7ddfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RadarBlip
+  lifeTime: 1.5
+--- !u!222 &1603077504
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603077500}
+  m_CullTransparentMesh: 1
 --- !u!1001 &6538186632034471227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -832,11 +921,57 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 70600900}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7413370603528324139, guid: 51e5a233d358f55439508b4f069aeda8, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 549930497979850876, guid: 51e5a233d358f55439508b4f069aeda8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1603077501}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3685958365785088325, guid: 51e5a233d358f55439508b4f069aeda8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6538186632034471232}
   m_SourcePrefab: {fileID: 100100000, guid: 51e5a233d358f55439508b4f069aeda8, type: 3}
+--- !u!224 &6538186632034471228 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8234629967851268958, guid: 51e5a233d358f55439508b4f069aeda8, type: 3}
+  m_PrefabInstance: {fileID: 6538186632034471227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &6538186632034471229 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 549930497979850876, guid: 51e5a233d358f55439508b4f069aeda8, type: 3}
+  m_PrefabInstance: {fileID: 6538186632034471227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &6538186632034471230 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3665891623079994629, guid: 51e5a233d358f55439508b4f069aeda8, type: 3}
+  m_PrefabInstance: {fileID: 6538186632034471227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6538186632034471231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3685958365785088325, guid: 51e5a233d358f55439508b4f069aeda8, type: 3}
+  m_PrefabInstance: {fileID: 6538186632034471227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6538186632034471232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538186632034471231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70af5aacb7e3d2140b4d50a9211243e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SonarRadarWithNewBlip
+  player: {fileID: 70600900}
+  radarRect: {fileID: 6538186632034471228}
+  sweep: {fileID: 6538186632034471230}
+  blipsContainer: {fileID: 6538186632034471229}
+  blipPrefab: {fileID: 1603077500}
+  radarRange: 50
+  revealAngleThreshold: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
