@@ -2,15 +2,27 @@ using UnityEngine;
 
 public class PopupController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private PopupUI Popup;
+    [SerializeField] private PopupUI CPopup;
+    [SerializeField] private KeyCode mapKey = KeyCode.M;
+    [SerializeField] private KeyCode controllsKey = KeyCode.N;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(mapKey))
+        {
+            if (Popup.gameObject.activeSelf)
+                Popup.ClosePopup();
+            else
+                Popup.OpenPopup();
+        }
+
+        if (Input.GetKeyDown(controllsKey))
+        {
+            if (CPopup.gameObject.activeSelf)
+                CPopup.ClosePopup();
+            else
+                CPopup.OpenPopup();
+        }
     }
 }
