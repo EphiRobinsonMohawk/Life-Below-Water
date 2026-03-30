@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
    public SubMovement subMovement;
     void Start()
     {
+        Application.targetFrameRate = 30; // Set the target frame rate
         inputManager.state = InputManager.InputState.Menus;       
     }
 
@@ -15,17 +16,20 @@ public class GameManager : MonoBehaviour
     {
         cameraManager.CameraControl();
         subMovement.HercCamControl();
-        if (inputManager.state != InputManager.InputState.Hercules)
+       /* if (inputManager.state != InputManager.InputState.Hercules)
         {
             inputManager.InputHandling();
         }
+       */
+
        
     }
     void FixedUpdate()
     {
-        if (inputManager.state == InputManager.InputState.Hercules)
-        {
-            inputManager.InputHandling();
-        }
+        inputManager.InputHandling();
+        /* if (inputManager.state == InputManager.InputState.Hercules)
+         {
+             inputManager.InputHandling();
+         }*/
     }
 }

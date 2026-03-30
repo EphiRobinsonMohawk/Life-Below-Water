@@ -4,6 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(CanvasGroup))]
 public class ShutterEffect : MonoBehaviour
 {
+    public ShutterMonitor mainMonitor;
+    public CameraManager cameraManager;
     private CanvasGroup canvasGroup;
 
     [Header("Settings")]
@@ -18,8 +20,16 @@ public class ShutterEffect : MonoBehaviour
 
     public void TriggerEffect()
     {
-        StopAllCoroutines();
-        StartCoroutine(ShutterRoutine());
+        //Check active camera. Control room, trigger this. Hercules, trigger the monitor's effect.
+        if (cameraManager.activeCamera == CameraManager.ActiveCamera.Control)
+        {
+            mainMonitor.TriggerEffect();
+        }
+        else
+        {
+            StopAllCoroutines();
+            StartCoroutine(ShutterRoutine());
+        }
     }
 
     private IEnumerator ShutterRoutine()

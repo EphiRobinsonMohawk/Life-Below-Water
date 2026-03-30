@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public enum Song { TemporaryWaterMusic }
+public enum Song { TemporaryWaterMusic,UnderWaterMotifV2 }
 
 [Serializable]
 public struct BGMData

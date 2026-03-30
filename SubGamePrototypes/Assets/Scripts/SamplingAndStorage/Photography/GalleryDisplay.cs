@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using System.Collections.Generic;
 
 public class GalleryDisplay : MonoBehaviour
 {
     public GameObject photoPrefab; // A UI Image prefab
     public Transform contentParent; // The Content object of a Scroll View
+
+    private Queue<string> pendingPhotos = new Queue<string>();
 
     void Start()
     {
@@ -20,6 +23,8 @@ public class GalleryDisplay : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        pendingPhotos.Clear();
+
         // 1. Get all PNG files from the persistent path
         string path = Application.persistentDataPath;
         string[] filePaths = Directory.GetFiles(path, "*.png");
@@ -31,6 +36,20 @@ public class GalleryDisplay : MonoBehaviour
     }
 
     public void AddPhoto(string path)
+    {
+        pendingPhotos.Enqueue(path);
+    }
+
+    public void LoadPendingPhotos()
+    {
+        while (pendingPhotos.Count > 0)
+        {
+            string path = pendingPhotos.Dequeue();
+            ProcessPhoto(path);
+        }
+    }
+
+    private void ProcessPhoto(string path)
     {
         // 2. Load the file into a texture
         byte[] fileData = File.ReadAllBytes(path);
@@ -46,5 +65,37 @@ public class GalleryDisplay : MonoBehaviour
 
         // Ensure scale is correct case parent affects it
         newPhoto.transform.localScale = Vector3.one;
+
+        // Initialize the Photo script
+        Photo photoScript = newPhoto.GetComponent<Photo>();
+        if (photoScript != null)
+        {
+            photoScript.Setup(path, this, photoSprite);
+        }
+    }
+
+    [Header("Fullscreen UI")]
+    public GameObject fullscreenPanel;
+    public Image fullscreenImage;
+
+    public void ShowFullscreen(Sprite fullSprite)
+    {
+        Debug.Log("Showing fullscreen image");
+        Debug.Log(fullSprite != null ? "Sprite found" : "Sprite not found");
+        Debug.Log(fullscreenPanel != null ? "Panel found" : "Panel not found");
+        Debug.Log(fullscreenImage != null ? "Image found" : "Image not found");
+        if (fullscreenPanel != null && fullscreenImage != null)
+        {
+            fullscreenImage.sprite = fullSprite;
+            fullscreenPanel.SetActive(true);
+        }
+    }
+
+    public void CloseFullscreen()
+    {
+        if (fullscreenPanel != null)
+        {
+            fullscreenPanel.SetActive(false);
+        }        
     }
 }
