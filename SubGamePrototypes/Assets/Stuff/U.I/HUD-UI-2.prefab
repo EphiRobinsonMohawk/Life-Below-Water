@@ -896,7 +896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6397726355109430097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1679,7 +1679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4529862461259927503, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
       propertyPath: m_Name
-      value: Canvas Variant
+      value: HUD-UI-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529862461259927503, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4551668635984571830, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1723,6 +1727,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8783896012557717652, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783896012557717652, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783896012557717652, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783896012557717652, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8783896012557717652, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
@@ -1807,8 +1823,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2817c62c2d349498bcc66fa9976df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopupController
-  popup: {fileID: 1367492232064067703}
-  toggleKey: 112
+  Popup: {fileID: 0}
+  CPopup: {fileID: 0}
+  mapKey: 109
+  controllsKey: 110
 --- !u!1 &4908964506799260780 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6089228428474572777, guid: c56447150f1907746ad98b7b548d53b6, type: 3}
