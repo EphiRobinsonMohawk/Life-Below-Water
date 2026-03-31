@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
 
 public class KeyToggleIcon : MonoBehaviour
 {
@@ -8,17 +7,14 @@ public class KeyToggleIcon : MonoBehaviour
     public Image iconImage;
     public Sprite onSprite;
     public Sprite offSprite;
-
-    [Header("Keyboard Fallback")]
-    public KeyCode keyboardKey = KeyCode.LeftShift; 
-
-
-    
+    public Sprite holdingSprite;
 
     [Header("Sync")]
     public SubMovement subMovement;
+    public ArmMovement armMovement;
 
     private bool isOn = false;
+    private bool isHolding = false;
 
     void Start()
     {
@@ -32,32 +28,81 @@ public class KeyToggleIcon : MonoBehaviour
             isOn = subMovement.isArmMode;
         }
 
+        if (armMovement == null)
+        {
+            armMovement = FindAnyObjectByType<ArmMovement>();
+        }
+
+        if (armMovement != null)
+        {
+            isHolding = armMovement._heldObject != null;
+        }
+
         UpdateIcon();
     }
 
-    void Update()
+    private void OnEnable()
     {
-        if (subMovement == null) return;
-
-        if (isOn != subMovement.isArmMode)
+        if (subMovement != null)
         {
-            isOn = subMovement.isArmMode;
-            UpdateIcon();
+            subMovement.onArmModeToggled.AddListener(SetArmMode);
         }
+
+        if (armMovement != null)
+        {
+            armMovement.onHoldingObjectToggled.AddListener(SetHoldingState);
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (subMovement != null)
+        {
+            subMovement.onArmModeToggled.RemoveListener(SetArmMode);
+        }
+
+        if (armMovement != null)
+        {
+            armMovement.onHoldingObjectToggled.RemoveListener(SetHoldingState);
+        }
+    }
+
+    private void SetArmMode(bool enabled)
+    {
+        isOn = enabled;
+        UpdateIcon();
+    }
+
+    private void SetHoldingState(bool holding)
+    {
+        isHolding = holding;
+        UpdateIcon();
     }
 
     void UpdateIcon()
     {
         if (iconImage == null) return;
 
-        iconImage.sprite = isOn ? onSprite : offSprite;
-
-        iconImage.color = isOn
-            ? new Color(1f, 1f, 1f, 1f)
-            : new Color(1f, 1f, 1f, 0.4f);
-
-        transform.localScale = isOn
-            ? Vector3.one * 1.05f
-            : Vector3.one;
+        // Visual State Logic:
+        // Priority: Off (not in arm mode) > Holding (in arm mode + holding) > On (in arm mode)
+        
+        if (!isOn)
+        {
+            iconImage.sprite = offSprite;
+            iconImage.color = new Color(1f, 1f, 1f, 0.4f);
+            transform.localScale = Vector3.one;
+        }
+        else if (isHolding && holdingSprite != null)
+        {
+            iconImage.sprite = holdingSprite;
+            iconImage.color = new Color(1f, 1f, 1f, 1f);
+            transform.localScale = Vector3.one * 1.15f; // Extra pop when holding
+        }
+        else
+        {
+            iconImage.sprite = onSprite;
+            iconImage.color = new Color(1f, 1f, 1f, 1f);
+            transform.localScale = Vector3.one * 1.05f;
+        }
     }
 }

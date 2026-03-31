@@ -1278,6 +1278,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3406886191869286256, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: armMovement
+      value: 
+      objectReference: {fileID: 1660933156}
+    - target: {fileID: 3406886191869286256, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: subMovement
+      value: 
+      objectReference: {fileID: 1243593282}
+    - target: {fileID: 3406886191869286256, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: holdingSprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4727696054626658172, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
       propertyPath: rov
       value: 
@@ -1410,6 +1422,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2056578302}
+    - target: {fileID: 7577006371272203699, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: homeBase
+      value: 
+      objectReference: {fileID: 1379711018}
     - target: {fileID: 8781492266901046313, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
       propertyPath: subMovement
       value: 
@@ -8528,6 +8544,11 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 2270686136580766825, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
   m_PrefabInstance: {fileID: 7201736898502964907}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1379711018 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7523147234333747796, guid: bfd73f36e6f63b74facd80c07a333edc, type: 3}
+  m_PrefabInstance: {fileID: 7359320874551470784}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1400003855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15273,6 +15294,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1660933156 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2699514388993845867, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+  m_PrefabInstance: {fileID: 8932446411237577670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307adf956cbfb574ca6bb9eac67da4fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArmMovement
 --- !u!114 &1663727515 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2503077051944169242, guid: 5d42dfd698e358948928c77654de6904, type: 3}

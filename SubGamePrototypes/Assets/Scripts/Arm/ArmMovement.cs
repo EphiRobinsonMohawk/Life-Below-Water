@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class ArmMovement : MonoBehaviour
 {
@@ -69,6 +70,7 @@ public class ArmMovement : MonoBehaviour
     public InputActionReference rightStick;
     public InputActionReference openHand;
     public InputActionReference closeHand;
+    public UnityEvent<bool> onHoldingObjectToggled = new UnityEvent<bool>();
     public InputActionReference returnArm;
 
 
@@ -364,6 +366,7 @@ public class ArmMovement : MonoBehaviour
         _gripJoint.connectedBody = _heldObject;
         _gripJoint.breakForce = Mathf.Infinity;
         _gripJoint.breakTorque = Mathf.Infinity;
+        onHoldingObjectToggled.Invoke(true);
 
         Debug.Log($"Grabbed {_heldObject.name}");
     }
@@ -383,6 +386,7 @@ public class ArmMovement : MonoBehaviour
 
         _heldObject = null;
         _gripJoint = null;
+        onHoldingObjectToggled.Invoke(false);
     }
 
     public void ReturnArmToDefaultPosition()
