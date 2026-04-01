@@ -58,6 +58,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2817c62c2d349498bcc66fa9976df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopupController
+  Popup: {fileID: 0}
+  CPopup: {fileID: 0}
+  mapKey: 109
+  controllsKey: 110
 --- !u!223 &886458505048149177
 Canvas:
   m_ObjectHideFlags: 0
@@ -247,7 +251,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CompassController
   player: {fileID: 0}
   compassContent: {fileID: 4410272708892386352}
-  pixelsPerDegree: 5
   rulerWidth: 3000
 --- !u!1 &1136588389006326639
 GameObject:
@@ -2456,7 +2459,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4965003148673420022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
@@ -2857,9 +2860,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 770cd977f98ea8f468c57da23677556f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepthReader
-  player: {fileID: 0}
+  surface: {fileID: 0}
+  rov: {fileID: 0}
   depthContent: {fileID: 250002746947689226}
   pixelsPerMeter: 4
+  offset: 0
+  smoothSpeed: 5
+  invertDirection: 1
+  depthText: {fileID: 0}
+  cameraManager: {fileID: 0}
+  cameraText: {fileID: 0}
+  targetCanvas: {fileID: 0}
+  controlCamera: {fileID: 0}
+  frontCamera: {fileID: 0}
+  rightCamera: {fileID: 0}
+  leftCamera: {fileID: 0}
+  thirdPersonCamera: {fileID: 0}
 --- !u!114 &6300130259848513188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4010,7 +4026,8 @@ MonoBehaviour:
   iconImage: {fileID: 5640051992595403738}
   onSprite: {fileID: -627376832, guid: de2a21ede5f1e304593c56c3ac071a0b, type: 3}
   offSprite: {fileID: 1788161713, guid: de2a21ede5f1e304593c56c3ac071a0b, type: 3}
-  toggleKey: 102
+  keyboardKey: 304
+  subMovement: {fileID: 0}
 --- !u!1 &9181893864842333472
 GameObject:
   m_ObjectHideFlags: 0
