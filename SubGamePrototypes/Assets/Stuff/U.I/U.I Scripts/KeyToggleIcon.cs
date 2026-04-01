@@ -82,9 +82,6 @@ public class KeyToggleIcon : MonoBehaviour
     void UpdateIcon()
     {
         if (iconImage == null) return;
-
-        // Visual State Logic:
-        // Priority: Off (not in arm mode) > Holding (in arm mode + holding) > On (in arm mode)
         
         if (!isOn)
         {
@@ -92,11 +89,11 @@ public class KeyToggleIcon : MonoBehaviour
             iconImage.color = new Color(1f, 1f, 1f, 0.4f);
             transform.localScale = Vector3.one;
         }
-        else if (isHolding && holdingSprite != null)
+        else if (isHolding)
         {
             iconImage.sprite = holdingSprite;
             iconImage.color = new Color(1f, 1f, 1f, 1f);
-            transform.localScale = Vector3.one * 1.15f; // Extra pop when holding
+            transform.localScale = Vector3.one * 1.05f;
         }
         else
         {

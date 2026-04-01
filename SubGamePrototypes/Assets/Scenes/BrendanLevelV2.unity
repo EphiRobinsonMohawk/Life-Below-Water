@@ -1234,6 +1234,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1795728353}
     m_Modifications:
+    - target: {fileID: 190540642891344312, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.7652
+      objectReference: {fileID: 0}
+    - target: {fileID: 241762039327246068, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 570.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 241762039327246068, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 965796971650031261, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
       propertyPath: rov
       value: 
@@ -1274,10 +1286,22 @@ PrefabInstance:
       propertyPath: playerRb
       value: 
       objectReference: {fileID: 2056578301}
+    - target: {fileID: 2781456596965229919, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 21.41003
+      objectReference: {fileID: 0}
     - target: {fileID: 2986749632172966481, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
       propertyPath: m_Name
       value: PlayerUICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3406886191869286256, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: onSprite
+      value: 
+      objectReference: {fileID: -1446355583, guid: 78aacbb9e449045488b49ddda174fbfb, type: 3}
+    - target: {fileID: 3406886191869286256, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: offSprite
+      value: 
+      objectReference: {fileID: 1547593408, guid: 78aacbb9e449045488b49ddda174fbfb, type: 3}
     - target: {fileID: 3406886191869286256, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
       propertyPath: armMovement
       value: 
@@ -1289,7 +1313,7 @@ PrefabInstance:
     - target: {fileID: 3406886191869286256, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
       propertyPath: holdingSprite
       value: 
-      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: -1748320636, guid: 78aacbb9e449045488b49ddda174fbfb, type: 3}
     - target: {fileID: 4727696054626658172, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
       propertyPath: rov
       value: 
@@ -1322,6 +1346,10 @@ PrefabInstance:
       propertyPath: thirdPersonCamera
       value: 
       objectReference: {fileID: 1067234748}
+    - target: {fileID: 5559475718250720031, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6491208486651044934, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
       propertyPath: playerRb
       value: 
@@ -1426,6 +1454,14 @@ PrefabInstance:
       propertyPath: homeBase
       value: 
       objectReference: {fileID: 1379711018}
+    - target: {fileID: 8202740999631625810, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1547593408, guid: 78aacbb9e449045488b49ddda174fbfb, type: 3}
+    - target: {fileID: 8202740999631625810, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8781492266901046313, guid: fe1c9cfa4f92f774a8224ebea4519974, type: 3}
       propertyPath: subMovement
       value: 
