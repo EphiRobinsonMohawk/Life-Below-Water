@@ -1729,6 +1729,8 @@ MonoBehaviour:
   inputManager: {fileID: 60022795}
   audioManager: {fileID: 1609070699}
   sampleStorage: {fileID: 8932446411237577671}
+  scoreManager: {fileID: 1546436334}
+  fundTracker: {fileID: 728135744}
 --- !u!4 &483952601
 Transform:
   m_ObjectHideFlags: 0
@@ -2263,6 +2265,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df57d0aebd02d15458c6ea78620a0e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpeciesButton
+--- !u!114 &728135744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4896250790976330973, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+  m_PrefabInstance: {fileID: 7201736898502964907}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!223 &755489923 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 1794671446439195703, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
@@ -14268,6 +14281,8 @@ MonoBehaviour:
   OnGameStart:
     m_PersistentCalls:
       m_Calls: []
+  photography: {fileID: 1663727515}
+  sampleStorage: {fileID: 8932446411237577671}
 --- !u!1001 &1557070919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24047,6 +24062,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ROV Hercules
       objectReference: {fileID: 0}
+    - target: {fileID: 8417801020908801920, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 1546436334}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2464205073462165449, guid: 5d42dfd698e358948928c77654de6904, type: 3}

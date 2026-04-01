@@ -61,6 +61,8 @@ public class UIManager : MonoBehaviour
     InputAction cancelAction;
     public AudioManager audioManager;
     public SampleStorage sampleStorage;
+    public ScoreManager scoreManager;
+    public TMP_Text fundTracker;
 
     public void Start()
     {
@@ -135,6 +137,7 @@ public class UIManager : MonoBehaviour
         activeCanvas.enabled = false;
         expeditionCanvas.enabled = true;
         activeCanvas = expeditionCanvas;
+        fundTracker.text = scoreManager.funds.ToString();
         //SetSelected(expeditionFirstSelected);
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }

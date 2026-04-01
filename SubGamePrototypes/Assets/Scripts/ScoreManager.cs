@@ -27,12 +27,30 @@ public class ScoreManager : MonoBehaviour
     public UnityEvent<float> OnTimeChange;
     public UnityEvent OnGameStart;
 
+    //References
+    public Photography photography;
+    public SampleStorage sampleStorage;
+
+    private void OnEnable()
+    {
+        sampleStorage.OnSampleStored.AddListener(SampleCollected);
+    }
 
     public void Start()
     {
         timerStarted = true;
         funds = startingFund;
         timeRemaining = startingTime;
+    }
+
+    void SpeciesIdentified()
+    {
+
+    }
+
+    void SampleCollected(Invertebrate sample)
+    {
+        ChangeFunds(250, "Collected sample!");
     }
 
     public void ChangeFunds(int _funds, string _reason)
