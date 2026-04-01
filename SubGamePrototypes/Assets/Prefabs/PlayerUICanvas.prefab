@@ -2880,8 +2880,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5172603465878853986}
-  - component: {fileID: 1896312330203387441}
   - component: {fileID: 1652383474319269287}
+  - component: {fileID: 6537182151138975666}
   m_Layer: 5
   m_Name: SpeedometerRoot
   m_TagString: Untagged
@@ -2914,22 +2914,6 @@ RectTransform:
   m_AnchoredPosition: {x: 142, y: 145}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1896312330203387441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3482822941312251623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4f0fefbd7bc37242925b7546c026d56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpeedometerLevels
-  speedometerScript: {fileID: 1652383474319269287}
-  Speedlevel_1: {fileID: 900711592075625570}
-  Speedlevel_2: {fileID: 6462072961356602989}
-  Speedlevel_3: {fileID: 8829575986427301309}
 --- !u!114 &1652383474319269287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2948,6 +2932,22 @@ MonoBehaviour:
   maxSpeed: 50
   minAngle: 130
   maxAngle: -130
+--- !u!114 &6537182151138975666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3482822941312251623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2f121a43a881d4481f816a32afd2d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpeedometerLevels
+  speedometerScript: {fileID: 1652383474319269287}
+  Speedlevel_1: {fileID: 900711592075625570}
+  Speedlevel_2: {fileID: 6462072961356602989}
+  Speedlevel_3: {fileID: 8829575986427301309}
 --- !u!1 &3762271086305605684
 GameObject:
   m_ObjectHideFlags: 0

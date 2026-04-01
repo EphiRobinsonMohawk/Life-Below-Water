@@ -11,9 +11,11 @@ public class Speedometer : MonoBehaviour
     public float minAngle = -130f;
     public float maxAngle = 130f;
 
+    public float speed;
+
     void Update()
     {
-        float speed = playerRb.linearVelocity.magnitude * 3.6f;
+        speed = playerRb.linearVelocity.magnitude * 3.6f * 2;
 
         // Rotate needle
         float normalizedSpeed = Mathf.Clamp01(speed / maxSpeed);
