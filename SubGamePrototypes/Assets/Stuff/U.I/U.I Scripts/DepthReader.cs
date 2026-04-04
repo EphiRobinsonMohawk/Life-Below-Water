@@ -59,7 +59,7 @@ public class DepthUIController : MonoBehaviour
 
         currentDepth = surface.position.y - rov.position.y;
 
-        Debug.Log(currentDepth);
+        //Debug.Log(currentDepth);
 
         if (currentDepth < 0f)
             currentDepth = 0f;

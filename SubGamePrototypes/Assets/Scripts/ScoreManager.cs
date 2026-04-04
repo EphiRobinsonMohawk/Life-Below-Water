@@ -2,6 +2,8 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class ScoreManager : MonoBehaviour
     //public Dictionary<int, string> changeQueue;
     public bool gameOver;
     public bool overtime;
+    bool overtimeCharge;
 
     //Events
     //Pass amount of funds changed and the reason
@@ -34,6 +37,7 @@ public class ScoreManager : MonoBehaviour
     private void OnEnable()
     {
         sampleStorage.OnSampleStored.AddListener(SampleCollected);
+        photography.onSpeciesIdentified.AddListener(SpeciesIdentified);
     }
 
     public void Start()
@@ -43,14 +47,20 @@ public class ScoreManager : MonoBehaviour
         timeRemaining = startingTime;
     }
 
-    void SpeciesIdentified()
+    void SpeciesIdentified(Dictionary<Species, bool> identifiedSpecies)
     {
-
+        if (identifiedSpecies.ContainsValue(true)) return;
+        Species species = identifiedSpecies.Keys.FirstOrDefault();
+        string speciesString = species.speciesName.ToString();
+        ChangeFunds(500, "Identified: " +speciesString);
+        Debug.Log("Changed funds because identified species: " + speciesString);
     }
 
-    void SampleCollected(Invertebrate sample)
+    void SampleCollected(Invertebrate _sample)
     {
-        ChangeFunds(250, "Collected sample!");
+        string sample = _sample.invertebrateType.ToString();
+        ChangeFunds(250, "Collected sample of: " +sample);
+        Debug.Log("Changed funds because of collected sample:" + sample);
     }
 
     public void ChangeFunds(int _funds, string _reason)
@@ -80,14 +90,23 @@ public class ScoreManager : MonoBehaviour
     public void LevelTimer()
     {
         timeRemaining -= Time.deltaTime;
-        if (!overtime)
+        if (timeRemaining <= 0)
         {
-            if (timeRemaining <= 0)
+            overtime = true;
+            if(overtimeCharge)
             {
-                overtime = true;
-                OnOvertime.Invoke();
+                ChangeFunds(-200, "Over expedition time!");
+                overtimeCharge = false;
+                StartCoroutine(OvertimeFundChange());
             }
+             OnOvertime.Invoke();
         }
         OnTimeChange.Invoke(timeRemaining);
+    }
+
+    IEnumerator OvertimeFundChange()
+    {
+        yield return new WaitForSeconds(30f);
+        overtimeCharge = true;
     }
 }
