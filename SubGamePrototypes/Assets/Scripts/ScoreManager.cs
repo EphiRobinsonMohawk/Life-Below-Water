@@ -49,14 +49,21 @@ public class ScoreManager : MonoBehaviour
 
     void SpeciesIdentified(Dictionary<Species, bool> identifiedSpecies)
     {
-        foreach (var entry in identifiedSpecies.Where(x => x.Value == false))
+        // Make a SAFE copy so we can modify the original
+        var copy = new List<KeyValuePair<Species, bool>>(identifiedSpecies);
+
+        foreach (var entry in copy)
         {
-            string speciesString = entry.Key.speciesName.ToString();
+            if (entry.Value == false)
+            {
+                string speciesString = entry.Key.speciesName.ToString();
 
-            ChangeFunds(500, "Identified: " + speciesString);
-            Debug.Log("Changed funds because identified species: " + speciesString);
+                ChangeFunds(500, "Identified: " + speciesString);
+                Debug.Log("Changed funds because identified species: " + speciesString); //debug log to verify correct species name is being passed and correct amount of funds is being changed
 
-            identifiedSpecies[entry.Key] = true;
+                // Now safe to modify original dictionary
+                identifiedSpecies[entry.Key] = true;
+            }
         }
     }
 
