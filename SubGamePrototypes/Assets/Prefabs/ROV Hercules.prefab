@@ -9314,9 +9314,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2.7345302
-  m_Height: 10.966516
+  m_Height: 10.901552
   m_Direction: 0
-  m_Center: {x: 0, y: 2.66, z: 0}
+  m_Center: {x: -0.032482147, y: 2.66, z: 0}
 --- !u!114 &2935820650338060305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9355,6 +9355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SubCollision
   scoreManager: {fileID: 0}
+  sub: {fileID: 0}
 --- !u!1 &8277067514692540836
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ public class ScoreManager : MonoBehaviour
     //public Dictionary<int, string> changeQueue;
     public bool gameOver;
     public bool overtime;
-    bool overtimeCharge;
+    bool overtimeCharge = true;
 
     //Events
     //Pass amount of funds changed and the reason
@@ -49,11 +49,15 @@ public class ScoreManager : MonoBehaviour
 
     void SpeciesIdentified(Dictionary<Species, bool> identifiedSpecies)
     {
-        if (identifiedSpecies.ContainsValue(true)) return;
-        Species species = identifiedSpecies.Keys.FirstOrDefault();
-        string speciesString = species.speciesName.ToString();
-        ChangeFunds(500, "Identified: " +speciesString);
-        Debug.Log("Changed funds because identified species: " + speciesString);
+        foreach (var entry in identifiedSpecies.Where(x => x.Value == false))
+        {
+            string speciesString = entry.Key.speciesName.ToString();
+
+            ChangeFunds(500, "Identified: " + speciesString);
+            Debug.Log("Changed funds because identified species: " + speciesString);
+
+            identifiedSpecies[entry.Key] = true;
+        }
     }
 
     void SampleCollected(Invertebrate _sample)
@@ -99,7 +103,7 @@ public class ScoreManager : MonoBehaviour
                 overtimeCharge = false;
                 StartCoroutine(OvertimeFundChange());
             }
-             OnOvertime.Invoke();
+             //OnOvertime.Invoke();
         }
         OnTimeChange.Invoke(timeRemaining);
     }
