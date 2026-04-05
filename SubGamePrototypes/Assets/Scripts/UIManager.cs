@@ -31,6 +31,7 @@ public class UIManager : MonoBehaviour
 
     // Popups
     public TextMeshProUGUI popUpNotification;
+    public TextMeshProUGUI popUpNotification2;
 
     [Header("First Selection Targets")]
     public GameObject introFirstSelected;
@@ -61,6 +62,8 @@ public class UIManager : MonoBehaviour
     InputAction cancelAction;
     public AudioManager audioManager;
     public SampleStorage sampleStorage;
+    public ScoreManager scoreManager;
+    public TMP_Text fundTracker;
 
     public void Start()
     {
@@ -92,6 +95,7 @@ public class UIManager : MonoBehaviour
 
         // Connect event listeners
         photography.onSpeciesIdentified.AddListener(ShowSpeciesPopUp);
+        scoreManager.OnFundsChanged.AddListener(ShowFundPopup);
         sampleStorage.OnSampleStored.AddListener(ShowSamplePopUp);
         
     }
@@ -135,6 +139,7 @@ public class UIManager : MonoBehaviour
         activeCanvas.enabled = false;
         expeditionCanvas.enabled = true;
         activeCanvas = expeditionCanvas;
+        fundTracker.text = scoreManager.funds.ToString();
         //SetSelected(expeditionFirstSelected);
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
@@ -330,6 +335,30 @@ public class UIManager : MonoBehaviour
             CancelInvoke(nameof(HideSpeciesPopUp));
             Invoke(nameof(HideSpeciesPopUp), 5f);
         }
+    }
+
+    private void ShowFundPopup(int _funds, string _reason)
+    {
+        popUpNotification2.gameObject.SetActive(true);
+        if (_funds > 0)
+        {
+            popUpNotification2.text = "You gained $" + _funds + " because: " +_reason;
+            popUpNotification2.color = Color.green;
+        }
+        else
+        {
+            _funds *= -1;
+            popUpNotification2.text = "You lost $" + _funds + " because: " + _reason;
+            popUpNotification2.color = Color.red;
+        }
+        CancelInvoke(nameof(HideFundsPopUp));
+        Invoke(nameof(HideFundsPopUp), 5f);
+    }
+
+    private void HideFundsPopUp()
+    {
+        popUpNotification2.color = Color.white;
+        popUpNotification2.gameObject.SetActive(false);
     }
 
     private void HideSpeciesPopUp()
