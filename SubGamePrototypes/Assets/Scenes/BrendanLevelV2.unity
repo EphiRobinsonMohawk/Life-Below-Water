@@ -1872,7 +1872,7 @@ Transform:
   m_GameObject: {fileID: 665428659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1513.402, y: 807.732, z: -180.279}
+  m_LocalPosition: {x: 1513.402, y: 808.041, z: -180.279}
   m_LocalScale: {x: 3.0027, y: 0.76032, z: 0.32194}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15441,6 +15441,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90afb1217ee1aee429d70c0448e49346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExpeditionTimer
+--- !u!4 &1595159851 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9221513332183516347, guid: bfd73f36e6f63b74facd80c07a333edc, type: 3}
+  m_PrefabInstance: {fileID: 7359320874551470784}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1603860689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16205,6 +16210,11 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5360180347738614441, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
   m_PrefabInstance: {fileID: 7201736898502964907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1836291834 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 719799219609354504, guid: bfd73f36e6f63b74facd80c07a333edc, type: 3}
+  m_PrefabInstance: {fileID: 7359320874551470784}
   m_PrefabAsset: {fileID: 0}
 --- !u!223 &1839521630 stripped
 Canvas:
@@ -23548,7 +23558,11 @@ PrefabInstance:
     - target: {fileID: 6939593480470892163, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: Journal
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 836591947}
+    - target: {fileID: 6939593480470892163, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: TaskBoard
+      value: 
+      objectReference: {fileID: 1836291834}
     - target: {fileID: 6939593480470892163, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: uiManager
       value: 
@@ -23561,6 +23575,10 @@ PrefabInstance:
       propertyPath: HerculesScreen
       value: 
       objectReference: {fileID: 496270379}
+    - target: {fileID: 6939593480470892163, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: ExpeditionTimer
+      value: 
+      objectReference: {fileID: 1595159851}
     - target: {fileID: 7017553362483086994, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
