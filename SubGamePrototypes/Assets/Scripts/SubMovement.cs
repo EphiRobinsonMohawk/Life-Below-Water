@@ -7,6 +7,7 @@ public class SubMovement : MonoBehaviour
     //Events
     public UnityEvent onEnterHerculesFirstPersonView;
     public UnityEvent onExitHerculesFirstPersonView;
+    public UnityEvent<bool> onArmModeToggled = new UnityEvent<bool>();
     public UnityEvent onExitHercules;
 
     //References
@@ -60,6 +61,7 @@ public class SubMovement : MonoBehaviour
         if (controllingHerc && _toggleArmAction != null && _toggleArmAction.WasPressedThisFrame())
         {
             isArmMode = !isArmMode;
+            onArmModeToggled.Invoke(isArmMode);
             Debug.Log("Arm Mode Toggled: " + isArmMode);
         }
     }
