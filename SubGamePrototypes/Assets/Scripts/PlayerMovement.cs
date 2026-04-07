@@ -10,9 +10,12 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSmoothness = 7f; // Lower = more "weight"
     public float autoLookSlow = 0.3f; // How much to slow down auto-look
     Vector2 currentRotation;
+
+    // Things to look at
     public Transform HerculesScreen;
     public Transform Journal;
-    private Transform targetTransform;
+    public Transform ExpeditionTimer;
+    public Transform TaskBoard;
 
     // Interaction Popup
     public GameObject interactionUI;
@@ -23,13 +26,23 @@ public class PlayerMovement : MonoBehaviour
     public InputAction look;
     public InputAction interact;
 
+
     // Private variables
-    Vector2 lookPosition;
+    private Transform targetTransform;
+    private Vector2 lookPosition;
+    private Transform[] targets;
+    private int currentTargetIndex = 1; // Start at HerculesScreen
+    private bool lookInputReset = true;
+    private bool isLookingUp = false;
+    public float flickThreshold = 0.5f;
 
     public void Start()
     {
         look = InputSystem.actions.FindAction("Player/Look");
         interact = InputSystem.actions.FindAction("Player/Interact");
+
+        // Initialization
+        targets = new Transform[] { Journal, HerculesScreen, TaskBoard };
     }
 
     // Always rotate
@@ -37,16 +50,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if (inputManager.state == InputManager.InputState.ControlRoom)
         {
-            targetTransform = null;
-            // Smoothly interpolate towards target rotation
-            currentRotation.x = Mathf.LerpAngle(currentRotation.x, lookPosition.x, Time.deltaTime * rotationSmoothness);
-            currentRotation.y = Mathf.LerpAngle(currentRotation.y, lookPosition.y, Time.deltaTime * rotationSmoothness);
-
-            cameraVertRot -= currentRotation.y;
-            cameraVertRot = Mathf.Clamp(cameraVertRot, -90f, 90f);
-
-            transform.localEulerAngles = Vector3.right * cameraVertRot;
-            player.Rotate(Vector3.up * currentRotation.x);
+            // Set current target based on index/vertical state
+            if (targets != null && targets.Length > 0)
+            {
+                if (isLookingUp)
+                {
+                    targetTransform = ExpeditionTimer;
+                }
+                else
+                {
+                    targetTransform = targets[currentTargetIndex];
+                }
+                HandleLookAtTarget();
+            }
         }
         else if (targetTransform != null)
         {
@@ -57,7 +73,58 @@ public class PlayerMovement : MonoBehaviour
 
     public void PlayerRotation()
     {
-        lookPosition = look.ReadValue<Vector2>();
+        Vector2 input = look.ReadValue<Vector2>();
+
+        // Handle cycling targets with flicks
+        if (lookInputReset)
+        {
+            // Vertical flicks (only from Hercules Screen)
+            if (input.y > flickThreshold && currentTargetIndex == 1 && !isLookingUp)
+            {
+                isLookingUp = true;
+                lookInputReset = false;
+                return;
+            }
+            else if (input.y < -flickThreshold && isLookingUp)
+            {
+                isLookingUp = false;
+                lookInputReset = false;
+                return;
+            }
+
+            // Horizontal flicks (only while not looking up)
+            if (!isLookingUp)
+            {
+                if (input.x > flickThreshold)
+                {
+                    // Flick Right -> Next target
+                    if (currentTargetIndex < targets.Length - 1)
+                    {
+                        currentTargetIndex++;
+                        lookInputReset = false;
+                        return;
+                    }
+                }
+                else if (input.x < -flickThreshold)
+                {
+                    // Flick Left -> Previous target
+                    if (currentTargetIndex > 0)
+                    {
+                        currentTargetIndex--;
+                        lookInputReset = false;
+                        return;
+                    }
+                }
+            }
+        }
+        else
+        {
+            // Reset look if stick returns near center or mouse stops
+            if (Mathf.Abs(input.x) < flickThreshold * 0.5f && Mathf.Abs(input.y) < flickThreshold * 0.5f)
+            {
+                lookInputReset = true;
+            }
+        }
     }
 
 

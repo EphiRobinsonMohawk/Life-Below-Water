@@ -75,8 +75,8 @@ public class ArmMovement : MonoBehaviour
 
 
     // Arm Default Position
-    Vector3 wristDefaultPosition = new Vector3(1.98319972f,-1.6768707f,4.63943052f);
-    Quaternion shoulderDefaultRotation = new Quaternion(5.26835571e-08f, 0.195197642f, -4.74152024e-08f, 0.980763912f);
+    Vector3 wristDefaultPosition = new Vector3(2.73715854f, -2.06343889f, 4.57884884f);
+    Quaternion shoulderDefaultRotation = new Quaternion(0.269972354f, -0.00291528646f, 0.962807596f, 0.0103965905f);
 
     Vector3 NextMove = Vector3.zero;
 
