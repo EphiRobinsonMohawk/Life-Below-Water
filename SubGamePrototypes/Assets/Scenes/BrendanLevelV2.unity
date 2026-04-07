@@ -29255,6 +29255,22 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.00000004485315
       objectReference: {fileID: 0}
+    - target: {fileID: 7201394002370729260, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201394002370729260, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: m_Limits.max
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201394002370729260, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: m_Limits.min
+      value: -70
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201394002370729260, guid: 5d42dfd698e358948928c77654de6904, type: 3}
+      propertyPath: m_ExtendedLimits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7480705876391056650, guid: 5d42dfd698e358948928c77654de6904, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1089.64
