@@ -4,6 +4,7 @@ public enum FishType
 {
     BaskingShark,
     Tuna,
+    BlobSculpin
 }
 
 public class Fish : Species
@@ -21,6 +22,9 @@ public class Fish : Species
                 break;
             case FishType.Tuna:
                 speciesName = "Pacific Bluefin Tuna";
+                break;
+            case FishType.BlobSculpin:
+                speciesName = "Blob Sculpin";
                 break;
         }
     }
