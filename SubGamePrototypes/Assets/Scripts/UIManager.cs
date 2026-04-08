@@ -33,6 +33,8 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI popUpNotification;
     public TextMeshProUGUI popUpNotification2;
 
+
+
     [Header("First Selection Targets")]
     public GameObject introFirstSelected;
     public GameObject galleryFirstSelected;
