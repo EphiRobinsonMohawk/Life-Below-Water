@@ -1774,6 +1774,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228146651}
   m_Mesh: {fileID: -6673886987444785032, guid: 4bfb9e95b8780394e91329ce2596780e, type: 3}
+--- !u!223 &234763686 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8826083026682452152, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+  m_PrefabInstance: {fileID: 7201736898502964907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!223 &239718649 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 4645834323518792084, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
@@ -3091,6 +3096,8 @@ MonoBehaviour:
   unlockedVesicomyidClamCanvas: {fileID: 645723048}
   lockedGracefulCrabCanvas: {fileID: 755489923}
   unlockedGracefulCrabCanvas: {fileID: 775747983}
+  lockedBlobSculpinCanvas: {fileID: 234763686}
+  unlockedBlobSculpinCanvas: {fileID: 1271895576}
   popUpNotification: {fileID: 1010735919}
   popUpNotification2: {fileID: 812775336}
   introFirstSelected: {fileID: 1812310674}
@@ -11792,6 +11799,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7f2ad22681316428f068ad1dba24d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SubMovement
+--- !u!223 &1271895576 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 6174654479227222477, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+  m_PrefabInstance: {fileID: 7201736898502964907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!223 &1298588729 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 1518481550364100130, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
@@ -13064,9 +13076,9 @@ Transform:
   - {fileID: 28164047}
   - {fileID: 60022796}
   - {fileID: 1023148769}
-  - {fileID: 483952601}
   - {fileID: 973029478}
   - {fileID: 1546436333}
+  - {fileID: 483952601}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1490600873
@@ -26810,6 +26822,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 208763635505606608, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 208763635505606608, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
     - target: {fileID: 262953291858443606, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_text
       value: 
@@ -26849,6 +26869,14 @@ PrefabInstance:
     - target: {fileID: 409571177408115391, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenExpeditions
+      objectReference: {fileID: 0}
+    - target: {fileID: 431227390772594343, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 431227390772594343, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
       objectReference: {fileID: 0}
     - target: {fileID: 485401491590635181, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -27062,6 +27090,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenFishJournal
       objectReference: {fileID: 0}
+    - target: {fileID: 1649749942869804150, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1649749942869804150, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799596729565608785, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1799596729565608785, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815013601251674789, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 1815013601251674789, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 1815264442808131641, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -27274,6 +27326,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenSettings
       objectReference: {fileID: 0}
+    - target: {fileID: 2856759234984858926, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 2856759234984858926, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910726282989105451, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 2910726282989105451, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 2952183577642243725, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_SortingOrder
       value: 5
@@ -27469,6 +27537,14 @@ PrefabInstance:
     - target: {fileID: 3826045749988184415, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenCheckbook
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860259427521500650, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 3860259427521500650, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
       objectReference: {fileID: 0}
     - target: {fileID: 3869407260612331368, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -27674,6 +27750,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenCheckbook
       objectReference: {fileID: 0}
+    - target: {fileID: 4949104884349671963, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 4949104884349671963, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCheckbook
+      objectReference: {fileID: 0}
     - target: {fileID: 4974357596141784530, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -27814,6 +27898,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenCheckbook
       objectReference: {fileID: 0}
+    - target: {fileID: 5688917757222695959, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 5688917757222695959, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExpeditions
+      objectReference: {fileID: 0}
     - target: {fileID: 5689087888823611054, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -27821,6 +27913,14 @@ PrefabInstance:
     - target: {fileID: 5689087888823611054, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenCheckbook
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715715331406594963, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 5715715331406594963, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
       objectReference: {fileID: 0}
     - target: {fileID: 5724491112549747156, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -27933,6 +28033,14 @@ PrefabInstance:
     - target: {fileID: 6424060069503441201, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenGallery
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506092975381192405, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 6506092975381192405, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitCurrentUI
       objectReference: {fileID: 0}
     - target: {fileID: 6688504549741040726, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -28154,6 +28262,14 @@ PrefabInstance:
       propertyPath: m_Value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7917508887960196688, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 7917508887960196688, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGallery
+      objectReference: {fileID: 0}
     - target: {fileID: 7926352939087809851, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -28287,6 +28403,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 483952600}
     - target: {fileID: 8837448975979215118, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPlantlifeJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876314848795184380, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483952600}
+    - target: {fileID: 8876314848795184380, guid: b68a64c327838914cb65dcbb4615e1d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenPlantlifeJournal
       objectReference: {fileID: 0}

@@ -28,6 +28,8 @@ public class UIManager : MonoBehaviour
     public Canvas unlockedVesicomyidClamCanvas;
     public Canvas lockedGracefulCrabCanvas;
     public Canvas unlockedGracefulCrabCanvas;
+    public Canvas lockedBlobSculpinCanvas;
+    public Canvas unlockedBlobSculpinCanvas;
 
     // Popups
     public TextMeshProUGUI popUpNotification;
@@ -85,6 +87,8 @@ public class UIManager : MonoBehaviour
         unlockedVesicomyidClamCanvas.enabled = false;
         lockedGracefulCrabCanvas.enabled = false;
         unlockedGracefulCrabCanvas.enabled = false;
+        unlockedBlobSculpinCanvas.enabled = false;
+        lockedBlobSculpinCanvas.enabled = false;
 
         introductionCanvas.enabled = true;
         activeCanvas = introductionCanvas;
@@ -170,6 +174,13 @@ public class UIManager : MonoBehaviour
                 //SetSelected(unlockedBaskingSharkFirstSelected);
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
+            case FishType.BlobSculpin:
+                activeCanvas.enabled = false;
+                unlockedBlobSculpinCanvas.enabled = true;
+                activeCanvas = unlockedBlobSculpinCanvas;
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+
             default:
                 Debug.Log("fish type not recognized, UI navigation failed");
                 break;
@@ -192,6 +203,12 @@ public class UIManager : MonoBehaviour
                 lockedBaskingSharkCanvas.enabled = true;
                 activeCanvas = lockedBaskingSharkCanvas;
                 //SetSelected(lockedBaskingSharkFirstSelected);
+                audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+                break;
+            case FishType.BlobSculpin:
+                activeCanvas.enabled = false;
+                lockedBlobSculpinCanvas.enabled = true;
+                activeCanvas = lockedBlobSculpinCanvas;
                 audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
                 break;
             default:
