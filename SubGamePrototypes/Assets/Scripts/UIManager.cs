@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
     public Canvas unlockedGracefulCrabCanvas;
     public Canvas lockedBlobSculpinCanvas;
     public Canvas unlockedBlobSculpinCanvas;
+    public Canvas task1canvas;
 
     // Popups
     public TextMeshProUGUI popUpNotification;
@@ -89,6 +90,7 @@ public class UIManager : MonoBehaviour
         unlockedGracefulCrabCanvas.enabled = false;
         unlockedBlobSculpinCanvas.enabled = false;
         lockedBlobSculpinCanvas.enabled = false;
+        task1canvas.enabled = false;
 
         introductionCanvas.enabled = true;
         activeCanvas = introductionCanvas;
@@ -153,6 +155,14 @@ public class UIManager : MonoBehaviour
         fishJournalCanvas.enabled = true;
         activeCanvas = fishJournalCanvas;
         //SetSelected(fishJournalFirstSelected);
+        audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
+    }
+
+    public void OpenFundDetails1()
+    {
+        activeCanvas.enabled = false;
+        task1canvas.enabled = true;
+        activeCanvas = task1canvas;
         audioManager.PlayOneShotSFX(audioManager.sfxsData[1]);
     }
 
